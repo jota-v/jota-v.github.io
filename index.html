@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/632ee0c9.main.css">
+        <link rel="stylesheet" href="styles/03bde04c.main.css">
         <script src="scripts/vendor/f7f27360.modernizr.js"></script>
     </head>
     <body>
@@ -28,7 +28,7 @@
                         <li>{{#link-to 'portfolio'}}Portfolio{{/link-to}}</li>
                         <li><a href="#">Flexy-Pics UI</a></li>
                         <li>{{#link-to 'about'}}About{{/link-to}}</li>
-                        <li><a href="#">Contact</a></li>
+                        <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
                     </ul>
                 </nav>
               </aside>
@@ -51,16 +51,28 @@
                 <p>Currently he's working in a gaming studio developing HTML5 Games.</p>
                 <p>Juan is a very <strong>detail - oriented</strong> professional always focused on achieving outstanding results. In addition to this, he is <strong>really</strong> passionate about all fields related UI development and UX design; loves to work, read and try out new projects, tools and frameworks in his spare time.</p>
                 
+                {{#view App.WeaponsView}}
                 <h2>Weapons of Choice</h2>
                 <ul class="weapons row">
-                    <li class="html5 col-xs-6 col-sm-4 col-md-3 col-lg-3" data-toggle="tooltip" title="HTML5"><img src="images/logo-html5.svg"></li>
-                    <li class="sass col-xs-6 col-sm-4 col-md-3 col-lg-3" data-toggle="tooltip" title="SASS"><img src="images/a52fe804.logo-sass.jpg"></li>
-                    <li class="jquery col-xs-6 col-sm-4 col-md-3 col-lg-4" data-toggle="tooltip" title="jQuery"><img src="images/JQuery_logo.svg"></li>
-                    <li class="css3 col-xs-6 col-sm-4 col-md-3 col-lg-3" data-toggle="tooltip" title="Ember js"><img src="images/af0f2810.logo-emberjs.png"></li>
-                    <li class="css3 col-xs-6 col-sm-4 col-md-3 col-lg-4" data-toggle="tooltip" title="Cordova/Phonegap"><img src="images/22742076.logo-cordova.png"></li>
-                    <li class="css3 col-xs-6 col-sm-4 col-md-3 col-lg-3" data-toggle="tooltip" title="Grunt"><img src="images/8dfae678.logo-grunt.png"></li>
-                    <li class="css3 col-xs-6 col-sm-4 col-md-3 col-lg-3" data-toggle="tooltip" title="Bower"><img src="images/74a6995e.bower-logo.png"></li>
-                    <li class="css3 col-xs-6 col-sm-4 col-md-3 col-lg-3" data-toggle="tooltip" title="Github"><img src="images/021f97e7.github-logo.png"></li>
+                    <li class="html5 col-xs-3 col-sm-3 col-md-3 col-lg-3" data-toggle="tooltip" title="HTML5"><img src="images/logo-html5.svg"></li>
+                    <li class="sass col-xs-3 col-xs-offset-1 col-sm-3 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1" data-toggle="tooltip" title="SASS"><img src="images/a52fe804.logo-sass.jpg"></li>
+                    <li class="jquery col-xs-5 col-sm-6 col-md-5 col-lg-5" data-toggle="tooltip" title="jQuery"><img src="images/JQuery_logo.svg"></li>
+                    <li class="css3 col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Ember js"><img src="images/af0f2810.logo-emberjs.png"></li>
+                    <li class="css3 col-xs-6 col-md-offset-1 col-sm-6 col-sm-offset-1  col-md-5 col-md-offset-1 col-lg-6 col-lg-offset-1" data-toggle="tooltip" title="Cordova / Phonegap"><img src="images/22742076.logo-cordova.png"></li>
+                    <li class="css3 col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Grunt"><img src="images/8dfae678.logo-grunt.png"></li>
+                    <li class="css3 col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Bower"><img src="images/74a6995e.bower-logo.png"></li>
+                    <li class="css3 col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Github"><img src="images/021f97e7.github-logo.png"></li>
+                </ul>
+                {{/view}}
+            </div>
+        </script>
+        
+        <script type="text/x-handlebars" id="contact">
+            <div id="contact">
+                <h1>Contact info</h1>
+                <ul>
+                    <li>juanvanni@gmail.com</li>
+                    <li>Skype: juan_vanni</li>
                 </ul>
             </div>
         </script>
@@ -79,7 +91,7 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <script src="scripts/7118fbfd.main.js"></script>
+        <script src="scripts/c1488a63.main.js"></script>
 
         <script src="scripts/491c175a.plugins.js"></script>
 </body>
