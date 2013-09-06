@@ -120,19 +120,23 @@ ul {
 }
 
 .about {
+    padding-bottom: 60px;
+    
     h1 {
         margin-bottom: 20px;
     }
     
     h2 {
-        margin: 40px 0 25px;
+        margin: 40px 0 35px;
         font-size: 27px;
     }
     
     .weapons {
         li {
+            height: 230px;
+            
             img {
-                width: 96%;
+                width: 100%;
                 height: auto;
                 display: block;
                 margin: 0 auto 20px;

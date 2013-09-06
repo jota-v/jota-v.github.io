@@ -32,7 +32,7 @@
                         <li>{{#link-to 'portfolio'}}Portfolio{{/link-to}}</li>
                         <li><a href="#">Flexy-Pics UI</a></li>
                         <li>{{#link-to 'about'}}About{{/link-to}}</li>
-                        <li><a href="#">Contact</a></li>
+                        <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
                     </ul>
                 </nav>
               </aside>
@@ -55,16 +55,28 @@
                 <p>Currently he's working in a gaming studio developing HTML5 Games.</p>
                 <p>Juan is a very <strong>detail - oriented</strong> professional always focused on achieving outstanding results. In addition to this, he is <strong>really</strong> passionate about all fields related UI development and UX design; loves to work, read and try out new projects, tools and frameworks in his spare time.</p>
                 
+                {{#view App.WeaponsView}}
                 <h2>Weapons of Choice</h2>
                 <ul class="weapons row">
-                    <li class="html5 col-xs-6 col-sm-4 col-md-3 col-lg-3" data-toggle="tooltip" title="HTML5"><img src="images/logo-html5.svg"></li>
-                    <li class="sass col-xs-6 col-sm-4 col-md-3 col-lg-3" data-toggle="tooltip" title="SASS"><img src="images/logo-sass.jpg"></li>
-                    <li class="jquery col-xs-6 col-sm-4 col-md-3 col-lg-4" data-toggle="tooltip" title="jQuery"><img src="images/JQuery_logo.svg"></li>
-                    <li class="css3 col-xs-6 col-sm-4 col-md-3 col-lg-3" data-toggle="tooltip" title="Ember js"><img src="images/logo-emberjs.png"></li>
-                    <li class="css3 col-xs-6 col-sm-4 col-md-3 col-lg-4" data-toggle="tooltip" title="Cordova/Phonegap"><img src="images/logo-cordova.png"></li>
-                    <li class="css3 col-xs-6 col-sm-4 col-md-3 col-lg-3" data-toggle="tooltip" title="Grunt"><img src="images/logo-grunt.png"></li>
-                    <li class="css3 col-xs-6 col-sm-4 col-md-3 col-lg-3" data-toggle="tooltip" title="Bower"><img src="images/bower-logo.png"></li>
-                    <li class="css3 col-xs-6 col-sm-4 col-md-3 col-lg-3" data-toggle="tooltip" title="Github"><img src="images/github-logo.png"></li>
+                    <li class="html5 col-xs-3 col-sm-3 col-md-3 col-lg-3" data-toggle="tooltip" title="HTML5"><img src="images/logo-html5.svg"></li>
+                    <li class="sass col-xs-3 col-xs-offset-1 col-sm-3 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1" data-toggle="tooltip" title="SASS"><img src="images/logo-sass.jpg"></li>
+                    <li class="jquery col-xs-5 col-sm-6 col-md-5 col-lg-5" data-toggle="tooltip" title="jQuery"><img src="images/JQuery_logo.svg"></li>
+                    <li class="css3 col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Ember js"><img src="images/logo-emberjs.png"></li>
+                    <li class="css3 col-xs-6 col-md-offset-1 col-sm-6 col-sm-offset-1  col-md-5 col-md-offset-1 col-lg-6 col-lg-offset-1" data-toggle="tooltip" title="Cordova / Phonegap"><img src="images/logo-cordova.png"></li>
+                    <li class="css3 col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Grunt"><img src="images/logo-grunt.png"></li>
+                    <li class="css3 col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Bower"><img src="images/bower-logo.png"></li>
+                    <li class="css3 col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Github"><img src="images/github-logo.png"></li>
+                </ul>
+                {{/view}}
+            </div>
+        </script>
+        
+        <script type="text/x-handlebars" id="contact">
+            <div id="contact">
+                <h1>Contact info</h1>
+                <ul>
+                    <li>juanvanni@gmail.com</li>
+                    <li>Skype: juan_vanni</li>
                 </ul>
             </div>
         </script>
