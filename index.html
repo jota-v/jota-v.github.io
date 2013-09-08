@@ -10,76 +10,123 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/03bde04c.main.css">
+        <link rel="stylesheet" href="styles/6d6c091c.main.css">
         <script src="scripts/vendor/f7f27360.modernizr.js"></script>
     </head>
     <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
         <script type="text/x-handlebars">
             <div class="app-container row">
               <aside id="nav-bar" class="col-xs-0 col-sm-3 col-md-3 col-lg-2">
-                <a href="index.html" class="logo">Jota V</a>
+                <div class="logo">{{#link-to 'home'}}Jota V{{/link-to}}</div>
                 <h1>UX Designer / <span>Front-End Developer</span></h1>
                 <nav class="nav">
                     <ul>
-                        <li>{{#link-to 'portfolio'}}Portfolio{{/link-to}}</li>
-                        <li><a href="#">Flexy-Pics UI</a></li>
-                        <li>{{#link-to 'about'}}About{{/link-to}}</li>
-                        <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
+                        <li class="portfolio-link">{{#link-to 'portfolio'}}Portfolio{{/link-to}}</li>
+                        <li class="flexy-link"><a href="http://github.com/jota-v">Github</a></li>
+                        <li class="about-link">{{#link-to 'about'}}About{{/link-to}}</li>
+                        <li class="contact-link">{{#link-to 'contact'}}Contact{{/link-to}}</li>
                     </ul>
                 </nav>
+                <div class="follow">
+                    <div class="button">
+                        <a href="https://twitter.com/juan_v_" class="twitter-follow-button" data-show-count="false">Follow @juan_v_</a>
+                      </div>
+                      <div class="cover">
+                        <div class="innie"></div>
+                        <div class="spine"></div>
+                        <div class="outie"></div>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
               </aside>
               <section id="main-content" class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
                 <!--[if lt IE 10]>
                     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
                 <![endif]-->
-                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-7">
+                <div class="container col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                    <!--[if lt IE 10]>
+                        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+                    <![endif]-->
                     {{outlet}}
                 </div>
               </section>
             </div>
         </script>
         
+        <script type="text/x-handlebars" id="home">
+            <div id="home">
+                <figure class="waykup-logo">
+                    <img src="images/waykup-logo.svg" alt="Waykup">
+                </figure>
+                <p>Soon available on <strong>iOS App Store</strong></p>
+                <img class="store-icon" src="images/App_Store_Icon_.png" alt="App Store icon">
+            </div>
+        </script>
+        
+        <script type="text/x-handlebars" id="portfolio">
+            <div id="portfolio">
+                <h1>Some works</h1>
+                {{#view App.WorksView}}
+                <div class="works">
+                    {{#each}}
+                    <article class="case item">
+                        <div class="thumb">
+                            <img src="images/portfolio/{{unbound image}}" alt="juan vanni {{unbound title}} project">
+                        </div>
+                        <h2>{{title}}</h2>
+                        {{format-markdown body}}
+                        <div class="credits">{{format-markdown credits}}</div>
+                        <hr>
+                    </article>
+                    {{/each}}
+                </div>
+                {{/view}}
+            </div>
+        </script>
+        
         <script type="text/x-handlebars" id="about">
-            <div class="about">
+            <article id="about">
                 <h1>About</h1>
-                <p>Juan Vanni is a qualified and experienced UX designer and primarily a front end developer currently living and working in Buenos Aires. He started his career as a visual designer and gradually flipped towards coding. He gained solid experience while working in a e-commerce company, interactive agencies, as a freelancer, and in a gaming studio.</p>
-                <p>Has worked for diverse clients that range from financial companies, film studios, petrochemical companies, hotels and real estate luxury brands, achieving a strong and assorted portfolio in a variety of different disciplines in a host of different roles.</p>
-                <p>Currently he's working in a gaming studio developing HTML5 Games.</p>
-                <p>Juan is a very <strong>detail - oriented</strong> professional always focused on achieving outstanding results. In addition to this, he is <strong>really</strong> passionate about all fields related UI development and UX design; loves to work, read and try out new projects, tools and frameworks in his spare time.</p>
+                <div class="description">
+                    <p>Juan Vanni is a qualified and experienced UX designer and primarily a front end developer currently living and working in Buenos Aires. He started his career as a visual designer and gradually flipped towards coding. He gained solid experience while working in a e-commerce company, interactive agencies, as a freelancer, and in a gaming studio.</p>
+                    <p>Has worked for diverse clients that range from financial companies, film studios, petrochemical companies, hotels and real estate luxury brands, achieving a strong and assorted portfolio in a variety of different disciplines in a host of different roles.</p>
+                    <p>Currently he's working in a gaming studio developing HTML5 Games.</p>
+                    <p>Juan is a very <strong>detail - oriented</strong> professional always focused on achieving outstanding results. In addition to this, he is <strong>really</strong> passionate about all fields related UI development and UX design; loves to work, read and try out new projects, tools and frameworks in his spare time.</p>
+                </div>
+                
+                <hr>
                 
                 {{#view App.WeaponsView}}
                 <h2>Weapons of Choice</h2>
                 <ul class="weapons row">
-                    <li class="html5 col-xs-3 col-sm-3 col-md-3 col-lg-3" data-toggle="tooltip" title="HTML5"><img src="images/logo-html5.svg"></li>
-                    <li class="sass col-xs-3 col-xs-offset-1 col-sm-3 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-1" data-toggle="tooltip" title="SASS"><img src="images/a52fe804.logo-sass.jpg"></li>
-                    <li class="jquery col-xs-5 col-sm-6 col-md-5 col-lg-5" data-toggle="tooltip" title="jQuery"><img src="images/JQuery_logo.svg"></li>
-                    <li class="css3 col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Ember js"><img src="images/af0f2810.logo-emberjs.png"></li>
-                    <li class="css3 col-xs-6 col-md-offset-1 col-sm-6 col-sm-offset-1  col-md-5 col-md-offset-1 col-lg-6 col-lg-offset-1" data-toggle="tooltip" title="Cordova / Phonegap"><img src="images/22742076.logo-cordova.png"></li>
-                    <li class="css3 col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Grunt"><img src="images/8dfae678.logo-grunt.png"></li>
-                    <li class="css3 col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Bower"><img src="images/74a6995e.bower-logo.png"></li>
-                    <li class="css3 col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Github"><img src="images/021f97e7.github-logo.png"></li>
+                    <li class="html5 col-xs-3 col-sm-3 col-md-3 col-lg-3" data-toggle="tooltip" title="HTML5"><img src="images/logo-html5.svg" alt="HTML5 logo"></li>
+                    <li class="sass col-xs-3 col-sm-3 col-md-3 col-lg-3" data-toggle="tooltip" title="SASS"><img src="images/Sass_Logo.jpg" alt="SASS logo"></li>
+                    <li class="jquery col-xs-5 col-sm-6 col-md-5 col-lg-5" data-toggle="tooltip" title="jQuery: JS library / Zepto if its a mobile project"><img src="images/JQuery_logo.svg" alt="jQuery logo"></li>
+                    <li class="bootstrap col-xs-3 col-sm-3 col-md-3 col-lg-3" data-toggle="tooltip" title="Twitter Bootstrap: for basic UI components and grids"><img src="images/bootstrap-logo.png" alt="Twitter Bootstrap logo"></li>
+                    <li class="ember col-xs-3 col-sm-3 col-md-3 col-lg-3" data-toggle="tooltip" title="Ember JS: MVC framework of choice"><img src="images/logo-emberjs.png" alt="Ember logo"></li>
+                    <li class="cordova col-xs-6 col-sm-6 col-md-6 col-lg-6" data-toggle="tooltip" title="Cordova / Phonegap: for mobile projects that requiere a native API"><img src="images/logo-cordova.png" alt="Apache Cordova logo"></li>
+                    <li class="grunt col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Grunt: for compiling code, running tests and optimizing images"><img src="images/logo-grunt.png" alt="Grunt logo"></li>
+                    <li class="bower col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Bower: for managing dependencies"><img src="images/bower-logo.png" alt="Bower logo"></li>
+                    <li class="github col-xs-4 col-sm-4 col-md-4 col-lg-4" data-toggle="tooltip" title="Github: code version control"><img src="images/github-logo.png" alt="Github logo"></li>
                 </ul>
                 {{/view}}
-            </div>
+            </article>
         </script>
         
         <script type="text/x-handlebars" id="contact">
             <div id="contact">
                 <h1>Contact info</h1>
                 <ul>
-                    <li>juanvanni@gmail.com</li>
-                    <li>Skype: juan_vanni</li>
+                    <li><a href="mailto:juanvanni@gmail.com">juanvanni@gmail.com</a><hr></li>
+                    <li>Skype: juan_vanni<hr></li>
                 </ul>
+                <strong>Take a photo with a QR reader to save the contact on your phone:</strong>
+                <div class="qr"></div>
             </div>
         </script>
         
-
-
-        <script src="scripts/97270342.vendor.js"></script>
+        <script src="scripts/4cbe3a19.vendor.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -88,11 +135,13 @@
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            ga('create','UA-36406353-1');ga('send','pageview');
         </script>
 
-        <script src="scripts/c1488a63.main.js"></script>
+        <script src="scripts/9f136c7e.main.js"></script>
 
-        <script src="scripts/491c175a.plugins.js"></script>
+        <script src="scripts/525b1c18.plugins.js"></script>
+        
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </body>
 </html>
