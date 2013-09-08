@@ -21,6 +21,8 @@
     "jquery": true,
     "globals": {
         "App": true,
-        "Ember": true
+        "Ember": true,
+        "Handlebars": true,
+        "Showdown": true
     }
 }

@@ -1,8 +1,7 @@
-$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
-
 @import 'sass-bootstrap/lib/bootstrap';
 @import '../styles/modules/variables';
 @import '../styles/modules/fonts';
+@import '../styles/modules/follow-button';
 
 .browsehappy {
     margin: 0.2em 0;
@@ -26,14 +25,30 @@ h6 {
     font-family: $lato; 
 }
 
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
 p {
-    line-height: 22px;
+    line-height: 20px;
+    font-size: 13px;
 }
 
 ul {
     margin:0;
     padding: 0;
     list-style: none;
+}
+
+hr {
+    display: block;
+    width: 14px;
+    float: left;
+    border-color: $grayLightest;
 }
 
 .app-container {
@@ -52,7 +67,7 @@ ul {
     background: $grayDark;
     height: 100%;
     
-    .logo {
+    .logo a {
         font: 70px/70px $mistral;
         display: block;
         color: $blue-green;
@@ -93,21 +108,35 @@ ul {
                 
                 &:hover {
                     background: $grayDarker;
-                    color: $white;
                     text-decoration: none;
-                }
-                
-                &.active {
-                    color: $violet;
                 }
             }
             
+            &.portfolio-link a.active,
+            &.portfolio-link a:hover {
+                color: $violet;
+            }
+            
+            &.flexy-link a.active,
+            &.flexy-link a:hover {
+                color: $orange;
+            }
+            
+            &.about-link a.active,
+            &.about-link a:hover {
+                color: $pink;
+            }
+            
+            &.contact-link a.active,
+            &.contact-link a:hover {
+                color: $green;
+            }
         }
     }
 }
 
 #main-content {
-    background: $whiteClouds;
+    background: $white;
     min-height: 100%;
     padding: 10px 20px;
     float: right;
@@ -115,42 +144,180 @@ ul {
     .container {
         max-width: 840px;
         margin:0;
-        float: left;
+        
+        @media (min-width: 1199px) {
+            
+        }
     }
 }
 
-.about {
-    padding-bottom: 60px;
+#home {
+    padding-top: 10%;
     
+    .waykup-logo {
+        display: block;
+    
+        img {
+            display:block;
+            width: 65%;
+            margin: 0 auto;
+        }
+    }
+    
+    p {
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .store-icon {
+        display: block;
+        width: 70px;
+        height: auto;
+        margin: 15px auto;
+    }
+}
+
+#portfolio {
     h1 {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
     
     h2 {
-        margin: 40px 0 35px;
-        font-size: 27px;
+        font-size: 18px;
+    }
+    
+    .credits p {
+        font-size: 11px;
+    }
+}
+
+#about {
+    padding-bottom: 60px;
+    
+    h1 {
+        margin-bottom: 25px;
+    }
+    
+    h2 {
+        margin: 35px 0 45px;
+        clear: both;
+    }
+    
+    hr {
+        margin: 25px 0 40px;
+    }
+    
+    @media (min-width: 690px) {
+        .description {
+           -moz-column-count: 2;
+           -moz-column-gap: 20px;
+           -webkit-column-count: 2;
+           -webkit-column-gap: 20px;
+        }
     }
     
     .weapons {
         li {
-            height: 230px;
+            height: 210px;
+            
+            @media (max-width: 690px) {
+                   height: 150px;
+            }
             
             img {
-                width: 100%;
+                width: 70%;
                 height: auto;
                 display: block;
-                margin: 0 auto 20px;
+                margin: 0 auto;
             }
             
             &.sass img {
-                width: 116%;
-                margin-left: -8%;
+                width: 93%;
             }
             
             &.jquery img {
-                width: 85%;
-                margin-top: 10%;
+                width: 82%;
+                padding-top: 16%;
+            }
+            
+            &.bootstrap img {
+                width: 96%;
+            }
+            
+            &.ember img {
+                width: 91%;
+            }
+            
+            &.github img {
+                width: 86%;
+            }
+            
+            @media (max-width: 560px) {
+                    
+                height: 130px;
+                
+                img {
+                    width: 95%;
+                }
+                
+                &.sass img {
+                    width: 115%;
+                }
+                
+                &.jquery img {
+                    width: 105%;
+                }
+                
+                &.bootstrap img {
+                    width: 120%;
+                }
+                
+                &.ember img {
+                    width: 116%;
+                }
+                
+                &.github img {
+                    width: 114%;
+                }
             }
         }
     }
 }
+
+#contact {
+    
+    h1 {
+        margin-bottom: 25px;
+    }
+    
+    ul {
+        display: block;
+        margin-bottom: 35px;
+        padding-left: 25px;
+        
+        li {
+            display: block;
+            margin-bottom: 8px;
+                
+            hr {
+                display: block;
+                float: none;
+                margin: 7px 0 16px;
+            }
+        }
+    }
+    
+    strong {
+        display: block;
+        margin-bottom: 15px;
+    }
+    
+    .qr {
+        width: 220px;
+        height: 220px;
+        display: block;
+        background: url('../images/qr.png') no-repeat;
+        background-size: 100%;
+    }
+}
+
