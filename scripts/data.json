@@ -20,7 +20,7 @@
         "id": 9,
         "image": "thumb-oneocean.jpg",
         "title": "One Ocean",
-        "body": "Involved in the whole UI design and development. For this project I designed the **FlexyPics UI** component as it required a very visual and original responsive and adaptive layout.\n\n Also led the whole front-end development of the project.",
+        "body": "Involved in the whole UI design and development. For this project I designed the **FlexyPics UI** component as it required a very visual and original responsive and adaptive layout.\n\n Also led the whole front-end development of the project.\n\n [View work](http://oneoceansouthbeach.com/)\n\n  [FlexyPics UI on Github](https://github.com/jota-v/Flexy-Pics)",
         "credits": "**Credits:** BridgerConway"
         
     }, {
@@ -29,7 +29,7 @@
         "image": "thumb-historias.jpg",
         "title": "Historias Cinemátograficas",
         "body": "For this very well known film studio here in Bueno Aires we designed a very original UI where you can navigate the studio's work with mouse movement. This horizontal layout (rather than vertical) was proposed to respect the movies widescreen film proportions. Another interesting feature is that the site was programed usig ajax for a more dynamic navigation.\n\n Recently optimized ajax calls, improved the css code and made it more touch friendly",
-        "credits": "**Credits:** Jota.v & Donhkoland "
+        "credits": "**Credits:** Jota.v & [Donhkoland](http://www.donhkoland.com/) "
         
     }, {
         
