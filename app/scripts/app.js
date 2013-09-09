@@ -17,7 +17,7 @@ App.WorksView = Ember.View.extend({
     didInsertElement: function() {
         $('.works').gridalicious({
             gutter: 40,
-            width: 220
+            width: 240
         });
     }
 });
