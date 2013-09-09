@@ -3,7 +3,7 @@
     [{  
         "id": 11,
         "image": "thumb-bingocrack.jpg",
-        "title": "Bingo Crack",
+        "title": "BingoCrack",
         "body": "**HTM5 Game**\n\n Developed the whole UI of the game, including all animations. First made all of them with the greenSock JS animation library, but they weren't performing as fluid as desired, so I migrated them to CSS3 using hardware accelerated animations. Compared performance of each one of them cross-browser using developer tools and fps meters. In conclusion made the perfect blend between greenSock and CSS3 animations.",
         "credits": "**Credits:** Etermax"
         
