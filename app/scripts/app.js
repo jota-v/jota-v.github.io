@@ -5,6 +5,15 @@ App.Router.map(function() {
     this.resource('about');
     this.resource('portfolio');
     this.resource('contact');
+    this.route('matchall', {
+        path: '*:'
+    });
+});
+
+App.ApplicationRoute = Ember.Route.extend({
+    beforeModel: function() {
+        this.transitionTo('home');
+    }
 });
 
 App.WeaponsView = Ember.View.extend({
