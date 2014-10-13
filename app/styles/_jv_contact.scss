@@ -1,0 +1,33 @@
+.jv-screen-contact {
+    min-height: 100%;
+    text-align: center;
+
+    > section {
+        min-height: 100%;
+    }
+
+    dt:not(.h3){
+        display: inline-block;
+        font-size: 26px;
+
+        &.icon-twitter {
+            font-size: 30px;
+        }
+    }
+
+    dd {
+        margin-bottom: 30px;
+    }
+
+    .v-card {
+        margin-bottom: 70px;
+    }
+
+    @media (min-height: 1250px) {
+        .jv-footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    }
+}

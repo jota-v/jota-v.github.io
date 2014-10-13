@@ -1,13 +1,13 @@
 {
-  "name": "jota-v",
-  "version": "0.0.0",
+  "name": "my-site-grunt",
+  "private": true,
   "dependencies": {
-    "sass-bootstrap": "~3.0.0",
-    "modernizr": "~2.6.2",
-    "jquery": "~1.10.2",
-    "ember": "~1.0.0",
-    "showdown": "~0.3.1",
+    "bootstrap-sass-official": "~3.2.0",
+    "core-scroll-header-panel": "Polymer/core-scroll-header-panel#~0.4.2",
+    "core-toolbar": "Polymer/core-toolbar#~0.4.2",
+    "core-drawer-panel": "Polymer/core-drawer-panel#~0.4.2",
+    "paper-button": "Polymer/paper-button#~0.4.2",
+    "core-tooltip": "Polymer/core-tooltip#~0.4.2",
     "Grid-A-Licious": "https://github.com/suprb/Grid-A-Licious.git"
-  },
-  "devDependencies": {}
+  }
 }

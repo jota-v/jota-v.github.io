@@ -1,0 +1,71 @@
+// @font-face {
+//     font-family: 'titillium';
+//     src: url('../fonts/titillium/titillium-thin-webfont.eot');
+//     src: url('../fonts/titillium/titillium-thin-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/titillium/titillium-thin-webfont.woff2') format('woff2'),
+//          url('../fonts/titillium/titillium-thin-webfont.woff') format('woff'),
+//          url('../fonts/titillium/titillium-thin-webfont.ttf') format('truetype'),
+//          url('../fonts/titillium/titillium-thin-webfont.svg#titilliumthin') format('svg');
+//     font-weight: 300;
+//     font-style: normal;
+// }
+
+@font-face {
+    font-family: 'titillium';
+    src: url('../fonts/titillium/titillium-light-webfont.eot');
+    src: url('../fonts/titillium/titillium-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/titillium/titillium-light-webfont.woff2') format('woff2'),
+         url('../fonts/titillium/titillium-light-webfont.woff') format('woff'),
+         url('../fonts/titillium/titillium-light-webfont.ttf') format('truetype'),
+         url('../fonts/titillium/titillium-light-webfont.svg#titilliumlight') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'social';
+  src: url('../fonts/social/social-icons.eot?82538466');
+  src: url('../fonts/social/social-icons.eot?82538466#iefix') format('embedded-opentype'),
+       url('../fonts/social/social-icons.woff?82538466') format('woff'),
+       url('../fonts/social/social-icons.ttf?82538466') format('truetype'),
+       url('../fonts/social/social-icons.svg?82538466#cart') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "social";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-mail:before { content: '\e800'; }
+.icon-twitter:before { content: '\e802'; } /* '' */
+.icon-github:before { content: '\e803'; } /* '' */
+.icon-linkedin:before { content: '\e804'; } /* '' */

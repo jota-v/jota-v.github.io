@@ -1,0 +1,302 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Jota V</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- endbuild -->
+
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+
+        <!-- build:js scripts/platform.js -->
+        <script src="bower_components/platform/platform.js"></script>
+        <!-- endbuild -->
+
+        <!-- Web components -->
+        <link rel="import" href="../bower_components/core-scroll-header-panel/core-scroll-header-panel.html">
+        <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
+        <link rel="import" href="../bower_components/core-drawer-panel/core-drawer-panel.html">
+        <link rel="import" href="../bower_components/paper-button/paper-button.html">
+        <link rel="import" href="../bower_components/core-tooltip/core-tooltip.html">
+    </head>
+    <body>
+
+        <core-drawer-panel responsiveWidth="9999px" class="left-drawer">
+            <div drawer class="drawer-panel">
+                <a href="#">Experience</a>
+                <a href="#">Github</a>
+                <a href="#">Hire Me</a>
+            </div>
+
+            <div main>
+            <core-scroll-header-panel condenses headerHeight="320px" condensedHeaderHeight="75px">
+
+                <core-toolbar class="core-header jv-navbar">
+
+                    <paper-icon-button class="navbar-toggle" icon="menu"></paper-icon-button>
+
+                    <div class="container bottom">
+                        <a href="index.html" class="h1 navbar-brand">Jota V</a>
+                        <p class="navbar-brand-tag">CSS Architect / UX Designer</p>
+                    </div>
+
+                    <div class="container">
+                        <nav class="main-menu">
+                            <div class="pull-left">
+                                <a class="nav-item" href="https://www.linkedin.com/profile/view?id=86087495&trk=nav_responsive_tab_profile_pic" target="_blank">
+                                    <span class="social-icon icon-linkedin"></span>
+                                </a>
+                                <a class="nav-item" href="https://github.com/jota-v" target="_blank">
+                                    <span class="social-icon icon-github"></span>
+                                </a>
+                                <a class="nav-item" href="https://twitter.com/jota_vanni" target="_blank">
+                                    <span class="social-icon icon-twitter"></span>
+                                </a>
+                            </div>
+                            <div class="pull-right">
+                                <a class="nav-item" href="experience.html">
+                                    <paper-button class="jv-btn">Experience</paper-button>
+                                </a>
+                                <a class="nav-item" href="http://waykup-app.com/">
+                                    <paper-button class="jv-btn">Waykup!</paper-button>
+                                </a>
+                                <a class="nav-item" href="contact.html">
+                                    <paper-button class="jv-btn">Contact</paper-button>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </core-toolbar>
+
+                <main content class="jv-screen-experience">
+                    <section class="jv-section-block experience">
+                        <div class="container">
+                            <h1 class="jv-section-title h2">Experience</h1>
+
+                            <article class="experience-item highlight">
+                                <div class="row">
+                                    <div class="col-xs-3 col-sm-3">
+                                        <img src="http://waykup-app.com/images/iphone.png" alt="Waykup" />
+                                    </div>
+                                    <div class="col-xs-9 col-sm-9">
+                                        <h2 class="h3 experience-title">Waykup!</h2>
+                                        <h3 class="experience-subtitle">iOS app</h3>
+                                        <p>This is a personal project. I wanted to develop a javascript app for mobile that perormed as a native app. I focused on every detail for the user experience to feel native like, every touch input, gesture, animation, speed and the UI.</p>
+                                        <p>The app consists on a geolocation alarm. It's currently available in the iOS appstore</p>
+                                        <p>The technology stack used for de development: Apache Cordova to wrap the webapp to be installed as native, grunt.js for compiling, require.js for modularity of the js code, hammer.js for touch gestures and sass as the css pre-precessor.</p>
+                                        <small class="credits">2014 - Juan Vanni - <a href="https://itunes.apple.com/us/app/waykup/id817714891?ls=1&mt=8" target="_blank">Download the app.</a></small>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <div class="experience-list">
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-meli.jpg" alt="Mercado Libre">
+                                    </div>
+                                    <h2 class="h3 experience-title">Mercado Libre</h2>
+                                    <h3 class="experience-subtitle">E-commerce</h3>
+                                    <p>Currently working for mercadolibre.com, South America's biggest e-commerce platfom. I'm in re-designing the whole css arquitecture in the company with a modular, maintainable, mobile-first perspective.</p>
+                                    <p>Also teaching people there about sass, efficient selectors, performant animations and efficient dry coding.</p>
+                                    <small class="credits">2014 - Mercado Libre</small>
+                                    <hr>
+                                </article>
+
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-preguntados.jpg" alt="Preguntados">
+                                    </div>
+                                    <h2 class="h3 experience-title">Preguntados*</h2>
+                                    <h3 class="experience-subtitle">HTML5 Game</h3>
+                                    <p>*Known as <strong>Trivia Crack</strong> in english.</p>
+                                    <p>I was part of a 3 members team developing the front-end of the game for the web. The challenge, as all games, was to care of animations that should perform at a constant 60fps.</p>
+                                    <p>For the technology stack, we used Grunt, Backbone and Less as the css preprocessor.</p>
+                                    <p>This trivia game became VERY popular in the region. Currently the webapp is used in a very well known TV show in Argentina.</p>
+                                    <small class="credits">2014 - Etermax</small>
+                                    <hr>
+                                </article>
+
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-apalabrados.jpg" alt="Apalabrados">
+                                    </div>
+                                    <h2 class="h3 experience-title">Apalabrados* 2.0</h2>
+                                    <h3 class="experience-subtitle">HTML5 Game</h3>
+                                    <p>*Known as <strong>Aworded</strong> in english.</p>
+                                    <p>Was part of a 2 memebers team. The work consisted of a complete refactor of the code with a new stack of technology focusing on maintainability. Also new features were added with a complete re-design of the app.</p>
+                                    <p>The game consits in a async online crossword puzzle. It is very successful in Spain.</p>
+                                    <small class="credits">2013 - Etermax</small>
+                                    <hr>
+                                </article>
+
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-bingocrack.jpg" alt="Bingo Crack">
+                                    </div>
+                                    <h2 class="h3 experience-title">Bingo Crack</h2>
+                                    <h3 class="experience-subtitle">HTML5 Game</h3>
+                                    <p>Developed the whole UI of the game, including all animations. First made all of them with the greenSock JS animation library, but they weren't performing as fluid as desired, so I migrated them to CSS3 using hardware accelerated animations. Compared performance of each one of them cross-browser using developer tools and fps meters. In conclusion made the perfect blend between greenSock and CSS3 animations.</p>
+                                    <small class="credits">2013 - Etermax</small>
+                                    <hr>
+                                </article>
+
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-oneocean.jpg" alt="One Ocean">
+                                    </div>
+                                    <h2 class="h3 experience-title">One Ocean</h2>
+                                    <h3 class="experience-subtitle">Website</h3>
+                                    <p>Involved in the whole UI design and development. For this real estate project I designed the FlexyPics UI component as it required a very visual and original responsive and adaptive layout.</p>
+                                    <p>Also led the whole front-end development of the project.</p>
+                                    <div class="credits">2013 - BridgerConway</div>
+                                    <hr>
+                                </article>
+
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-ypf.jpg" alt="YPF">
+                                    </div>
+                                    <h2 class="h3 experience-title">YPF</h2>
+                                    <h3 class="experience-subtitle">Website</h3>
+                                    <p>Led the front-end team of three people in the development of the “YPF” site (petrochemical company, biggest in Argentina), and worked in conjunction with Accenture in the implementation of it in Visual Studio.</p>
+                                    <small class="credits">2012 - BridgerConway</small>
+                                    <hr>
+                                </article>
+
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-guia-ypf.jpg" alt="Guía YPF">
+                                    </div>
+                                    <h2 class="h3 experience-title">Guía YPF</h2>
+                                    <h3 class="experience-subtitle">Web app</h3>
+                                    <p>Led the project and programmed the entire front-end “Guía YPF“ site.</p>
+                                    <p>The main feature are the maps using the Google Maps API 3 which showed several layers of information of locations and routes from all around Argentina for travellers.</p>
+                                    <small class="credits">2012 - BridgerConway</small>
+                                    <hr>
+                                </article>
+
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-iberostar.jpg" alt="Iberostar">
+                                    </div>
+                                    <h2 class="h3 experience-title">Iberostar</h2>
+                                    <h3 class="experience-subtitle">Website / Booking platform</h3>
+                                    <p>Was part of a team in the front-end development of the booking system of this very well known international hotels brand.</p>
+                                    <p>This was a large project where many people were involved. The back-end was made by a company in Spain.</p>
+                                    <div class="credits">2011 - BridgerConway</div>
+                                    <hr>
+                                </article>
+
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-consultatio.jpg" alt="Consultatio">
+                                    </div>
+                                    <h2 class="h3 experience-title">Consultatio</h2>
+                                    <h3 class="experience-subtitle">Website</h3>
+                                    <p>Made the entire front-end develovment for this site.</p>
+                                    <div class="credits">2012 - BridgerConway</div>
+                                    <hr>
+                                </article>
+
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-techo.jpg" alt="Techo para mi país">
+                                    </div>
+                                    <h2 class="h3 experience-title">TECHO para mi país</h2>
+                                    <h3 class="experience-subtitle">Website</h3>
+                                    <p>Front-end development for the 2012 anual founds recollection of the Techo para mi país organization. The site was online for just one month during the anual recollection. Also helped designing the wireframes of the home page. The site was only online for one month during the anual recollection but you can see it hosted in my server here. Ad honorem work.</p>
+                                    <div class="credits">2012 - Juan Vanni</div>
+                                    <hr>
+                                </article>
+
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-oceana.jpg" alt="Oceana">
+                                    </div>
+                                    <h2 class="h3 experience-title">Oceana</h2>
+                                    <h3 class="experience-subtitle">Website</h3>
+                                    <p>For this project I was only involved in the front-end development. The highlights are the Google Maps API3 Location viewer and the Floorplans visualizer with ajax functionaly.</p>
+                                    <div class="credits">2012 - BridgerConway</div>
+                                    <hr>
+                                </article>
+
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-historias.jpg" alt="Historias">
+                                    </div>
+                                    <h2 class="h3 experience-title">Historias</h2>
+                                    <h3 class="experience-subtitle">Website</h3>
+                                    <p>For this very well known film studio here in Bueno Aires we designed a very original UI where you can navigate the studio's work with mouse movement. This horizontal layout (rather than vertical) was proposed to respect the movies widescreen film proportions. Another interesting feature is that the site was programed usig ajax for a more dynamic navigation.</p>
+                                    <p>Recently optimized ajax calls, improved the css code and made it more touch friendly.</p>
+                                    <div class="credits">2011 - Juan Vanni</div>
+                                    <hr>
+                                </article>
+
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-incaa.jpg" alt="Omint">
+                                    </div>
+                                    <h2 class="h3 experience-title">INCAA</h2>
+                                    <h3 class="experience-subtitle">Web app</h3>
+                                    <p>Currently wireframing and prototyping a web app for INCAA.</p>
+                                    <p>INCAA is the national film institute, the idea is to make a web and mobile app where everyone may watch online any film in the history of argentinian film making. Also to re-juvenate the brand and bring it closer to a younger audience.</p>
+                                    <p>The idea also is that the app will work s a social network itself, where users can register, have a profile, follow one another, have lists with favorites, pending to watch and share them with other users.</p>
+                                    <p>I also proposed that the institute should encourage famouse actors / actress and directors to be users registered in the site. If they have lists of favorites many other users will tend to watch the movies of their favorite actors or directors.</p>
+                                    <div class="credits">Project Cancelled - Juan Vanni</div>
+                                    <hr>
+                                </article>
+
+                                <article class="experience-item">
+                                    <div class="thumb">
+                                        <img src="../images/experience/thumb-omint.jpg" alt="Omint">
+                                    </div>
+                                    <h2 class="h3 experience-title">Omint</h2>
+                                    <h3 class="experience-subtitle">Website</h3>
+                                    <p>Programmed most of the front-end of the site of this well-known health insurance company in Argentina. I and also involved in it’s integration in DotNetNuke.</p>
+                                    <div class="credits">2010 - BridgerConway</div>
+                                    <hr>
+                                </article>
+
+                            </div>
+                        </div>
+                    </section>
+                    <footer class="jv-footer">
+                        <div class="container">
+                            <h5 class="copy">2014 - Developed by Juan Vanni with <a href="https://www.polymer-project.org/" target="_blank">Polymer Web Components</a></h5>
+                            <!-- <a class="twitter-follow-button" href="https://twitter.com/jota_vanni" data-show-count="false" data-lang="en"> Follow @jota_vanni</a> -->
+                        </div>
+                    </footer>
+                </main>
+            </core-scroll-header-panel>
+
+        </div>
+    </core-drawer-panel>
+
+        <!-- build:js(.) scripts/vendor.js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/Grid-A-Licious/jquery.grid-a-licious.js"></script>
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+          e.src='//www.google-analytics.com/analytics.js';
+          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+          ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+    </body>
+</html>

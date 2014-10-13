@@ -1,0 +1,22 @@
+.jv-footer {
+    min-height: 50px;
+    text-align: center;
+    color: #fff;
+    background: $brand-primary;
+
+    .copy {
+        // float: left;
+        margin: 0;
+        line-height: 50px;
+    }
+
+    .twitter-follow-button {
+        float: right;
+        margin-top: 15px;
+    }
+
+    a:hover,
+    a:active {
+        text-decoration: none;
+    }
+}
