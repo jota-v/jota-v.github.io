@@ -1,9 +1,0 @@
-[
-  "../MutationObservers/build.json",
-  "src/base.js",
-  "src/traverse.js",
-  "src/observe.js",
-  "src/upgrade.js",
-  "src/register.js",
-  "src/boot.js"
-]
