@@ -275,7 +275,9 @@ module.exports = function (grunt) {
                 strip: true
             },
             files: {
-                'dist/index.html': 'dist/index.html'
+                'dist/index.html': 'dist/index.html',
+                'dist/experience.html': 'dist/experience.html',
+                'dist/contact.html': 'dist/contact.html'
             },
         },
     },
@@ -334,6 +336,17 @@ module.exports = function (grunt) {
         src: '{,*/}*.css'
       }
     },
+
+
+    'gh-pages': {
+        options: {
+          base: 'dist',
+          branch: 'master',
+          message: 'Auto-generated commit'
+        },
+        src: ['**']
+    },
+
 
     // Run some tasks in parallel to speed up build process
     concurrent: {
@@ -409,5 +422,10 @@ module.exports = function (grunt) {
     'newer:jshint',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'default',
+    'gh-pages'
   ]);
 };

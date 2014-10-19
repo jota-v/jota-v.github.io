@@ -1,5 +1,5 @@
 body * {
-    text-rendering: optimizeLegibility;
+    text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -31,6 +31,14 @@ core-drawer-panel[narrow] button {
 ul {
   padding: 0;
   list-style: none;
+}
+
+a {
+    &:hover,
+    &:active,
+    &:focus {
+        outline: 0;
+    }
 }
 
 main {
