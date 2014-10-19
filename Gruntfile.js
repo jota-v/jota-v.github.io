@@ -334,17 +334,25 @@ module.exports = function (grunt) {
         cwd: '<%= config.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      bower: {
+        expand: true,
+        cwd: './',
+        dest: '<%= config.dist %>',
+        src: [
+          'bower_components/polymer/**/*'
+        ]
       }
     },
 
-
     'gh-pages': {
-        options: {
-          base: 'dist',
-          branch: 'master',
-          message: 'Auto-generated commit'
-        },
-        src: ['**']
+      options: {
+        base: 'dist',
+        branch: 'master',
+        message: 'Auto-generated commit',
+        repo: 'https://github.com/jota-v/jota-v.github.io.git'
+      },
+      src: '**/*'
     },
 
 
@@ -413,6 +421,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy:dist',
+    'copy:bower',
     // 'rev',
     'usemin',
     'vulcanize'
@@ -422,10 +431,5 @@ module.exports = function (grunt) {
     'newer:jshint',
     'test',
     'build'
-  ]);
-
-  grunt.registerTask('deploy', [
-    'default',
-    'gh-pages'
   ]);
 };
