@@ -1,0 +1,32 @@
+.drawer-panel {
+    background: $brand-primary;
+}
+
+.drawer-nav-item {
+    position: relative;
+    display: none;
+    @include size(100%, 50px);
+    padding-left: 15px;
+    font-family: $font-family-secondary;
+    line-height: 50px;
+    background: $brand-primary;
+    border-bottom: 1px solid $brand-terciary;
+
+    &:after {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        @include square(10px);
+        margin-top: -5px;
+        border-top: 1px solid $brand-secondary;
+        border-right: 1px solid $brand-secondary;
+        @include rotate(45deg);
+        content: '';
+    }
+}
+
+core-drawer-panel[selected="drawer"] {
+    .drawer-nav-item {
+        display: block;
+    }
+}

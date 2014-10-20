@@ -6,6 +6,7 @@
     background: url('../images/hexa-bg.png') no-repeat scroll center center $brand-primary;
 
     .container {
+        position: relative;
         width: 100%;
         max-width: 1280px;
         margin: 0 auto;
@@ -44,11 +45,12 @@
     .main-menu {
         .pull-left {
             float: left;
-            padding-left: 20px;
+            display: none;
         }
 
         .pull-right {
             float: right;
+            display: none;
         }
     }
 
@@ -77,6 +79,52 @@
 
         &:hover {
             text-decoration: none;
+        }
+    }
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: -20px;
+    right: 18px;
+    z-index: 1;
+    @include square(52px);
+    min-width: 0;
+    padding: 12px 0;
+    border-radius: 50%;
+
+    > span {
+        display: block;
+        @include size(29px, 3px);
+        margin: 5px auto;
+        background: #fff;
+    }
+}
+
+@media (min-width: $screen-xs) {
+    .navbar-toggle {
+        top: 8px;
+    }
+
+    .jv-navbar .main-menu {
+        .pull-left {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: $screen-md) {
+    .navbar-toggle {
+        display: none;
+    }
+
+    .jv-navbar .main-menu {
+        .pull-left {
+            padding-left: 20px;
+        }
+
+        .pull-right {
+            display: block;
         }
     }
 }

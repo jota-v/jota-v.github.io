@@ -30,9 +30,11 @@
 
         <core-drawer-panel responsiveWidth="9999px" class="left-drawer">
             <div drawer class="drawer-panel">
-                <a href="#">Experience</a>
-                <a href="#">Github</a>
-                <a href="#">Hire Me</a>
+                <a class="drawer-nav-item" href="index.html">Home</a>
+                <a class="drawer-nav-item" href="experience.html">Experience</a>
+                <a class="drawer-nav-item" href="https://github.com/jota-v">Github</a>
+                <a class="drawer-nav-item" href="http://waykup-app.com/">Waykup!</a>
+                <a class="drawer-nav-item" href="contact.html">Contact</a>
             </div>
 
             <div main>
@@ -40,10 +42,8 @@
 
                 <core-toolbar class="core-header jv-navbar">
 
-                    <paper-icon-button class="navbar-toggle" icon="menu"></paper-icon-button>
-
                     <div class="container bottom">
-                        <a href="index.html" class="h1 navbar-brand">Jota V</a>
+                        <h1 class="navbar-brand"><a href="index.html">Jota V<span class="jv-hidden">Juan Vanni</span></a></h1>
                         <p class="navbar-brand-tag">CSS Architect / UX Designer</p>
                     </div>
 
@@ -67,11 +67,17 @@
                                 <a class="nav-item" href="http://waykup-app.com/">
                                     <paper-button class="jv-btn">Waykup!</paper-button>
                                 </a>
-                                <a class="nav-item" href="#">
+                                <a class="nav-item" href="contact.html">
                                     <paper-button class="jv-btn">Contact</paper-button>
                                 </a>
                             </div>
                         </nav>
+
+                        <paper-button class="navbar-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </paper-button>
                     </div>
                 </core-toolbar>
 
