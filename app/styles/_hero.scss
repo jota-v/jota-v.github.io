@@ -1,0 +1,22 @@
+.hero {
+    height: 230px;
+    padding: $grid-gutter 0;
+    margin-bottom: $grid-gutter * 2;
+    text-align: center;
+    color: #fff;
+    background-color: #536dfe;
+    border-bottom: 1px solid $gray-lighter;
+
+    &-title {
+        margin-top: 0;
+    }
+}
+
+core-header-panel {
+    height: 100%;
+}
+
+.core-header {
+    height: 60px;
+    background-color: #536dfe;
+}

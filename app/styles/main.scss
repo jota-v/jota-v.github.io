@@ -1,25 +1,11 @@
 // Core variables and mixins
-@import "jv_variables";
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
-
-// Reset
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/normalize";
-
-// Core CSS
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/scaffolding";
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/type";
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
+@import "variables";
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon.scss";
 
 // Components
-@import "jv_fonts";
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/progress-bars";
+@import "fonts";
+
 
 // Custom styles
-@import "jv_globals";
-@import "jv_logos";
-@import "jv_navbar";
-@import "jv_drawer";
-@import "jv_footer";
-@import "jv_home";
-@import "jv_experience";
-@import "jv_contact";
+@import "scaffolding";
+@import "hero";
