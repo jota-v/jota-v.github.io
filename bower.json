@@ -1,13 +1,11 @@
 {
-  "name": "my-site-grunt",
-  "private": true,
+  "name": "jota-v-github-io",
+  "version": "0.0.0",
   "dependencies": {
-    "bootstrap-sass-official": "~3.2.0",
-    "core-scroll-header-panel": "Polymer/core-scroll-header-panel#~0.4.2",
-    "core-toolbar": "Polymer/core-toolbar#~0.4.2",
-    "core-drawer-panel": "Polymer/core-drawer-panel#~0.4.2",
-    "paper-button": "Polymer/paper-button#~0.4.2",
-    "core-tooltip": "Polymer/core-tooltip#~0.4.2",
-    "Grid-A-Licious": "https://github.com/suprb/Grid-A-Licious.git"
-  }
+    "react": "~0.5.1",
+    "suit-base": "~0.8.0",
+    "suit-components": "~0.3.0",
+    "suit-utils": "~0.10.3"
+  },
+  "devDependencies": {}
 }
