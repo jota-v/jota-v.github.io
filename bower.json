@@ -1,11 +1,10 @@
 {
   "name": "jota-v-github-io",
-  "version": "0.0.0",
+  "private": true,
   "dependencies": {
-    "react": "~0.5.1",
+    "jquery": "~1.11.1",
     "suit-base": "~0.8.0",
-    "suit-components": "~0.3.0",
-    "suit-utils": "~0.10.3"
-  },
-  "devDependencies": {}
+    "suit-utils": "~0.10.3",
+    "suit-components": "~0.3.0"
+  }
 }
