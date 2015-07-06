@@ -46,7 +46,7 @@ module.exports = function(grunt) {
             },
             styles: {
                 files: ['<%= config.app %>/styles/{,*/}*.css'],
-                tasks: ['newer:cssnext', 'postcss']
+                tasks: ['cssnext', 'postcss']
             },
             livereload: {
                 options: {
@@ -57,6 +57,20 @@ module.exports = function(grunt) {
                     '.tmp/styles/{,*/}*.css',
                     '<%= config.app %>/images/{,*/}*'
                 ]
+            }
+        },
+
+        browserSync: {
+            bsFiles: {
+                src : [
+                    '.tmp/styles/main.css',
+                    '<%= config.app %>/*.html'
+                ]
+            },
+            options: {
+                server: {
+                    baseDir: ['<%= config.app %>', './']
+                }
             }
         },
 
@@ -303,7 +317,6 @@ module.exports = function(grunt) {
         }
     });
 
-
     grunt.registerTask('serve', 'start the server and preview your app, --allow-remote for remote access', function(target) {
         if (grunt.option('allow-remote')) {
             grunt.config.set('connect.options.hostname', '0.0.0.0');
@@ -314,10 +327,10 @@ module.exports = function(grunt) {
 
         grunt.task.run([
             'clean:server',
-            'concurrent:server',
+            // 'concurrent:server',
             'cssnext',
             'postcss',
-            'connect:livereload',
+            'browserSync',
             'watch'
         ]);
     });
