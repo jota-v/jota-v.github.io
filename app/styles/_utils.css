@@ -1,0 +1,63 @@
+.u-clearfix:before,
+.u-clearfix:after {
+    display: table;
+    content: "";
+}
+
+.u-clearfix:after {
+    clear: both;
+}
+
+.u-clearBoth {
+    clear: both;
+}
+
+.u-hide {
+    display: none;
+}
+
+.u-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.u-pullLeft {
+    float: left;
+}
+
+.u-pullRight {
+    float: right;
+}
+
+.u-arrange,
+.u-arrangeFill {
+    overflow: hidden;
+}
+
+.u-arrangeFit {
+    float:left;
+    margin-right: 5px;
+}
+
+.u-arrangeFit--right {
+    float: right;
+    margin-left: 5px;
+}
+
+.u-btnReset {
+    padding: 0;
+    text-align: left;
+    background: none;
+    border: 0;
+    outline: 0;
+}
+
+.u-btnReset:hover {
+    text-decoration: underline;
+}
+
+.u-btnReset:focus,
+.u-btnReset:active {
+    outline: 0;
+}

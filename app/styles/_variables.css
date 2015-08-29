@@ -1,22 +1,3 @@
 :root {
-    /*grays*/
-    --grayDraker: #212121;
-    --grayDark: #333;
-    --gray: #555;
-    --grayLight: #999;
-    --grayLighter: #ddd;
-    --grayLightest: #fafafa;
-
-    /*main colors*/
-    --brandColor: #3D5AFE;
-    --brandColorSecondary: #69F0AE;
-    --linkColor: #304FFE;
-
-    /*layout*/
-    --gutter: 10px;
-    --gutterMedium: 15px;
-    --vGutter: 10px;
-    --vGutterLg: 15px;
-    --vGutterDouble: 20px;
-
+    --color: red;
 }

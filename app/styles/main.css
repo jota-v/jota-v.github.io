@@ -1,20 +1,8 @@
-/*Base*/
-@import "../../bower_components/normalize-css/normalize.css";
-@import "../../bower_components/suit-base/lib/base.css";
-
-/*Utils*/
+/* Default variables */
 @import "_variables.css";
-@import "../../bower_components/suit-utils-display/lib/display.css";
-@import "../../bower_components/suit-utils-layout/lib/layout.css";
-@import "../../bower_components/suit-utils-size/lib/size.css";
 
-/*Components*/
-@import "../../bower_components/suit-components-arrange/lib/arrange.css";
-@import "../../bower_components/suit-components-grid/lib/grid.css";
-
-/*Globals*/
-@import "_globals.css";
-@import "_typography.css";
-
-/*App*/
-@import "_hero.css";
+/* Base styles */
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/suitcss-base/index.css";
+@import "_utils.css";
+@import "_base.css";
