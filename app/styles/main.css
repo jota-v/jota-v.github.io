@@ -6,3 +6,8 @@
 @import "../../node_modules/suitcss-base/index.css";
 @import "_utils.css";
 @import "_base.css";
+@import "_typography.css";
+
+/* Components */
+@import "components/_grid.css";
+@import "components/_buttons.css";

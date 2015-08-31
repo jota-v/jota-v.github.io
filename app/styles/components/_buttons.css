@@ -1,0 +1,12 @@
+.btn {
+    display: inline-block;
+    padding: 0 20px;
+    line-height: 38px;
+    color: var(--grey-e);
+    background: var(--color-link);
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: color(var(--color-link) lightness(+5%));
+}

@@ -1,5 +1,9 @@
 body {
-    background: var(--color);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+    background: #fff;
+    color: var(--grey-4);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
 }

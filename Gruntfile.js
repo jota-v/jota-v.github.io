@@ -6,10 +6,7 @@
 
 module.exports = function(grunt) {
 
-    // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
-
-    // Load grunt tasks automatically
     require('load-grunt-tasks')(grunt);
 
     // Configurable paths
@@ -18,13 +15,10 @@ module.exports = function(grunt) {
         dist: 'dist'
     };
 
-    // Define the configuration for all the tasks
     grunt.initConfig({
 
-        // Project settings
         config: config,
 
-        // Watches files for changes and runs tasks based on the changed files
         watch: {
             js: {
                 files: ['<%= config.app %>/scripts/{,*/}*.js'],
@@ -85,7 +79,6 @@ module.exports = function(grunt) {
             server: '.tmp'
         },
 
-        // Make sure code styles are up to par and there are no obvious mistakes
         jshint: {
             options: {
                 jshintrc: '.jshintrc',
@@ -109,14 +102,14 @@ module.exports = function(grunt) {
             }
         },
 
-        // Autoprefixr
         postcss: {
             options: {
-                map: true, // inline sourcemaps
+                map: true,
                 processors: [
                     require('postcss-import'),
                     require('postcss-custom-properties'),
                     require('postcss-calc'),
+                    require('postcss-color-function'),
                     require('autoprefixer-core')({
                         browsers: ['> 1%', 'last 2 versions', 'Opera 12.1']
                     })
@@ -132,7 +125,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // Renames files for browser caching purposes
         filerev: {
             dist: {
                 src: [
