@@ -7,7 +7,11 @@
 @import "_utils.css";
 @import "_base.css";
 @import "_typography.css";
+@import "../../node_modules/grunt-evil-icons/node_modules/evil-icons/assets/evil-icons.css";
 
 /* Components */
 @import "components/_grid.css";
 @import "components/_buttons.css";
+
+/*App*/
+@import "_hero.css";

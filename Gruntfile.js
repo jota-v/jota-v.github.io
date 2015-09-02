@@ -27,6 +27,10 @@ module.exports = function(grunt) {
             gruntfile: {
                 files: ['Gruntfile.js']
             },
+            html: {
+                files: ['<%= config.app %>/{,*/}*.html'],
+                tasks: ['evil_icons:watch']
+            },
             styles: {
                 files: ['<%= config.app %>/styles/{,*/}*.css'],
                 tasks: ['postcss']
@@ -42,7 +46,7 @@ module.exports = function(grunt) {
             livereload: {
                 options: {
                     files: [
-                        '<%= config.app %>/{,*/}*.html',
+                        '.tmp/{,*/}*.html',
                         '.tmp/styles/{,*/}*.css',
                         '<%= config.app %>/images/{,*/}*',
                         '<%= config.app %>/scripts/{,*/}*.js'
@@ -183,6 +187,19 @@ module.exports = function(grunt) {
             }
         },
 
+        evil_icons: {
+            watch: {
+                files: {
+                    ".tmp/index.html": "<%= config.app %>/index.html"
+                }
+            },
+            dist: {
+                files: {
+                    "<%= config.dist %>/index.html": "<%= config.app %>/index.html"
+                }
+            }
+        },
+
         htmlmin: {
             dist: {
                 options: {
@@ -316,6 +333,7 @@ module.exports = function(grunt) {
         'copy:dist',
         'filerev',
         'usemin',
+        'evil_icons:dist',
         'htmlmin'
     ]);
 

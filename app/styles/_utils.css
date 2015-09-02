@@ -31,16 +31,16 @@
 }
 
 .u-arrange,
-.u-arrangeFill {
+.u-arrange-fill {
     overflow: hidden;
 }
 
-.u-arrangeFit {
+.u-arrange-fit {
     float:left;
     margin-right: 5px;
 }
 
-.u-arrangeFit--right {
+.u-arrange-fit--inverse {
     float: right;
     margin-left: 5px;
 }
