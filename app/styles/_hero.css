@@ -1,17 +1,12 @@
 .hero {
-    height: 100vh;
-    min-height: 400px;
-    color: var(--grey-f);
-    background: linear-gradient(var(--color-1) 20%, color(var(--color-1) blackness(+20%)) 90%);
-    margin-bottom: 50px;
+  height: 95vh;
+  min-height: 450px;
+  color: var(--grey-f);
+  background: var(--color-4);
+  margin-bottom: 50px;
 }
-
 .hero-title {
-    padding-top: 200px;
-    line-height: 1.15;
-    text-align: center;
-}
-
-.hero-title .icon {
-    vertical-align: middle;
+  font-size: 61px;
+  line-height: 99vh;
+  text-align: center;
 }
