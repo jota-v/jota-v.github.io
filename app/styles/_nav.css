@@ -1,0 +1,24 @@
+.nav {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  font: 18px/70px var(--ff-secondary);
+  /*font-weight: 700;*/
+  color: var(--grey-f);
+}
+
+.nav-logo {
+
+}
+
+.nav-menu > li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.nav-menu > li > a {
+  text-transform: uppercase;
+  color: var(--grey-f);
+}

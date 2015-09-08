@@ -1,63 +1,48 @@
-.u-clearfix:before,
-.u-clearfix:after {
-    display: table;
-    content: "";
+.u-clearfix:before, .u-clearfix:after {
+  display: table;
+  content: "";
 }
-
 .u-clearfix:after {
-    clear: both;
+  clear: both;
 }
-
 .u-clearBoth {
-    clear: both;
+  clear: both;
 }
-
 .u-hide {
-    display: none;
+  display: none;
 }
-
 .u-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
 .u-pullLeft {
-    float: left;
+  float: left;
 }
-
 .u-pullRight {
-    float: right;
+  float: right;
 }
-
-.u-arrange,
-.u-arrange-fill {
-    overflow: hidden;
+.u-arrange, .u-arrange-fill {
+  overflow: hidden;
 }
-
 .u-arrange-fit {
-    float:left;
-    margin-right: 5px;
+  float: left;
+  margin-right: 5px;
 }
-
 .u-arrange-fit--inverse {
-    float: right;
-    margin-left: 5px;
+  float: right;
+  margin-left: 5px;
 }
-
 .u-btnReset {
-    padding: 0;
-    text-align: left;
-    background: none;
-    border: 0;
-    outline: 0;
+  padding: 0;
+  text-align: left;
+  background: none;
+  border: 0;
+  outline: 0;
 }
-
 .u-btnReset:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
-.u-btnReset:focus,
-.u-btnReset:active {
-    outline: 0;
+.u-btnReset:focus, .u-btnReset:active {
+  outline: 0;
 }

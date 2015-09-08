@@ -1,17 +1,19 @@
 /* Default variables */
 @import "_variables.css";
 
-/* Base styles */
+/* Scaffolding */
 @import "../../node_modules/normalize.css/normalize.css";
 @import "../../node_modules/suitcss-base/index.css";
+@import "_scaffolding.css";
 @import "_utils.css";
-@import "_base.css";
+@import "_layout.css";
 @import "_typography.css";
-@import "../../node_modules/grunt-evil-icons/node_modules/evil-icons/assets/evil-icons.css";
 
 /* Components */
-@import "components/_grid.css";
 @import "components/_buttons.css";
+@import "../../node_modules/grunt-evil-icons/node_modules/evil-icons/assets/evil-icons.css";
+@import "../../bower_components/wow/css/libs/animate.css";
 
-/*App*/
+/* Molecules */
+@import "_nav.css";
 @import "_hero.css";

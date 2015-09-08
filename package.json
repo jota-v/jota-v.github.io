@@ -16,6 +16,7 @@
     "grunt-contrib-jshint": "^0.11.0",
     "grunt-contrib-uglify": "^0.8.0",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-cssnano": "^1.1.0",
     "grunt-evil-icons": "^0.3.6",
     "grunt-filerev": "^2.2.0",
     "grunt-newer": "^1.1.0",
@@ -38,6 +39,7 @@
   },
   "dependencies": {
     "jquery": "^2.1.4",
+    "mobile-detect": "^1.2.1",
     "normalize.css": "^3.0.3",
     "suitcss-base": "^0.8.0"
   }
