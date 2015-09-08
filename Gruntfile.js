@@ -114,7 +114,7 @@ module.exports = function(grunt) {
           require('postcss-calc'),
           require('postcss-color-function'),
           require('autoprefixer-core')({
-            browsers: ['> 1%', 'last 2 versions', 'Opera 12.1']
+            browsers: ['> 1%', 'last 6 versions']
           })
         ]
       },
@@ -123,7 +123,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '<%= config.app %>/styles',
           dest: '.tmp/styles/',
-          src: ['main.css', 'atomizer.css']
+          src: ['main.css','main__large.css','atomizer.css']
         }]
       }
     },

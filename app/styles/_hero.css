@@ -1,12 +1,11 @@
 .hero {
-  height: 95vh;
-  min-height: 450px;
+  height: 260px;
   color: var(--grey-f);
   background: var(--color-4);
+  padding: 22% 5% 0;
   margin-bottom: 50px;
 }
 .hero-title {
-  font-size: 61px;
-  line-height: 99vh;
+  font-size: 13vw;
   text-align: center;
 }

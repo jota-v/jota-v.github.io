@@ -9,18 +9,25 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-  <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/atomizer.css">
-  <!-- endbuild -->
 
   <!-- build:js(.) scripts/mobile-detect.js -->
   <script src="./node_modules/mobile-detect/mobile-detect.js"></script>
   <!-- endbuild -->
 
+  <script>
+    var md = new MobileDetect(window.navigator.userAgent);
+    if (md.mobile()) {
+      // document.getElementById("body").className += "mobile";
+    } else {
+      // document.getElementById("body").className += "not-mobile";
+      document.write('<link rel="stylesheet" href="styles/main__large.css">');
+    }
+  </script>
+
 </head>
 
-<body>
+<body id="body">
   <nav class="nav u-clearfix">
     <div class="container">
       <a class="nav-logo u--pullLeft" href="">JV</a>
@@ -39,7 +46,7 @@
 
   <header class="hero">
     <div class="container">
-      <h1 class="hero-title">Building UIs the right way</h1>
+      <h1 class="hero-title">Building <br>done right</h1>
     </div>
   </header>
 
