@@ -1,0 +1,22 @@
+.xaSlide {
+  width: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.xaSlide-container {
+  display: table;
+}
+
+.xaSlide-item {
+  display: table-cell;
+  padding:  15px;
+}
+
+.xaSlide-item:first-child {
+  padding-left: 0;
+}
+
+.xaSlide-item:last-child {
+  padding-right: 0;
+}

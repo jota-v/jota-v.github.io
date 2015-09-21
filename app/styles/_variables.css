@@ -9,6 +9,7 @@
   --grey-f: #F5F5F5;
 
   /*Colors*/
+  --brandMain: #4E3FB5;
   --color-1: #50DAC8;
   --color-2: #DC68D2;
   --color-4: #282034;
@@ -19,7 +20,7 @@
   --color-link: var(--color-info);
 
   /*Layout*/
-  --gutter: 10px;
+  --gutter: 12px;
 
   /*Typography*/
   --ff-primary: "Open Sans", Helvetica, Arial, sans-serif;

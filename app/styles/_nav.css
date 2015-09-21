@@ -1,22 +1,25 @@
 .nav {
-  width: 100%;
-  height: 50px;
-  font: 14px/50px var(--ff-secondary);
-  color: var(--grey-f);
+  font: 14px var(--ff-secondary);
+  /*border-bottom: 1px solid var(--brandMain);*/
+  backface-visibility: hidden;
 }
 
-.nav-logo {
-
-}
-.nav-menu {
-  display: none;
-}
-.nav-menu > li {
-  display: inline-block;
-  margin-left: 15px;
+.nav,
+.nav-logo,
+.nav-btn {
+  transition: all 200ms ease;
 }
 
-.nav-menu > li > a {
-  text-transform: uppercase;
-  color: var(--grey-f);
+.nav.active {
+  background: rgba(255,255,255,.95);
+  color: var(--brandMain);
+  box-shadow: 0 2px 4px rgba(0,0,0,.18);
+}
+
+.nav.active .nav-logo {
+  color: var(--brandMain);
+}
+
+.nav.active .nav-btn span{
+  background: var(--brandMain);
 }

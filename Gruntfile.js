@@ -1,7 +1,3 @@
-/*jshint node:true*/
-
-// Generated on 2015-08-29 using
-// generator-webapp 0.5.1
 'use strict';
 
 module.exports = function(grunt) {
@@ -29,7 +25,7 @@ module.exports = function(grunt) {
       },
       html: {
         files: ['<%= config.app %>/{,*/}*.html'],
-        tasks: ['evil_icons:watch']
+        tasks: ['evil_icons:watch','atomizer']
       },
       styles: {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
@@ -97,9 +93,21 @@ module.exports = function(grunt) {
     },
 
     atomizer: {
-      options: {
+      task: {
+        options: {
+          config: {
+            breakPoints: {
+              'md': '@media(min-width:768px)',
+              'lg': '@media(min-width:1024px)'
+            },
+            custom: {
+              '$brandMain': '#4E3FB5',
+              '$gutter': '12px'
+            }
+          }
+        },
         files: [{
-          src: ['<%= config.app %>/*.html'],
+          src: '<%= config.app %>/index.html',
           dest: '<%= config.app %>/styles/atomizer.css'
         }]
       }
@@ -110,9 +118,7 @@ module.exports = function(grunt) {
         map: true,
         processors: [
           require('postcss-import'),
-          require('postcss-custom-properties'),
-          require('postcss-calc'),
-          require('postcss-color-function'),
+          require('postcss-css-variables'),
           require('autoprefixer-core')({
             browsers: ['> 1%', 'last 6 versions']
           })
@@ -313,9 +319,10 @@ module.exports = function(grunt) {
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
+    'atomizer',
     'postcss',
     'concat',
-    'cssmin', //cssnano
+    'cssmin',
     'uglify',
     'copy:dist',
     'filerev',
