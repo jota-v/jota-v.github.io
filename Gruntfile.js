@@ -35,9 +35,10 @@ module.exports = function(grunt) {
 
     browserSync: {
       options: {
-        notify: false,
+        notify: true,
         background: true,
-        browser: 'Google Chrome'
+        browser: 'Google Chrome',
+        open: false
       },
       livereload: {
         options: {
@@ -102,7 +103,8 @@ module.exports = function(grunt) {
             },
             custom: {
               '$brandMain': '#4E3FB5',
-              '$gutter': '12px'
+              '$gutter': '12px',
+              '$Lato': 'Lato'
             }
           }
         },

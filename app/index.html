@@ -14,13 +14,13 @@
   <!-- build:js(.) scripts/mobile-detect.js -->
   <script src="./node_modules/mobile-detect/mobile-detect.js"></script>
   <!-- endbuild -->
+
   <script>
     var md = new MobileDetect(window.navigator.userAgent);
     if (! md.mobile()) {
       document.write('<link rel="stylesheet" href="styles/main__large.css">');
     }
   </script>
-
 </head>
 
 <body id="body">
@@ -86,9 +86,10 @@
       </article>
     </div>
   </section>
+
   <section>
     <div class="H(50px) Lh(50px) Bg(#eee) Ta(c)">
-      <a href="" class="D(b)">View more</a>
+      <a href="" class="D(b) Fz(13px) Tt(u)">View all work</a>
     </div>
     <div class="xaSlide">
       <ul class="xaSlide-container container Py(30px)">
@@ -104,8 +105,14 @@
       </ul>
     </div>
   </section>
-  <footer>
 
+  <section class="section section--negative Ta(c)">
+    <h2 class="Mb(15px)">Want to work with me?</h2>
+    <a href="#" class="btn">Get in touch</a>
+  </section>
+
+  <footer>
+    <small>2015 Juan Vanni</small>
   </footer>
 
 

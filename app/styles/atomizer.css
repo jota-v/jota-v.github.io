@@ -25,6 +25,9 @@
 .Fz\(13vw\) {
   font-size: 13vw;
 }
+.Fz\(13px\) {
+  font-size: 13px;
+}
 .H\(50px\) {
   height: 50px;
 }
@@ -45,6 +48,9 @@
 }
 .Mb\(12px\) {
   margin-bottom: 12px;
+}
+.Mb\(15px\) {
+  margin-bottom: 15px;
 }
 .P\(0\) {
   padding: 0;
@@ -76,6 +82,9 @@
 }
 .Ta\(c\) {
   text-align: center;
+}
+.Tt\(u\) {
+  text-transform: uppercase;
 }
 .W\(100\%\) {
   width: 100%;
