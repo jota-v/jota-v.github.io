@@ -10,6 +10,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
   <link rel="stylesheet" href="styles/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
 
   <!-- build:js(.) scripts/mobile-detect.js -->
   <script src="./node_modules/mobile-detect/mobile-detect.js"></script>
@@ -33,7 +34,7 @@
     }
   </script>
 
-  <nav class="nav u-clearfix Pos(f) H(50px) W(100%) Lh(50px)">
+  <nav class="nav u-clearfix Pos(f) H(50px) W(100%) Lh(50px) Z(10)">
     <div class="container">
       <a class="nav-logo Fl(start) C(#fff) Fz(23px)" href="#">JV</a>
       <button class="nav-btn hamburger Fl(end) Mt(17px)">
@@ -49,7 +50,7 @@
     </div>
   </nav>
 
-  <header class="hero P(r) Pt(100px) Pb(65px) Px(6%) Ta(c) Bg($brandMain) C(#fff)">
+  <header class="hero P(r) Pt(100px) Pb(65px) Px(7%) Ta(c) Bg($brandMain) C(#fff)">
     <div class="container">
       <h1 class="hero-title Mb(10px) Fz(13vw)">Building done right.</h1>
       <p>2015 Portfolio of Juan Vanni. Creative front-end dev from Buenos Aires.</p>
@@ -59,30 +60,45 @@
   <section class="section u-clearfix">
     <article class="container">
       <div class="col W(100%) W(50%)--md Fl(start)">
-        <h2 class="Mb(30px)">I'm a passionate front-end dev specialized in UI and mobile development.</h2>
+        <h2 class="Mb(25px) Fw(300)">I'm a passionate front-end dev specialized in UI and mobile development.</h2>
       </div>
       <div class="col W(100%) W(50%)--md Fl(start)">
         <p class="Mb(12px)">My name is Juan Vanni (a.k.a. Jota) and I live in Buenos Aires. I'm a passionate front-end developer - specialized in UI and mobile -, UX designer and speaker. I stand out for writing neat, performant and scalable code, as also designing very well cared, thoughtful user experiences.</p>
         <p class="Mb(12px)">Throughout my career I worked for some of the biggest brands in Argentina in all kind of projects. From big corporation sites, e-commerce platforms, mobile applications and HTML5 video games.</p>
-        <p class="Mb(12px)">I'm a very detail oriented professional always focused on achieving outstanding results. I love what I do and that's the fuel that gets me on delivering high quality products.</p>
-        <a class="btn D(b) W(100%) Mt(25px)" href="#">Learn More</a>
+        <p class="Mb(25px)">I'm a very detail oriented professional always focused on achieving outstanding results. I love what I do and that's the fuel that gets me on delivering high quality products.</p>
+        <a class="btn D(b) W(100%) Fw(900) Fz(12px) Lts(1px)" href="#">Learn More</a>
       </div>
     </article>
   </section>
 
-  <section class="section section--negative section--highlights P(0)">
+  <section class="section section--negative P(0)">
     <div class="owl-carousel owl-theme">
       <article class="W(100%) Px($gutter) Py(50px)">
-        <h2 class="">Waykup</h2>
-        <p>iOS native app</p>
+        <div class="col W(100%) W(50%)--md Fl(start)">
+            <h2 class="Mb(12px)">Waykup</h2>
+            <p class="Mb(25px)">With this simple and easy to use proximity alarm, you no longer need to worry about missing your stop. With Waykup you can get the most of each daily trip!</p>
+          </div>
+          <div class="col W(100%) W(50%)--md Fl(start)">
+            <img src="images/iphone-hand.png">
+          </div>
       </article>
       <article class="W(100%) Px($gutter) Py(50px)">
-        <h2 class="">MercadoLibre</h2>
-        <p>Biggest eCommerce in Latin America</p>
+        <div class="col W(100%) W(50%)--md Fl(start)">
+          <h2 class="Mb(12px)">An online marketplace.</h2>
+          <p class="Mb(25px)">MercadoLibre is the largest e-commerce ecosystem in Latin America. It offer a wide range of services to our sellers and buyers throughout the region including marketplace, payments, advertising and e-building solutions.</p>
+        </div>
+        <div class="col W(100%) W(50%)--md Fl(start)">
+          <img src="images/highlight_MELI.png">
+        </div>
       </article>
       <article class="W(100%) Px($gutter) Py(50px)">
-        <h2 class="">Preguntados</h2>
-        <p>Video Game with success all around the world.</p>
+        <div class="col W(100%) W(50%)--md Fl(start)">
+          <h2 class="Mb(12px)">A multiplayer trivia game.</h2>
+          <p class="Mb(25px)">Is an Argentinian trivia multiplayer game for Android, iOS and web browsers. It can be played against Facebook friends and users who registered with their e-mails.</p>
+        </div>
+        <div class="col W(100%) W(50%)--md Fl(start)">
+          <img src="images/highlight_TRIVIA.png">
+        </div>
       </article>
     </div>
   </section>
@@ -92,16 +108,15 @@
       <a href="" class="D(b) Fz(13px) Tt(u)">View all work</a>
     </div>
     <div class="xaSlide">
-      <ul class="xaSlide-container container Py(30px)">
-        <li class="xaSlide-item">brand</li>
-        <li class="xaSlide-item">brand</li>
-        <li class="xaSlide-item">brand</li>
-        <li class="xaSlide-item">brand</li>
-        <li class="xaSlide-item">brand</li>
-        <li class="xaSlide-item">brand</li>
-        <li class="xaSlide-item">brand</li>
-        <li class="xaSlide-item">brand</li>
-        <li class="xaSlide-item">brand</li>
+      <ul class="xaSlide-container container Py(20px)">
+        <li class="xaSlide-item"><img src="images/logo_IBEROSTAR.png" alt="Iberostar"></li>
+        <li class="xaSlide-item"><img src="images/logo_YPF.png" alt="YPF"></li>
+        <li class="xaSlide-item"><img src="images/logo_MERCADOLIBRE.png" alt="mercadolibre"></li>
+        <li class="xaSlide-item"><img src="images/logo_PREGUNTADOS.png" alt="Trivia Crack"></li>
+        <li class="xaSlide-item"><img src="images/logo_TRUMP.png" alt="Trump"></li>
+        <li class="xaSlide-item"><img src="images/logo_CONSULTATIO.png" alt="Consultatio"></li>
+        <li class="xaSlide-item"><img src="images/logo_OMINT.png" alt="omint"></li>
+        <li class="xaSlide-item"><img src="images/logo_TECHO.png" alt="Techo"></li>
       </ul>
     </div>
   </section>

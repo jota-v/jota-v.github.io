@@ -1,16 +1,16 @@
 .btn {
   display: inline-block;
   padding: 0 20px;
-  line-height: 44px;
+  line-height: 42px;
   text-align: center;
   text-transform: uppercase;
-  color: var(--brandMain);
+  color: var(--grey-4);
   /*background: #fff;*/
-  border: 1px solid var(--brandMain);
+  border: 1px solid var(--grey-2);
   border-radius: 5px;
 }
 
 .btn:hover {
   color: #fff;
-  background: var(--brandMain);
+  background: var(--grey-2);
 }

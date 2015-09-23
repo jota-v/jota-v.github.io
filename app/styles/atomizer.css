@@ -19,11 +19,20 @@
 .Fl\(end\) {
   float: right;
 }
+.Fw\(300\) {
+  font-weight: 300;
+}
+.Fw\(900\) {
+  font-weight: 900;
+}
 .Fz\(23px\) {
   font-size: 23px;
 }
 .Fz\(13vw\) {
   font-size: 13vw;
+}
+.Fz\(12px\) {
+  font-size: 12px;
 }
 .Fz\(13px\) {
   font-size: 13px;
@@ -31,20 +40,20 @@
 .H\(50px\) {
   height: 50px;
 }
+.Lts\(1px\) {
+  letter-spacing: 1px;
+}
 .Lh\(50px\) {
   line-height: 50px;
 }
 .Mt\(17px\) {
   margin-top: 17px;
 }
-.Mt\(25px\) {
-  margin-top: 25px;
-}
 .Mb\(10px\) {
   margin-bottom: 10px;
 }
-.Mb\(30px\) {
-  margin-bottom: 30px;
+.Mb\(25px\) {
+  margin-bottom: 25px;
 }
 .Mb\(12px\) {
   margin-bottom: 12px;
@@ -55,9 +64,9 @@
 .P\(0\) {
   padding: 0;
 }
-.Px\(6\%\) {
-  padding-left: 6%;
-  padding-right: 6%;
+.Px\(7\%\) {
+  padding-left: 7%;
+  padding-right: 7%;
 }
 .Px\(\$gutter\) {
   padding-left: 12px;
@@ -67,9 +76,9 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.Py\(30px\) {
-  padding-top: 30px;
-  padding-bottom: 30px;
+.Py\(20px\) {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .Pt\(100px\) {
   padding-top: 100px;
@@ -88,6 +97,9 @@
 }
 .W\(100\%\) {
   width: 100%;
+}
+.Z\(10\) {
+  z-index: 10;
 }
 @media(min-width:768px) {
   .W\(50\%\)--md {

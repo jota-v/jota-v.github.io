@@ -1,6 +1,5 @@
 .nav {
   font: 14px var(--ff-secondary);
-  /*border-bottom: 1px solid var(--brandMain);*/
   backface-visibility: hidden;
 }
 
