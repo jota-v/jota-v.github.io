@@ -7,6 +7,9 @@
 .C\(\#fff\) {
   color: #fff;
 }
+.C\(\$grey-2\) {
+  color: #212121;
+}
 .D\(n\) {
   display: none;
 }

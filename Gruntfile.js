@@ -102,9 +102,25 @@ module.exports = function(grunt) {
               'lg': '@media(min-width:1024px)'
             },
             custom: {
+              //Greys
+              '$grey-2': '#212121',
+              '$grey-4': '#424242',
+              '$grey-6': '#616161',
+              '$grey-9': '#9E9E9E',
+              '$grey-b': '#BDBDBD',
+              '$grey-e': '#EEEEEE',
+              '$grey-f': '#F5F5F5',
+
+              // Color
               '$brandMain': '#4E3FB5',
-              '$gutter': '12px',
-              '$Lato': 'Lato'
+
+              // fonts
+              '$Fs-base': '15px',
+              '$Fs-small': '12px',
+              '$Ff-primary': '"Lato", Helvetica, Arial, sans-serif',
+
+              // Layout
+              '$gutter': '12px'
             }
           }
         },
@@ -121,7 +137,7 @@ module.exports = function(grunt) {
         processors: [
           require('postcss-import'),
           require('postcss-css-variables'),
-          require('autoprefixer-core')({
+          require('autoprefixer')({
             browsers: ['> 1%', 'last 6 versions']
           })
         ]

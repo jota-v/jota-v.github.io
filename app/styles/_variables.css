@@ -23,7 +23,8 @@
   --gutter: 12px;
 
   /*Typography*/
-  --ff-primary: "Lato", Helvetica, Arial, sans-serif;
-  --ff-secondary: "Montserrat", Helvetica, Arial, sans-serif;
-  --fs-base: 15px;
+  --Ff-primary: "Lato", Helvetica, Arial, sans-serif;
+  --Ff-secondary: "Montserrat", Helvetica, Arial, sans-serif;
+  --Fs-base: 15px;
+  --Fs-small: 12px;
 }
