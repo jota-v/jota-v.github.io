@@ -25,6 +25,8 @@
   /*Typography*/
   --Ff-primary: "Lato", Helvetica, Arial, sans-serif;
   --Ff-secondary: "Montserrat", Helvetica, Arial, sans-serif;
-  --Fs-base: 15px;
-  --Fs-small: 12px;
+  --Fz-base: 14px;
+  --Fz-sm: 12px;
+  --Fz-lg: 17px;
+  --Fz-xlg: 23px;
 }

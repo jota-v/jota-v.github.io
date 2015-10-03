@@ -1,10 +1,6 @@
 .hero {
   height: 95vh;
   min-height: 450px;
-  background: var(--color-4);
-  padding: 0;
-}
-.hero-title {
-  font-size: 61px;
-  /*line-height: 99vh;*/
+  padding-top: 38vh;
+  top: 50px;
 }

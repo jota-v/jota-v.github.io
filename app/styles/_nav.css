@@ -1,12 +1,13 @@
 .nav {
   font: 14px var(--Ff-secondary);
+  background: var(--brandMain);
   backface-visibility: hidden;
 }
 
 .nav,
 .nav-logo,
 .nav-btn {
-  transition: all 200ms ease;
+  transition: all 300ms ease;
 }
 
 .nav.active {

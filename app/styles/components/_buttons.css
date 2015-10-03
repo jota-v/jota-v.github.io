@@ -4,13 +4,13 @@
   line-height: 42px;
   text-align: center;
   text-transform: uppercase;
-  color: var(--grey-4);
+  color: var(--brandMain);
   /*background: #fff;*/
-  border: 1px solid var(--grey-2);
+  border: 1px solid var(--brandMain);
   border-radius: 5px;
 }
 
 .btn:hover {
   color: #fff;
-  background: var(--grey-2);
+  background: var(--brandMain);
 }

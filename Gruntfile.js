@@ -98,6 +98,7 @@ module.exports = function(grunt) {
         options: {
           config: {
             breakPoints: {
+              'sm': '@media(min-width:480px)',
               'md': '@media(min-width:768px)',
               'lg': '@media(min-width:1024px)'
             },
@@ -115,8 +116,10 @@ module.exports = function(grunt) {
               '$brandMain': '#4E3FB5',
 
               // fonts
-              '$Fs-base': '15px',
-              '$Fs-small': '12px',
+              '$Fz-base': '14px',
+              '$Fz-sm': '12px',
+              '$Fz-lg': '17px',
+              '$Fz-xlg': '23px',
               '$Ff-primary': '"Lato", Helvetica, Arial, sans-serif',
 
               // Layout
@@ -189,7 +192,8 @@ module.exports = function(grunt) {
 
     cssnano: {
       options: {
-        sourcemap: false
+        sourcemap: false,
+        autoprefixer: false
       },
       dist: {
         files: [{

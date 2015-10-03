@@ -1,6 +1,6 @@
 
 html {
-  font-size: var(--Fs-base);
+  font-size: var(--Fz-base);
 }
 body {
   font-family: var(--Ff-primary);
@@ -9,16 +9,16 @@ body {
 }
 
 h1,h2,h3,h4 {
-  line-height: 1.2;
   font-weight: 300;
 }
 
 h1 {
   font-weight: 600;
+  line-height: 1.1;
 }
 
-h2 {
-  font-size: 1.65rem;
+h3 {
+  font-size: var(--Fz-xlg);
 }
 
 /*h1 {
