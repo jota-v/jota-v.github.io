@@ -1,9 +1,0 @@
-/* Default variables */
-@import "_variables.css";
-
-
-@media (min-width:768px) {
-  /* Molecules */
-  @import "_nav__large.css";
-  @import "_hero__large.css";
-}

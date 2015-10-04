@@ -1,22 +1,9 @@
-// Generated on 2015-10-03 using
-// generator-webapp 1.1.0
 'use strict';
 
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// If you want to recursively match all subfolders, use:
-// 'test/spec/**/*.js'
+module.exports = function(grunt) {
 
-module.exports = function (grunt) {
-
-  // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
-
-  // Automatically load required grunt tasks
-  require('jit-grunt')(grunt, {
-    useminPrepare: 'grunt-usemin'
-  });
+  require('load-grunt-tasks')(grunt);
 
   // Configurable paths
   var config = {
@@ -24,70 +11,48 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
-  // Define the configuration for all the tasks
   grunt.initConfig({
 
-    // Project settings
     config: config,
 
-    // Watches files for changes and runs tasks based on the changed files
     watch: {
-      babel: {
+      js: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
-        tasks: ['babel:dist']
-      },
-      babelTest: {
-        files: ['test/spec/{,*/}*.js'],
-        tasks: ['babel:test', 'test:watch']
+        tasks: ['jshint'],
       },
       gruntfile: {
         files: ['Gruntfile.js']
       },
       html: {
         files: ['<%= config.app %>/{,*/}*.html'],
-        tasks: ['atomizer']
+        tasks: ['evil_icons:watch','atomizer']
       },
-      stylus: {
-        files: ['<%= config.app %>/styles/{,*/}*.styl'],
-        tasks: ['stylus', 'postcss']
+      styles: {
+        files: ['<%= config.app %>/styles/{,*/}*.css'],
+        tasks: ['postcss']
       }
     },
 
     browserSync: {
       options: {
-        notify: false,
+        notify: true,
         background: true,
-        watchOptions: {
-          ignored: ''
-        }
+        browser: 'Google Chrome',
+        open: false
       },
       livereload: {
         options: {
           files: [
-            '<%= config.app %>/{,*/}*.html',
+            '.tmp/{,*/}*.html',
             '.tmp/styles/{,*/}*.css',
             '<%= config.app %>/images/{,*/}*',
-            '.tmp/scripts/{,*/}*.js'
+            '<%= config.app %>/scripts/{,*/}*.js'
           ],
           port: 9000,
           server: {
             baseDir: ['.tmp', config.app],
             routes: {
-              '/bower_components': './bower_components',
-              '/node_modules': './node_modules'
-            }
-          }
-        }
-      },
-      test: {
-        options: {
-          port: 9001,
-          open: false,
-          logLevel: 'silent',
-          host: 'localhost',
-          server: {
-            baseDir: ['.tmp', './test', config.app],
-            routes: {
+              '/node_modules': './node_modules',
               '/bower_components': './bower_components'
             }
           }
@@ -116,49 +81,16 @@ module.exports = function (grunt) {
       server: '.tmp'
     },
 
-    // Make sure code styles are up to par and there are no obvious mistakes
-    eslint: {
-      target: [
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc',
+        reporter: require('jshint-stylish')
+      },
+      all: [
         'Gruntfile.js',
         '<%= config.app %>/scripts/{,*/}*.js',
-        '!<%= config.app %>/scripts/vendor/*',
-        'test/spec/{,*/}*.js'
+        '!<%= config.app %>/scripts/vendor/*'
       ]
-    },
-
-    // Mocha testing framework configuration options
-    mocha: {
-      all: {
-        options: {
-          run: true,
-          urls: ['http://<%= browserSync.test.options.host %>:<%= browserSync.test.options.port %>/index.html']
-        }
-      }
-    },
-
-    // Compiles ES6 with Babel
-    babel: {
-      options: {
-        sourceMap: true
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/scripts',
-          src: '{,*/}*.js',
-          dest: '.tmp/scripts',
-          ext: '.js'
-        }]
-      },
-      test: {
-        files: [{
-          expand: true,
-          cwd: 'test/spec',
-          src: '{,*/}*.js',
-          dest: '.tmp/spec',
-          ext: '.js'
-        }]
-      }
     },
 
     atomizer: {
@@ -202,36 +134,18 @@ module.exports = function (grunt) {
       }
     },
 
-    // Compiles Sass to CSS and generates necessary files if requested
-    sass: {
-      options: {
-        sourceMap: true,
-        sourceMapEmbed: true,
-        sourceMapContents: true,
-        includePaths: ['.']
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/styles',
-          src: ['*.{scss,sass}'],
-          dest: '.tmp/styles',
-          ext: '.css'
-        }]
-      }
-    },
-
     stylus: {
-      options: {
-        compress: false,
-        path: '.',
-        'include css': true,
-        relativeDest: '.tmp/styles'
-      },
-      dist: {
-        files: {
-          'main.css': '<%= config.app %>/styles/main.styl',
-          'main__large.css': '<%= config.app %>/styles/main__large.styl'
+      compile: {
+        options: {
+          compress: false
+        },
+        build: {
+          files: [{
+            expand: true,
+            cwd: '<%= config.app %>/styles',
+            dest: '.tmp/styles/',
+            src: ['main.css','main__large.css','atomizer.css']
+          }]
         }
       }
     },
@@ -240,22 +154,23 @@ module.exports = function (grunt) {
       options: {
         map: true,
         processors: [
+          // require('postcss-import'),
+          // require('postcss-css-variables'),
           require('autoprefixer')({
-            browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']
+            browsers: ['> 1%', 'last 6 versions']
           })
         ]
       },
-      dist: {
+      build: {
         files: [{
           expand: true,
-          cwd: '.tmp/styles/',
-          src: '{,*/}*.css',
-          dest: 'dist/styles/'
+          cwd: '<%= config.app %>/styles',
+          dest: '.tmp/styles/',
+          src: ['main.css','main__large.css','atomizer.css']
         }]
       }
     },
 
-    // Renames files for browser caching purposes
     filerev: {
       dist: {
         src: [
@@ -291,6 +206,21 @@ module.exports = function (grunt) {
       css: ['<%= config.dist %>/styles/{,*/}*.css']
     },
 
+    cssnano: {
+      options: {
+        sourcemap: false,
+        autoprefixer: false
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '.tmp/concat/styles',
+          dest: '<%= config.dist %>/styles/',
+          src: 'main.css'
+        }]
+      }
+    },
+
     // The following *-min tasks produce minified files in the dist folder
     imagemin: {
       dist: {
@@ -314,18 +244,16 @@ module.exports = function (grunt) {
       }
     },
 
-    cssnano: {
-      options: {
-        sourcemap: false,
-        autoprefixer: false
+    evil_icons: {
+      watch: {
+        files: {
+          ".tmp/index.html": "<%= config.app %>/index.html"
+        }
       },
       dist: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/concat/styles',
-          dest: '<%= config.dist %>/styles/',
-          src: 'main.css'
-        }]
+        files: {
+          "<%= config.dist %>/index.html": "<%= config.app %>/index.html"
+        }
       }
     },
 
@@ -367,21 +295,23 @@ module.exports = function (grunt) {
             'styles/fonts/{,*/}*.*'
           ]
         }]
+      },
+      styles: {
+        expand: true,
+        dot: true,
+        cwd: '<%= config.app %>/styles',
+        dest: '.tmp/styles/',
+        src: '{,*/}*.css'
       }
     },
 
     // Run some tasks in parallel to speed up build process
     concurrent: {
       server: [
-        'babel:dist',
-        'stylus'
-      ],
-      test: [
-        'babel'
+        'copy:styles'
       ],
       dist: [
-        'babel',
-        'stylus',
+        'copy:styles',
         'imagemin',
         'svgmin'
       ]
@@ -389,7 +319,7 @@ module.exports = function (grunt) {
   });
 
 
-  grunt.registerTask('serve', 'start the server and preview your app', function (target) {
+  grunt.registerTask('serve', 'start the server and preview your app', function(target) {
 
     if (target === 'dist') {
       return grunt.task.run(['build', 'browserSync:dist']);
@@ -404,44 +334,43 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('server', function (target) {
+  grunt.registerTask('server', function(target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run([target ? ('serve:' + target) : 'serve']);
   });
 
-  grunt.registerTask('test', function (target) {
+  grunt.registerTask('test', function(target) {
     if (target !== 'watch') {
       grunt.task.run([
         'clean:server',
         'concurrent:test',
-        'postcss'
+        'autoprefixer'
       ]);
     }
 
     grunt.task.run([
-      'browserSync:test',
-      'mocha'
+      'browserSync:test'
     ]);
   });
 
   grunt.registerTask('build', [
     'clean:dist',
-    'atomizer',
     'useminPrepare',
     'concurrent:dist',
+    'atomizer',
     'postcss',
     'concat',
-    'cssnano',
+    'cssmin',
     'uglify',
     'copy:dist',
     'filerev',
     'usemin',
+    'evil_icons:dist',
     'htmlmin'
   ]);
 
   grunt.registerTask('default', [
-    'newer:eslint',
-    'test',
+    'newer:jshint',
     'build'
   ]);
 };
