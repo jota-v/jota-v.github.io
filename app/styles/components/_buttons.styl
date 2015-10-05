@@ -1,15 +1,59 @@
 .btn {
   display: inline-block;
   padding: 0 20px;
-  line-height: 42px;
+  font-size: $Fz-xsm;
+  font-weight: 900;
+  line-height: 40px;
+  letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
-  color: $brandMain;
-  border: 1px solid $brandMain;
-  border-radius: 5px;
+  color: $grey-4;
+  border: 1px solid $grey-9;
+  border-radius: 3px;
+  transition: all 100ms;
+
+  &:hover {
+    background: $grey-f;
+    border-color: $grey-9;
+    color: $grey-4;
+    box-shadow: 0 3px 6px rgba(0,0,0,.21);
+  }
+
+  &:active {
+    color: #fff;
+    background: $grey-9;
+  }
+
 }
 
-.btn:hover {
-  color: #fff;
-  background: $brandMain;
+.btn--inverse {
+  background: $grey-f;
+  border-color: $grey-f;
+  color: $grey-4;
+
+  // &:hover {
+  //   background: $grey-f;
+  //   border-color: $grey-9;
+  //   color: $grey-4;
+  //   box-shadow: 0 3px 6px rgba(0,0,0,.21);
+  // }
+  //
+  // &:active {
+  //   color: #fff;
+  //   background: $grey-9;
+  // }
+
+}
+
+.btn--alternative {
+  background: $grey-2;
+  border-color: $color-error;
+  color: $color-error;
+
+  &:hover {
+    background: $color-error;
+    border-color: $color-error;
+    color: $grey-f;
+    box-shadow: 0 3px 6px rgba(0,0,0,.21);
+  }
 }

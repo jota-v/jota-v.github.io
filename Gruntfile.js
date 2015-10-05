@@ -18,6 +18,9 @@ module.exports = function (grunt) {
     useminPrepare: 'grunt-usemin'
   });
 
+  grunt.loadNpmTasks('grunt-media-query-extractor');
+  grunt.loadNpmTasks('grunt-comment-media-queries');
+
   // Configurable paths
   var config = {
     app: 'app',
@@ -45,10 +48,10 @@ module.exports = function (grunt) {
       },
       html: {
         files: ['<%= config.app %>/{,*/}*.html'],
-        tasks: ['atomizer']
+        tasks: ['atomizer','mqe']
       },
       stylus: {
-        files: ['<%= config.app %>/styles/{,*/}*.styl'],
+        files: ['<%= config.app %>/styles/{,*/}*.{styl,css}'],
         tasks: ['stylus', 'postcss']
       }
     },
@@ -57,6 +60,8 @@ module.exports = function (grunt) {
       options: {
         notify: false,
         background: true,
+        open: false,
+        browser: 'Google Chrome',
         watchOptions: {
           ignored: ''
         }
@@ -186,37 +191,19 @@ module.exports = function (grunt) {
               // fonts
               '$Fz-base': '14px',
               '$Fz-sm': '12px',
-              '$Fz-lg': '17px',
+              '$Fz-lg': '18px',
               '$Fz-xlg': '23px',
+              '$Fz-xxlg': '58px',
               '$Ff-primary': '"Lato", Helvetica, Arial, sans-serif',
 
               // Layout
-              '$gutter': '12px'
+              '$gutter': '15px'
             }
           }
         },
         files: [{
           src: '<%= config.app %>/index.html',
-          dest: '<%= config.app %>/styles/atomizer.css'
-        }]
-      }
-    },
-
-    // Compiles Sass to CSS and generates necessary files if requested
-    sass: {
-      options: {
-        sourceMap: true,
-        sourceMapEmbed: true,
-        sourceMapContents: true,
-        includePaths: ['.']
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/styles',
-          src: ['*.{scss,sass}'],
-          dest: '.tmp/styles',
-          ext: '.css'
+          dest: '<%= config.app %>/styles/_atomizer.css'
         }]
       }
     },
@@ -234,6 +221,29 @@ module.exports = function (grunt) {
           'main__large.css': '<%= config.app %>/styles/main__large.styl'
         }
       }
+    },
+
+    mqe: {
+      options: {
+        log: true
+      },
+      your_target: {
+        files: {
+          '<%= config.app %>/styles': ['<%= config.app %>/styles/_atomizer.css']
+        }
+      }
+    },
+
+    'comment-media-queries': {
+      options: {
+        // log: true
+      },
+      your_target: {
+        files: {
+          '<%= config.app %>/styles/_atomizer-min-width-768px.css': ['<%= config.app %>/styles/_atomizer-min-width-768px.css'],
+          '<%= config.app %>/styles/_atomizer-min-width-1024px.css': ['<%= config.app %>/styles/_atomizer-min-width-1024px.css']
+        }
+      },
     },
 
     postcss: {
@@ -255,6 +265,13 @@ module.exports = function (grunt) {
       }
     },
 
+    inline: {
+      dist: {
+        src: '<%= config.app %>/index.html',
+        dest: '.tmp/index.html'
+      }
+    },
+
     // Renames files for browser caching purposes
     filerev: {
       dist: {
@@ -268,14 +285,11 @@ module.exports = function (grunt) {
       }
     },
 
-    // Reads HTML for usemin blocks to enable smart builds that automatically
-    // concat, minify and revision files. Creates configurations in memory so
-    // additional tasks can operate on them
     useminPrepare: {
       options: {
         dest: '<%= config.dist %>'
       },
-      html: '<%= config.app %>/index.html'
+      html: '.tmp/index.html'
     },
 
     // Performs rewrites based on rev and the useminPrepare configuration
@@ -287,7 +301,7 @@ module.exports = function (grunt) {
           '<%= config.dist %>/styles'
         ]
       },
-      html: ['<%= config.dist %>/{,*/}*.html'],
+      html: ['.tmp/{,*/}*.html'],
       css: ['<%= config.dist %>/styles/{,*/}*.css']
     },
 
@@ -345,7 +359,7 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= config.dist %>',
+          cwd: '.tmp',
           src: '{,*/}*.html',
           dest: '<%= config.dist %>'
         }]
@@ -427,6 +441,9 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'atomizer',
+    'mqe',
+    'comment-media-queries',
+    'inline',
     'useminPrepare',
     'concurrent:dist',
     'postcss',
