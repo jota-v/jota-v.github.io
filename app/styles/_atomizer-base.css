@@ -78,6 +78,10 @@
 	line-height: 50px;
 }
 
+.Lh\(1\.15\) {
+	line-height: 1.15;
+}
+
 .Mx\(-12\%\) {
 	margin-left: -12%;
 	margin-right: -12%;
