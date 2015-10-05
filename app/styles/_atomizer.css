@@ -124,8 +124,8 @@
   .Fl\(start\)--md {
     float: left;
   }
-  .Fz\(62px\)--md {
-    font-size: 62px;
+  .Fz\(67px\)--md {
+    font-size: 67px;
   }
   .Fz\(40px\)--md {
     font-size: 40px;
@@ -133,6 +133,9 @@
   .Mx\(0\)--md {
     margin-left: 0;
     margin-right: 0;
+  }
+  .Mstart\(40px\)--md {
+    margin-left: 40px;
   }
   .Px\(0\)--md {
     padding-left: 0;

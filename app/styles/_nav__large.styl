@@ -15,21 +15,27 @@
   display: none;
 }
 
-.nav-menu {
+.navMenu {
   display: block;
 }
 
-.nav-menu > li {
+.navMenu-item {
   display: inline-block;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
-.nav-menu > li > a {
-  font-size: $Fz-base;
+.navMenu-item > a {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: $grey-f;
 
   .active & {
     color: $brandMain;
   }
+}
+
+.navMenu-icon {
+  font-size: 21px;
 }
