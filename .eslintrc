@@ -14,5 +14,15 @@
   "quotmark": "single",
   "strict": true,
   "undef": true,
-  "unused": true
+  "unused": true,
+  "indent": 2,
+  "rules": {
+    "eqeqeq": 1,
+    "curly": 1,
+    "strict": 2,
+    "quotes": [1, "single"]
+  },
+  "globals": {
+    "InstantClick": true
+  }
 }

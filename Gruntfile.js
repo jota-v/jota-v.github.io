@@ -123,6 +123,9 @@ module.exports = function (grunt) {
 
     // Make sure code styles are up to par and there are no obvious mistakes
     eslint: {
+      options: {
+        configFile: '.eslintrc'
+      },
       target: [
         'Gruntfile.js',
         '<%= config.app %>/scripts/{,*/}*.js',
@@ -243,7 +246,7 @@ module.exports = function (grunt) {
           '<%= config.app %>/styles/_atomizer-min-width-768px.css': ['<%= config.app %>/styles/_atomizer-min-width-768px.css'],
           '<%= config.app %>/styles/_atomizer-min-width-1024px.css': ['<%= config.app %>/styles/_atomizer-min-width-1024px.css']
         }
-      },
+      }
     },
 
     postcss: {
