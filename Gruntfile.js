@@ -48,7 +48,7 @@ module.exports = function (grunt) {
       },
       html: {
         files: ['<%= config.app %>/{,*/}*.html'],
-        tasks: ['atomizer','mqe']
+        tasks: ['inline','atomizer','mqe']
       },
       stylus: {
         files: ['<%= config.app %>/styles/{,*/}*.{styl,css}'],
@@ -69,7 +69,7 @@ module.exports = function (grunt) {
       livereload: {
         options: {
           files: [
-            '<%= config.app %>/{,*/}*.html',
+            '.tmp/{,*/}*.html',
             '.tmp/styles/{,*/}*.css',
             '<%= config.app %>/images/{,*/}*',
             '.tmp/scripts/{,*/}*.js'
@@ -202,7 +202,7 @@ module.exports = function (grunt) {
           }
         },
         files: [{
-          src: '<%= config.app %>/index.html',
+          src: '.tmp/index.html',
           dest: '<%= config.app %>/styles/_atomizer.css'
         }]
       }
@@ -266,6 +266,9 @@ module.exports = function (grunt) {
     },
 
     inline: {
+      options: {
+        uglify: true
+      },
       dist: {
         src: '<%= config.app %>/index.html',
         dest: '.tmp/index.html'
@@ -412,6 +415,10 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'concurrent:server',
+      'inline',
+      'atomizer',
+      'mqe',
+      'stylus',
       'postcss',
       'browserSync:livereload',
       'watch'
@@ -440,10 +447,10 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'inline',
     'atomizer',
     'mqe',
     'comment-media-queries',
-    'inline',
     'useminPrepare',
     'concurrent:dist',
     'postcss',
