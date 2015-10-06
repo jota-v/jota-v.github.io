@@ -55,7 +55,13 @@
             <a class="btn btn--inverse" href="#">View more</a>
           </div>
           <div class="col W(100%) W(65%)--md Fl(start)--md">
-            <img src="images/iphone-hand.png">
+            <script>
+              if (isMobile.any === true) {
+                document.write('<img alt="Waykup highlight image" src="images/iphone-hand.png">');
+              } else {
+                document.write('<img alt="Waykup highlight image" src="images/iphone-hand.png">');
+              }
+            </script>
           </div>
         </div>
       </article>
@@ -66,7 +72,13 @@
             <p class="Mb(25px)">MercadoLibre is the largest e-commerce ecosystem in Latin America. It offer a wide range of services to our sellers and buyers throughout the region including marketplace, payments, advertising and e-building solutions.</p>
           </div>
           <div class="col W(100%) W(65%)--md Fl(start)--md">
-            <img src="images/highlight_MELI.png">
+            <script>
+              if (isMobile.any === true) {
+                document.write('<img alt="MercadoLibre highlight image" src="images/highlight_MELI.png">');
+              } else {
+                document.write('<img alt="MercadoLibre highlight image" src="images/highlight_MELI.png">');
+              }
+            </script>
           </div>
         </div>
       </article>
@@ -77,7 +89,13 @@
             <p class="Mb(25px)">Is an Argentinian trivia multiplayer game for Android, iOS and web browsers. It can be played against Facebook friends and users who registered with their e-mails.</p>
           </div>
           <div class="col W(100%) W(65%)--md Fl(start)--md">
-            <img src="images/highlight_TRIVIA.png">
+            <script>
+              if (isMobile.any === true) {
+                document.write('<img alt="Trivia Crack highlight image" src="images/highlight_TRIVIA.png">');
+              } else {
+                document.write('<img alt="Trivia Crack highlight image" src="images/highlight_TRIVIA.png">');
+              }
+            </script>
           </div>
         </div>
       </article>
@@ -90,14 +108,14 @@
     </div>
     <div class="xaSlide">
       <ul class="xaSlide-container container Py(25px) Py(50px)--md">
-        <li class="xaSlide-item"><img src="images/logo_IBEROSTAR.png" alt="Iberostar"></li>
-        <li class="xaSlide-item"><img src="images/logo_YPF.png" alt="YPF"></li>
-        <li class="xaSlide-item"><img src="images/logo_MERCADOLIBRE.png" alt="mercadolibre"></li>
-        <li class="xaSlide-item"><img src="images/logo_PREGUNTADOS.png" alt="Trivia Crack"></li>
-        <li class="xaSlide-item"><img src="images/logo_TRUMP.png" alt="Trump"></li>
-        <li class="xaSlide-item"><img src="images/logo_CONSULTATIO.png" alt="Consultatio"></li>
-        <li class="xaSlide-item"><img src="images/logo_OMINT.png" alt="omint"></li>
-        <li class="xaSlide-item"><img src="images/logo_TECHO.png" alt="Techo"></li>
+        <li class="xaSlide-item"><img alt="Iberostar Logo" src="images/logo_IBEROSTAR.png" alt="Iberostar"></li>
+        <li class="xaSlide-item"><img alt="YPF Logo" src="images/logo_YPF.png" alt="YPF"></li>
+        <li class="xaSlide-item"><img alt="MercadoLibre Logo" src="images/logo_MERCADOLIBRE.png" alt="mercadolibre"></li>
+        <li class="xaSlide-item"><img alt="TriviaCrack Logo" src="images/logo_PREGUNTADOS.png" alt="Trivia Crack"></li>
+        <li class="xaSlide-item"><img alt="Trump Logo" src="images/logo_TRUMP.png" alt="Trump"></li>
+        <li class="xaSlide-item"><img alt="Consultatio Logo" src="images/logo_CONSULTATIO.png" alt="Consultatio"></li>
+        <li class="xaSlide-item"><img alt="Omit Logo" src="images/logo_OMINT.png" alt="omint"></li>
+        <li class="xaSlide-item"><img alt="Techo Logo" src="images/logo_TECHO.png" alt="Techo"></li>
       </ul>
     </div>
   </section>
@@ -107,11 +125,7 @@
     <a href="#" class="btn btn--alternative">Get in touch</a>
   </section>
 
-  <footer>
-    <small>2015 Juan Vanni</small>
-  </footer>
-
-
+  <inline src="templates/footer.html" />
 
   <!-- build:js(.) scripts/vendor.js -->
   <script src="./node_modules/jquery/dist/jquery.js"></script>

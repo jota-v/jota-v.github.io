@@ -1,19 +1,8 @@
-// Generated on 2015-10-03 using
-// generator-webapp 1.1.0
 'use strict';
-
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// If you want to recursively match all subfolders, use:
-// 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
 
-  // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
-
-  // Automatically load required grunt tasks
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin'
   });
@@ -21,19 +10,14 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-media-query-extractor');
   grunt.loadNpmTasks('grunt-comment-media-queries');
 
-  // Configurable paths
   var config = {
     app: 'app',
     dist: 'dist'
   };
 
-  // Define the configuration for all the tasks
   grunt.initConfig({
-
-    // Project settings
     config: config,
 
-    // Watches files for changes and runs tasks based on the changed files
     watch: {
       babel: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
@@ -106,7 +90,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Empties folders to start fresh
     clean: {
       dist: {
         files: [{
@@ -121,7 +104,6 @@ module.exports = function (grunt) {
       server: '.tmp'
     },
 
-    // Make sure code styles are up to par and there are no obvious mistakes
     eslint: {
       options: {
         configFile: '.eslintrc'
@@ -134,7 +116,6 @@ module.exports = function (grunt) {
       ]
     },
 
-    // Mocha testing framework configuration options
     mocha: {
       all: {
         options: {
@@ -144,7 +125,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Compiles ES6 with Babel
     babel: {
       options: {
         sourceMap: true
@@ -205,7 +185,7 @@ module.exports = function (grunt) {
           }
         },
         files: [{
-          src: '.tmp/index.html',
+          src: '.tmp/*.html',
           dest: '<%= config.app %>/styles/_atomizer.css'
         }]
       }
@@ -273,12 +253,13 @@ module.exports = function (grunt) {
         uglify: true
       },
       dist: {
-        src: '<%= config.app %>/index.html',
-        dest: '.tmp/index.html'
+        files: {
+          '.tmp/index.html': ['<%= config.app %>/index.html'],
+          '.tmp/about.html': ['<%= config.app %>/about.html']
+        }
       }
     },
 
-    // Renames files for browser caching purposes
     filerev: {
       dist: {
         src: [
@@ -298,7 +279,6 @@ module.exports = function (grunt) {
       html: '.tmp/index.html'
     },
 
-    // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
       options: {
         assetsDirs: [
@@ -311,7 +291,6 @@ module.exports = function (grunt) {
       css: ['<%= config.dist %>/styles/{,*/}*.css']
     },
 
-    // The following *-min tasks produce minified files in the dist folder
     imagemin: {
       dist: {
         files: [{
@@ -359,7 +338,6 @@ module.exports = function (grunt) {
           removeCommentsFromCDATA: true,
           removeEmptyAttributes: true,
           removeOptionalTags: true,
-          // true would impact styles with attribute selectors
           removeRedundantAttributes: false,
           useShortDoctype: true
         },
@@ -372,7 +350,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Copies remaining files to places other tasks can use
     copy: {
       dist: {
         files: [{
@@ -390,7 +367,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Run some tasks in parallel to speed up build process
     concurrent: {
       server: [
         'babel:dist',
