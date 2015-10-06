@@ -24,106 +24,108 @@
 
   <inline src="templates/nav.html" />
 
-  <header class="hero P(r) Pt(100px) Pb(65px) Px(10%) Px(20%)--sm Px(0)--md Ta(c) Bg($brandMain) C(#fff)">
+  <header class="hero P(r) Pt(100px) Pb(65px) Px(10%) Px(20%)--sm Px(0)--md Ta(c) Bg($brandMain) C(#fff)" role="banner">
     <div class="container">
       <h1 class="hero-title Mb($gutter) Lh(1.15) Fw(300) Fz(13vw) Fz(10vw)--sm Fz(67px)--md">Building done right</h1>
       <h2 class="Mx(-12%) Fz($Fz-lg) Mx(0)--md"><span class="D(ib)">Neat, adaptive and unbreakable UIs.</span> <span class="D(ib)">2015 Portfolio of JV, front-end dev from Buenos Aires.</span></h2>
     </div>
   </header>
 
-  <section class="section Py(110px)--md u-clearfix">
-    <article class="container container--cols">
-      <div class="col W(100%) W(50%)--md Fl(start) Pend(50px)--lg">
-        <h3 class="section__title Mb(12px) Fw(300) C($grey-4)">I'm a passionate UI developer specialized in mobile and adaptive experiences.</h3>
+  <main role="main">
+    <section class="section Py(110px)--md u-clearfix">
+      <article class="container container--cols">
+        <div class="col W(100%) W(50%)--md Fl(start) Pend(50px)--lg">
+          <h3 class="section__title Mb(12px) Fw(300) C($grey-4)">I'm a passionate UI developer specialized in mobile and adaptive experiences.</h3>
+        </div>
+        <div class="col W(100%) W(50%)--md Fl(start)">
+          <p class="Mb($gutter)">My name is Juan Vanni. I'm a passionate front-end developer - specialized in UI and mobile -, UX designer and speaker. I stand out for writing neat, performant and scalable code, as also designing very well cared, thoughtful user experiences.</p>
+          <!-- <p class="Mb($gutter)">Throughout my career I worked for some of the biggest brands in Argentina in all kind of projects. From big corporation sites, e-commerce platforms, mobile applications and HTML5 video games.</p> -->
+          <p class="Mb(25px)">I'm a very detail oriented professional always focused on achieving outstanding results. I love what I do and that's the fuel that gets me on delivering high quality products.</p>
+          <a class="btn D(b) W(100%) D(ib)--md W(a)--md" href="#" role="button">Learn More</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section section--negative P(0)">
+      <div class="owl-carousel owl-theme">
+        <article class="W(100%) Px($gutter) Py(50px)">
+          <div class="container container--cols">
+            <div class="col W(100%) W(35%)--md Fl(end)--md">
+              <h3 class="section__title Mb(12px)">Waykup</h3>
+              <p class="Mb(25px)">With this simple and easy to use proximity alarm, you no longer need to worry about missing your stop. With Waykup you can get the most of each daily trip!</p>
+              <a class="btn btn--inverse" href="#" role="button">View more</a>
+            </div>
+            <div class="col W(100%) W(65%)--md Fl(start)--md">
+              <script>
+                if (isMobile.any === true) {
+                  document.write('<img alt="Waykup highlight image" src="images/iphone-hand.png">');
+                } else {
+                  document.write('<img alt="Waykup highlight image" src="images/iphone-hand.png">');
+                }
+              </script>
+            </div>
+          </div>
+        </article>
+        <article class="W(100%) Px($gutter) Py(50px)">
+          <div class="container container--cols">
+            <div class="col W(100%) W(35%)--md Fl(start)--md">
+              <h3 class="section__title Mb(12px)">An online marketplace.</h3>
+              <p class="Mb(25px)">MercadoLibre is the largest e-commerce ecosystem in Latin America. It offer a wide range of services to our sellers and buyers throughout the region including marketplace, payments, advertising and e-building solutions.</p>
+            </div>
+            <div class="col W(100%) W(65%)--md Fl(start)--md">
+              <script>
+                if (isMobile.any === true) {
+                  document.write('<img alt="MercadoLibre highlight image" src="images/highlight_MELI.png">');
+                } else {
+                  document.write('<img alt="MercadoLibre highlight image" src="images/highlight_MELI.png">');
+                }
+              </script>
+            </div>
+          </div>
+        </article>
+        <article class="W(100%) Px($gutter) Py(50px)">
+          <div class="container container--cols">
+            <div class="col W(100%) W(35%)--md Fl(end)--md">
+              <h3 class="section__title Mb(12px)">A multiplayer trivia game.</h3>
+              <p class="Mb(25px)">Is an Argentinian trivia multiplayer game for Android, iOS and web browsers. It can be played against Facebook friends and users who registered with their e-mails.</p>
+            </div>
+            <div class="col W(100%) W(65%)--md Fl(start)--md">
+              <script>
+                if (isMobile.any === true) {
+                  document.write('<img alt="Trivia Crack highlight image" src="images/highlight_TRIVIA.png">');
+                } else {
+                  document.write('<img alt="Trivia Crack highlight image" src="images/highlight_TRIVIA.png">');
+                }
+              </script>
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="col W(100%) W(50%)--md Fl(start)">
-        <p class="Mb($gutter)">My name is Juan Vanni. I'm a passionate front-end developer - specialized in UI and mobile -, UX designer and speaker. I stand out for writing neat, performant and scalable code, as also designing very well cared, thoughtful user experiences.</p>
-        <!-- <p class="Mb($gutter)">Throughout my career I worked for some of the biggest brands in Argentina in all kind of projects. From big corporation sites, e-commerce platforms, mobile applications and HTML5 video games.</p> -->
-        <p class="Mb(25px)">I'm a very detail oriented professional always focused on achieving outstanding results. I love what I do and that's the fuel that gets me on delivering high quality products.</p>
-        <a class="btn D(b) W(100%) D(ib)--md W(a)--md" href="#">Learn More</a>
+    </section>
+
+    <section>
+      <div class="H(50px) Lh(50px) Bg(#eee) Ta(c)">
+        <a href="" class="D(b) Fz(13px) Tt(u)">View all work</a>
       </div>
-    </article>
-  </section>
+      <div class="xaSlide">
+        <ul class="xaSlide-container container Py(25px) Py(50px)--md">
+          <li class="xaSlide-item"><img alt="Iberostar Logo" src="images/logo_IBEROSTAR.png" alt="Iberostar"></li>
+          <li class="xaSlide-item"><img alt="YPF Logo" src="images/logo_YPF.png" alt="YPF"></li>
+          <li class="xaSlide-item"><img alt="MercadoLibre Logo" src="images/logo_MERCADOLIBRE.png" alt="mercadolibre"></li>
+          <li class="xaSlide-item"><img alt="TriviaCrack Logo" src="images/logo_PREGUNTADOS.png" alt="Trivia Crack"></li>
+          <li class="xaSlide-item"><img alt="Trump Logo" src="images/logo_TRUMP.png" alt="Trump"></li>
+          <li class="xaSlide-item"><img alt="Consultatio Logo" src="images/logo_CONSULTATIO.png" alt="Consultatio"></li>
+          <li class="xaSlide-item"><img alt="Omit Logo" src="images/logo_OMINT.png" alt="omint"></li>
+          <li class="xaSlide-item"><img alt="Techo Logo" src="images/logo_TECHO.png" alt="Techo"></li>
+        </ul>
+      </div>
+    </section>
 
-  <section class="section section--negative P(0)">
-    <div class="owl-carousel owl-theme">
-      <article class="W(100%) Px($gutter) Py(50px)">
-        <div class="container container--cols">
-          <div class="col W(100%) W(35%)--md Fl(end)--md">
-            <h3 class="section__title Mb(12px)">Waykup</h3>
-            <p class="Mb(25px)">With this simple and easy to use proximity alarm, you no longer need to worry about missing your stop. With Waykup you can get the most of each daily trip!</p>
-            <a class="btn btn--inverse" href="#">View more</a>
-          </div>
-          <div class="col W(100%) W(65%)--md Fl(start)--md">
-            <script>
-              if (isMobile.any === true) {
-                document.write('<img alt="Waykup highlight image" src="images/iphone-hand.png">');
-              } else {
-                document.write('<img alt="Waykup highlight image" src="images/iphone-hand.png">');
-              }
-            </script>
-          </div>
-        </div>
-      </article>
-      <article class="W(100%) Px($gutter) Py(50px)">
-        <div class="container container--cols">
-          <div class="col W(100%) W(35%)--md Fl(start)--md">
-            <h3 class="section__title Mb(12px)">An online marketplace.</h3>
-            <p class="Mb(25px)">MercadoLibre is the largest e-commerce ecosystem in Latin America. It offer a wide range of services to our sellers and buyers throughout the region including marketplace, payments, advertising and e-building solutions.</p>
-          </div>
-          <div class="col W(100%) W(65%)--md Fl(start)--md">
-            <script>
-              if (isMobile.any === true) {
-                document.write('<img alt="MercadoLibre highlight image" src="images/highlight_MELI.png">');
-              } else {
-                document.write('<img alt="MercadoLibre highlight image" src="images/highlight_MELI.png">');
-              }
-            </script>
-          </div>
-        </div>
-      </article>
-      <article class="W(100%) Px($gutter) Py(50px)">
-        <div class="container container--cols">
-          <div class="col W(100%) W(35%)--md Fl(end)--md">
-            <h3 class="section__title Mb(12px)">A multiplayer trivia game.</h3>
-            <p class="Mb(25px)">Is an Argentinian trivia multiplayer game for Android, iOS and web browsers. It can be played against Facebook friends and users who registered with their e-mails.</p>
-          </div>
-          <div class="col W(100%) W(65%)--md Fl(start)--md">
-            <script>
-              if (isMobile.any === true) {
-                document.write('<img alt="Trivia Crack highlight image" src="images/highlight_TRIVIA.png">');
-              } else {
-                document.write('<img alt="Trivia Crack highlight image" src="images/highlight_TRIVIA.png">');
-              }
-            </script>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section>
-    <div class="H(50px) Lh(50px) Bg(#eee) Ta(c)">
-      <a href="" class="D(b) Fz(13px) Tt(u)">View all work</a>
-    </div>
-    <div class="xaSlide">
-      <ul class="xaSlide-container container Py(25px) Py(50px)--md">
-        <li class="xaSlide-item"><img alt="Iberostar Logo" src="images/logo_IBEROSTAR.png" alt="Iberostar"></li>
-        <li class="xaSlide-item"><img alt="YPF Logo" src="images/logo_YPF.png" alt="YPF"></li>
-        <li class="xaSlide-item"><img alt="MercadoLibre Logo" src="images/logo_MERCADOLIBRE.png" alt="mercadolibre"></li>
-        <li class="xaSlide-item"><img alt="TriviaCrack Logo" src="images/logo_PREGUNTADOS.png" alt="Trivia Crack"></li>
-        <li class="xaSlide-item"><img alt="Trump Logo" src="images/logo_TRUMP.png" alt="Trump"></li>
-        <li class="xaSlide-item"><img alt="Consultatio Logo" src="images/logo_CONSULTATIO.png" alt="Consultatio"></li>
-        <li class="xaSlide-item"><img alt="Omit Logo" src="images/logo_OMINT.png" alt="omint"></li>
-        <li class="xaSlide-item"><img alt="Techo Logo" src="images/logo_TECHO.png" alt="Techo"></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section section--negative Ta(c)">
-    <h3 class="Fz(28px) Lts(1px) Fz(40px)--md Fw(900) Mb(15px)">Want to work with me?</h3>
-    <a href="#" class="btn btn--alternative">Get in touch</a>
-  </section>
+    <section class="section section--negative Ta(c)">
+      <h3 class="Fz(28px) Lts(1px) Fz(40px)--md Fw(900) Mb(15px)">Want to work with me?</h3>
+      <a href="#" class="btn btn--alternative" role="button">Get in touch</a>
+    </section>
+  </main>
 
   <inline src="templates/footer.html" />
 

@@ -24,36 +24,86 @@
 
   <inline src="templates/nav.html" />
 
-  <header class="Lh(110px) Bg($grey-f) Mt(65px)">
+  <header class="Lh(110px) Bg($grey-f) Mt(65px)" role="banner">
     <div class="container">
       <h1 class="Fz(48px)">About</h1>
     </div>
   </header>
 
-  <section class="section Bg(#fff)">
-    <div class="container container--cols">
-      <div class="col Fl(start) W(100%) W(50%)--md W(40%)--lg">
-        <img class="W(100%)" src="images/jv_2.jpg">
+  <main role="main">
+    <section class="section Bg(#fff)">
+      <div class="container container--cols">
+        <div class="col Fl(start) W(100%) W(50%)--md W(40%)--lg">
+          <img class="W(100%)" src="images/jv_2.jpg">
+        </div>
+        <div class="col Fl(start) W(100%) W(50%)--md W(60%)--lg">
+          <p class="Mb($gutter)">My name is Juan Vanni. I'm a passionate front-end developer - specialized in UI and mobile -, UX designer and speaker. I stand out for writing neat, performant and scalable code, as also designing very well cared, thoughtful user experiences.</p>
+          <p class="Mb($gutter)">Throughout my career I worked for some of the biggest brands in Argentina in all kind of projects. From big corporation sites, e-commerce platforms, mobile applications and HTML5 video games.</p>
+          <p class="Mb(25px)">I'm a very detail oriented professional always focused on achieving outstanding results. I love what I do and that's the fuel that gets me on delivering high quality products.</p>
+        </div>
       </div>
-      <div class="col Fl(start) W(100%) W(50%)--md W(60%)--lg">
-        <p class="Mb($gutter)">My name is Juan Vanni. I'm a passionate front-end developer - specialized in UI and mobile -, UX designer and speaker. I stand out for writing neat, performant and scalable code, as also designing very well cared, thoughtful user experiences.</p>
-        <p class="Mb($gutter)">Throughout my career I worked for some of the biggest brands in Argentina in all kind of projects. From big corporation sites, e-commerce platforms, mobile applications and HTML5 video games.</p>
-        <p class="Mb(25px)">I'm a very detail oriented professional always focused on achieving outstanding results. I love what I do and that's the fuel that gets me on delivering high quality products.</p>
+    </section>
+
+    <section class="section section--negative">
+      <div class="container">
+        <h2 class="Fz(38px) Mb(15px)">Proficiency</h2>
       </div>
-    </div>
-  </section>
+      <div class="container container--cols">
+        <div class="col Fl(start) W(100%) W(50%)--md">
+          <h3 class="Mb(25px) Fz(22px)">Hard Skills</h3>
+          <h4 class="Mb(5px)">HTML</h4>
+          <div class="progress">
+            <div class="progress-bar W(95%)" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
 
-  <section class="section section--negative">
-    <div class="container">
-      <h2 class="Fz(38px)">Proficiency</h2>
-    </div>
-  </section>
+          <h4 class="Mt(25px) Mb(5px)">CSS</h4>
+          <div class="progress">
+            <div class="progress-bar W(95%)" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
 
-  <section class="section Bg(#fff)">
-    <div class="container">
-      <h2 class="Fz(38px)">Weapons of choice</h2>
-    </div>
-  </section>
+          <h4 class="Mt(25px) Mb(5px)">JS</h4>
+          <div class="progress">
+            <div class="progress-bar W(35%)" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+          <h4 class="Mt(25px) Mb(5px)">UX DESIGN</h4>
+          <div class="progress">
+            <div class="progress-bar W(70%)" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+          <h4 class="Mt(25px) Mb(5px)">NERDNESS</h4>
+          <div class="progress Mb(15px)">
+            <div class="progress-bar W(95%)" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="col Fl(start) W(100%) W(50%)--md">
+          <h3 class="Mb(25px) Fz(22px)">Soft Skills</h3>
+
+          <h4 class="Mb(5px)">COMMUNICATION</h4>
+          <div class="progress">
+            <div class="progress-bar W(80%)" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+          <h4 class="Mt(25px) Mb(5px)">CRITIAL THINKING</h4>
+          <div class="progress">
+            <div class="progress-bar W(80%)" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+          <h4 class="Mt(25px) Mb(5px)">CREATIVITY</h4>
+          <div class="progress">
+            <div class="progress-bar W(90%)" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section Bg(#fff)">
+      <div class="container">
+        <h2 class="Fz(38px)">Weapons of choice</h2>
+      </div>
+    </section>
+  </main>
 
   <inline src="templates/footer.html" />
 
