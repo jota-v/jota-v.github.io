@@ -266,7 +266,7 @@ module.exports = function (grunt) {
           '<%= config.dist %>/scripts/{,*/}*.js',
           '<%= config.dist %>/styles/{,*/}*.css',
           '<%= config.dist %>/images/{,*/}*.*',
-          '<%= config.dist %>/styles/fonts/{,*/}*.*',
+          '<%= config.dist %>/fonts/{,*/}*.*',
           '<%= config.dist %>/*.{ico,png}'
         ]
       }
@@ -321,8 +321,8 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '.tmp/concat/styles',
-          dest: '<%= config.dist %>/styles/',
+          cwd: '.tmp/styles',
+          dest: '<%= config.dist %>/styles',
           src: 'main.css'
         }]
       }
@@ -361,7 +361,7 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
+            'fonts/{,*/}*.*'
           ]
         }]
       }
