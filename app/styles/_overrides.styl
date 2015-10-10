@@ -1,30 +1,47 @@
 .owl-theme .owl-nav.disabled + .owl-dots {
-  margin-top: 0;
+  margin-top: 0
 }
 
 .owl-carousel{
-  position: relative;
+  position: relative
 }
 
 .owl-theme .owl-nav.disabled + .owl-dots {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0,0,0,.1)
+  position: absolute
+  bottom: 0
+  width: 100%
+  // background: rgba(0,0,0,.05)
 }
 
 .owl-carousel .owl-item img.waykup {
-  width: 68%;
-  margin: 0 auto;
+  width: 68%
+  margin: 0 auto
 }
 .owl-carousel .owl-item img.meli {
-  position: relative;
-  width: 112%;
-  right: -5%;
+  position: relative
+  width: 112%
+  right: -5%
 }
 
 .owl-carousel .owl-item img.trivia {
-  position: relative;
-  width: 100%;
-  left: -5%;
+  position: relative
+  width: 100%
+  left: -5%
+}
+
+// Dots
+.owl-theme .owl-dots .owl-dot span {
+  width: 12px
+  height: 12px
+  background: none
+  border: 1px solid #fff
+  box-shadow: 1px 1px 0 rgba(0,0,0,.4)
+}
+
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: rgba(255,255,255,.6)
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background: #fff
 }
