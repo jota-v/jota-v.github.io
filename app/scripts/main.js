@@ -1,4 +1,4 @@
-// jshint devel:true
+
 'use strict';
 function navPos() {
   var scrollPos = $(window).scrollTop();
