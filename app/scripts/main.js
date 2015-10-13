@@ -9,9 +9,9 @@ function navPos() {
   }
 }
 
-$(document).ready(function(){
+$(function(){
 
-  InstantClick.init();
+  // InstantClick.init();
 
   $('.owl-carousel').owlCarousel({
     items: 1,

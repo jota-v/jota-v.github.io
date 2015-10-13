@@ -160,7 +160,8 @@ module.exports = function (grunt) {
             },
             custom: {
               //Greys
-              '$grey-2': '#212121',
+              '$grey-1': '#171717',
+              '$grey-2': '#232323',
               '$grey-4': '#424242',
               '$grey-6': '#616161',
               '$grey-9': '#9E9E9E',
@@ -173,6 +174,7 @@ module.exports = function (grunt) {
 
               // fonts
               '$Fz-base': '14px',
+              '$Fz-xsm': '10px',
               '$Fz-sm': '12px',
               '$Fz-lg': '18px',
               '$Fz-xlg': '23px',
