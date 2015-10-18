@@ -257,7 +257,8 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '.tmp/index.html': ['<%= config.app %>/index.html'],
-          '.tmp/about.html': ['<%= config.app %>/about.html']
+          '.tmp/about.html': ['<%= config.app %>/about.html'],
+          '.tmp/work.html': ['<%= config.app %>/work.html']
         }
       }
     },

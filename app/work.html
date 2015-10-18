@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>JV's 2016 Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,900' rel='stylesheet' type='text/css'>
+
+    <script src="../node_modules/ismobilejs/isMobile.js?__inline=true"></script>
+    <script>
+      if (isMobile.any === false) {
+        document.write('<link rel="stylesheet" href="styles/main__large.css">');
+      }
+    </script>
+  </head>
+
+  <body>
+
+    <inline src="templates/nav.html" />
+
+    <header class="Lh(110px) Bg($grey-f) Mt(65px)" role="banner">
+      <div class="container">
+        <h1 class="Fz(48px)">About</h1>
+      </div>
+    </header>
+
+    <main role="main">
+
+    </main>
+
+    <inline src="templates/footer.html" />
+    <inline src="templates/scripts.html" />
+
+  </body>
+</html>
