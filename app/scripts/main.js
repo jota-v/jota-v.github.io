@@ -23,6 +23,15 @@ $(function(){
   $(window).scroll(function () {
     navPos();
   });
+
+  if ($('.workRest-items')) {
+    $('.workRest-items').gridalicious({
+      animate: true,
+      selector: '.workRest-item',
+      gutter: 0,
+      width: 320
+    });
+  }
 });
 
  // var md = new MobileDetect(window.navigator.userAgent);
