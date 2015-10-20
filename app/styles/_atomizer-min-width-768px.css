@@ -1,0 +1,104 @@
+/* @media (min-width:768px) { */
+
+.D\(ib\)--md {
+	display: inline-block;
+}
+
+.Fl\(end\)--md {
+	float: right;
+}
+
+.Fl\(start\)--md {
+	float: left;
+}
+
+.Fz\(67px\)--md {
+	font-size: 67px;
+}
+
+.Mx\(0\)--md {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.Mstart\(40px\)--md {
+	margin-left: 40px;
+}
+
+.T\(50\%\)--md {
+	top: 50%;
+}
+
+.End\(0\)--md {
+	right: 0;
+}
+
+.End\(\$gutter\)--md {
+	right: 15px;
+}
+
+.Start\(0\)--md {
+	left: 0;
+}
+
+.P\(50px\)--md {
+	padding: 50px;
+}
+
+.P\(0\)--md {
+	padding: 0;
+}
+
+.P\(90px\)--md {
+	padding: 90px;
+}
+
+.Px\(0\)--md {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.Py\(110px\)--md {
+	padding-top: 110px;
+	padding-bottom: 110px;
+}
+
+.Py\(65px\)--md {
+	padding-top: 65px;
+	padding-bottom: 65px;
+}
+
+.Pos\(r\)--md {
+	position: relative;
+}
+
+.Pos\(a\)--md {
+	position: absolute;
+}
+
+.TranslateY\(-50\%\)--md {
+	transform: translateY(-50%);
+}
+
+.W\(50\%\)--md {
+	width: 50%;
+}
+
+.W\(a\)--md {
+	width: auto;
+}
+
+.W\(40\%\)--md {
+	width: 40%;
+}
+
+.W\(65\%\)--md {
+	width: 65%;
+}
+
+.W\(35\%\)--md {
+	width: 35%;
+}
+
+/* } */
+
