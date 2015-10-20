@@ -1,0 +1,35 @@
+.weaponItem {
+  position: relative
+  text-align: center
+}
+
+.weaponItem-img,
+.weaponItem-text {
+  transition: all 250ms ease-out
+  backface-visibility hidden
+}
+
+.weaponItem-text {
+  position: absolute
+  top: 50%
+  text-shadow: 1px 1px 0 #fff;
+  transform: scale(0) translate3d(0,-60%,0)
+
+  h5 {
+    font-size: $Fz-base
+    font-weight: 700
+    letter-spacing 1px
+    text-transform uppercase
+  }
+}
+
+.weaponItem:hover {
+  .weaponItem-img {
+    opacity: .5
+    -webkit-filter: blur(13px)
+  }
+
+  .weaponItem-text {
+    transform: scale(1) translate3d(0,-60%,0)
+  }
+}
