@@ -32,6 +32,23 @@ $(function(){
       width: 320
     });
   }
+
+  var pathname = window.location.pathname;
+
+  switch (pathname) {
+    case '/about.html':
+      $('.navMenu-item').removeClass('active');
+      $('.navMenu-item--about').addClass('active');
+      break;
+    case '/work.html':
+      $('.navMenu-item').removeClass('active');
+      $('.navMenu-item--work').addClass('active');
+      break;
+    case '/contact.html':
+      $('.navMenu-item').removeClass('active');
+      $('.navMenu-item--contact').addClass('active');
+      break;
+  }
 });
 
  // var md = new MobileDetect(window.navigator.userAgent);
