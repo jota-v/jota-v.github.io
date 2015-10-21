@@ -1,23 +1,22 @@
 /* Default variables */
-@import "_variables";
+@import "helpers/_variables";
 
 
 @media (min-width:768px) {
 
   /* Components */
-  @import "components/_buttons__large"
 
   // Scaffolding
-  @import "_typography__medium";
-  @import "_layout__large";
+  @import "base/_typography__medium";
+  @import "base/_layout__large";
 
   // App
-  @import "_nav__large";
-  @import "_hero__large";
+  @import "app-components/_nav__large";
+  @import "app-components/_hero__large";
   @import "_atomizer-min-width-768px.css";
   @import "_atomizer-min-width-1024px.css";
 }
 
 @media (min-width:1024px) {
-  @import "_typography__large";
+  @import "base/_typography__large";
 }
