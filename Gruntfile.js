@@ -258,7 +258,8 @@ module.exports = function (grunt) {
         files: {
           '.tmp/index.html': ['<%= config.app %>/index.html'],
           '.tmp/about.html': ['<%= config.app %>/about.html'],
-          '.tmp/work.html': ['<%= config.app %>/work.html']
+          '.tmp/work.html': ['<%= config.app %>/work.html'],
+          '.tmp/contact.html': ['<%= config.app %>/contact.html']
         }
       }
     },
