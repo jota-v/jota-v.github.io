@@ -1,0 +1,27 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: $grey-4;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+a {
+  text-decoration: none;
+  color: $color-link;
+
+  &:hover,
+  &:active {
+    color: saturate($color-link, 90%);
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none
+}

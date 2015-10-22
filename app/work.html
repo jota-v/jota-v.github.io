@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Work - JV Portfolio 2015</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,900' rel='stylesheet' type='text/css'>
+
+    <script src="../node_modules/ismobilejs/isMobile.js?__inline=true"></script>
+    <script>
+      if (isMobile.any === false) {
+        document.write('<link rel="stylesheet" href="styles/main__large.css">');
+      }
+    </script>
+  </head>
+
+  <body>
+
+    <inline src="templates/nav.html" />
+
+    <header class="Bg($brandMain) Mt(65px) C($grey-f) Ta(c) P(50px) P(90px)--md" role="banner">
+      <div class="container">
+        <h1 class="Fz(57px)">I just love what I do</h1>
+        <p class="Mx(-12%) Fz($Fz-lg) Mx(0)--md">Don't take my word for it. Here I've selected the very best work I have been fortunate enough to produce.</p>
+      </div>
+    </header>
+
+    <main role="main" class="work">
+      <section class="Pt(100px) Pb(0) workHighlight Bg(#fff) Ta(c)" id="waykup">
+        <article class="container">
+          <h2 class="section__title Mb(25px)">Waykup!</h2>
+          <p class="Mx(a) Mb(50px) Maw(800px)">I wanted to develop a javascript app for mobile that performed as a native app focusing on every detail for the user experience to feel native like, every touch input, gesture, animation, speed and the UI. The technology stack used for development: Apache Cordova to wrap the webapp to be installed as native, grunt.js for compiling, require.js for modularity of the js code, hammer.js for touch gestures and sass as the css pre-precessor.
+  The app consists on a geolocation alarm. It is currently available in the iOS appstore. <a href="https://itunes.apple.com/us/app/waykup/id817714891?ls=1&mt=8" target="_blank">Download now!</a></p>
+          <div class="Mx(-15px)">
+            <img src="images/work/waykup.png" class="W(100%) D(b)">
+          </div>
+        </article>
+      </section>
+
+      <section class="workRest Py(90px) Bg($grey-f)">
+        <div class="container container--cols Ta(c)">
+          <!-- <h2 class="section__title Mb(50px)">I love what I do and I hope you do too!</h2> -->
+          <!-- <p class="Mb(50px)">I love what I do and I hope you do too! Have a poke around, get to know me a bit better.</p> -->
+
+          <div class="workRest-items Cf">
+            <article class="workRest-item" id="meli">
+              <img class="workRest-item-img" src="images/work/thumb-meli2.png">
+              <h3 class="workRest-item-title">MercadoLibre</h3>
+              <h4 class="workRest-item-context">E-commerce</h4>
+              <p>Currently working for mercadolibre.com, South America's biggest e-commerce platfom. I'm in re-designing the whole css arquitecture in the company with a modular, maintainable, mobile-first perspective.</p>
+              <p>Also teaching people there about sass, efficient selectors, performant animations and efficient dry coding.</p>
+              <p class="workRest-item-copyrights"><strong>2015 - MercadoLibre</strong></p>
+            </article>
+
+            <article class="workRest-item" id="trivia">
+              <img class="workRest-item-img" src="images/work/thumb-trivia.jpg">
+              <h3 class="workRest-item-title">TriviaCrack*</h3>
+              <h4 class="workRest-item-context">HTML5 Video Game</h4>
+              <p>*Known as Preguntados in spanish.</p>
+              <p>Number one mobile game in the App Store and Google Play for several months worldwide.</p>
+              <p>I was part of a 3 members team developing the front-end of the game for the web. The challenge, as all games, was to care of animations that should perform at a constant 60fps.</p>
+              <p>For the technology stack, we used Grunt, Backbone and Less as the css preprocessor.</p>
+              <p>Currently the webapp is used in a very well known TV show in Argentina.</p>
+              <p class="workRest-item-copyrights"><strong>2014 - Etermax</strong></p>
+            </article>
+
+            <article class="workRest-item">
+              <img class="workRest-item-img" src="images/work/thumb-apalabrados.jpg">
+              <h3 class="workRest-item-title">Apalabrados</h3>
+              <h4 class="workRest-item-context">HTML5 Video Game</h4>
+              <p>Was part of a 2 memebers team. The work consisted of a complete refactor of the code with a new stack of technology focusing on maintainability. Also new features were added with a complete re-design of the app.</p>
+              <p>The game consits in a async online crossword puzzle. It is very successful in Spain.</p>
+              <p class="workRest-item-copyrights"><strong>2013 - Etermax</strong></p>
+            </article>
+
+            <article class="workRest-item">
+              <img class="workRest-item-img" src="images/work/thumb-bingocrack3.jpg">
+              <h3 class="workRest-item-title">BingoCrack</h3>
+              <h4 class="workRest-item-context">HTML5 Video Game</h4>
+              <p>It's a real-time bingo game with sockets.</p>
+              <p>Developed the whole UI of the game, including all animations. First made all of them with the greenSock JS animation library, but they weren't performing as fluid as desired, so I migrated them to CSS3 using hardware accelerated animations. Compared performance of each one of them cross-browser using developer tools and fps meters. In conclusion made the perfect blend between greenSock and CSS3 animations.</p>
+              <p class="workRest-item-copyrights"><strong>2013 - Etermax</strong></p>
+            </article>
+
+            <article class="workRest-item">
+              <img class="workRest-item-img" src="images/work/thumb-oneocean.jpg">
+              <h3 class="workRest-item-title">One Ocean</h3>
+              <h4 class="workRest-item-context">Website</h4>
+              <p>Involved in the whole UI design and development. For this real estate project I designed the FlexyPics UI component as it required a very visual and original responsive and adaptive layout.</p>
+              <p>Also led the whole front-end development of the project.</p>
+              <p class="workRest-item-copyrights"><strong>2013 - BridgerConway</strong></p>
+            </article>
+
+            <article class="workRest-item">
+              <img class="workRest-item-img" src="images/work/thumb-ypf.jpg">
+              <h3 class="workRest-item-title">YPF</h3>
+              <h4 class="workRest-item-context">Website</h4>
+              <p>Biggest petrochemical company in Argentina, and one of the biggest companies in the region</p>
+              <p>Led the front-end team of three people in the development of the “YPF” site. We developed it from zero, attention to design and scalability of the code were our major concerns. Later worked in conjunction with Accenture in the implementation of it in Visual Studio.</p>
+              <p class="workRest-item-copyrights"><strong>2012 - BridgerConway</strong></p>
+            </article>
+
+            <article class="workRest-item">
+              <img class="workRest-item-img" src="images/work/thumb-guia-ypf.jpg">
+              <h3 class="workRest-item-title">Guía YPF</h3>
+              <h4 class="workRest-item-context">Webapp</h4>
+              <p>Led the project and programmed the entire front-end “Guía YPF“ site.</p>
+              <p>The main feature are the maps using the Google Maps API 3 which showed several layers of information of locations and routes from all around Argentina for travellers.</p>
+              <p class="workRest-item-copyrights"><strong>2012 - BridgerConway</strong></p>
+            </article>
+
+            <article class="workRest-item">
+              <img class="workRest-item-img" src="images/work/thumb-iberostar.jpg">
+              <h3 class="workRest-item-title">Iberostar</h3>
+              <h4 class="workRest-item-context">Website</h4>
+              <p>Was part of a team in the front-end development of the booking system of this very well known international hotels brand.</p>
+              <p>This was a large project where many people were involved. The back-end was made by a company in Spain.</p>
+              <p class="workRest-item-copyrights"><strong>2011 - BridgerConway</strong></p>
+            </article>
+
+            <article class="workRest-item">
+              <img class="workRest-item-img" src="images/work/thumb-consultatio.jpg">
+              <h3 class="workRest-item-title">Consultatio</h3>
+              <h4 class="workRest-item-context">Website</h4>
+              <p>Made the entire front-end develovment for this real estate company site.</p>
+              <p class="workRest-item-copyrights"><strong>2011 - BridgerConway</strong></p>
+            </article>
+
+
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <inline src="templates/footer.html" />
+    <inline src="templates/scripts.html" />
+
+  </body>
+</html>

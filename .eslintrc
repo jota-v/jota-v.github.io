@@ -1,0 +1,28 @@
+{
+  "bitwise": true,
+  "browser": true,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "esnext": true,
+  "immed": true,
+  "jquery": true,
+  "latedef": true,
+  "mocha": true,
+  "newcap": true,
+  "noarg": true,
+  "quotmark": "single",
+  "strict": true,
+  "undef": true,
+  "unused": true,
+  "indent": 2,
+  "rules": {
+    "eqeqeq": 1,
+    "curly": 1,
+    "strict": 2,
+    "quotes": [1, "single"]
+  },
+  "globals": {
+    "InstantClick": true
+  }
+}

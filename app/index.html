@@ -1,297 +1,137 @@
 <!doctype html>
-<html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <title>Jota V</title>
-        <meta name="description" content="Juan Vanni's profile site">
-        <meta name="viewport" content="user-scalable=no, width=device-width">
-        <link rel="shortcut icon" href="/favicon.ico">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<html lang="en">
 
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
+  <head>
+    <meta charset="utf-8">
+    <title>JV's 2016 Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css(.tmp) styles/main_medium.css -->
-        <link rel="stylesheet" media="(min-width: 768px)" href="styles/main_medium.css">
-        <!-- endbuild -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,900' rel='stylesheet' type='text/css'>
 
-        <!-- build:js scripts/platform.js -->
-        <script src="../bower_components/platform/platform.js"></script>
-        <!-- endbuild -->
+    <script src="../node_modules/ismobilejs/isMobile.js?__inline=true"></script>
+    <script>
+      if (isMobile.any === false) {
+        document.write('<link rel="stylesheet" href="styles/main__large.css">');
+      }
+    </script>
+  </head>
 
-        <!-- Web components -->
-        <link rel="import" href="../bower_components/core-scroll-header-panel/core-scroll-header-panel.html">
-        <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
-        <link rel="import" href="../bower_components/core-drawer-panel/core-drawer-panel.html">
-        <link rel="import" href="../bower_components/paper-button/paper-button.html">
-        <link rel="import" href="../bower_components/core-tooltip/core-tooltip.html">
-    </head>
-    <body>
+  <body>
 
-        <core-drawer-panel responsiveWidth="9999px" class="left-drawer">
-            <div drawer class="drawer-panel">
-                <a class="drawer-nav-item" href="index.html">Home</a>
-                <a class="drawer-nav-item" href="experience.html">Experience</a>
-                <a class="drawer-nav-item" href="https://github.com/jota-v">Github</a>
-                <a class="drawer-nav-item" href="http://waykup-app.com/">Waykup!</a>
-                <a class="drawer-nav-item" href="contact.html">Contact</a>
+    <inline src="templates/nav.html" />
+
+    <header class="hero P(r) Pt(100px) Pb(65px) Px(10%) Px(20%)--sm Px(0)--md Ta(c) Bg($brandMain) C(#fff)" role="banner">
+      <div class="container">
+        <h1 class="hero-title Mb($gutter) Lh(1.15) Fw(300) Fz(13vw) Fz(10vw)--sm Fz(67px)--md">Building done right</h1>
+        <h2 class="Mx(-12%) Fz($Fz-lg) Mx(0)--md"><span class="D(ib)">Neat, adaptive and unbreakable UIs.</span> <span class="D(ib)">2016 Portfolio of JV, front-end dev from Buenos Aires.</span></h2>
+      </div>
+    </header>
+
+    <main role="main">
+      <section class="section Py(110px)--md u-clearfix">
+        <article class="container container--cols">
+          <div class="col W(100%) W(50%)--md Fl(start) Pend(50px)--lg">
+            <h3 class="section__title Mb(12px) Fw(300) C($grey-4)">I'm a passionate UI developer specialized in mobile and adaptive experiences.</h3>
+          </div>
+          <div class="col W(100%) W(50%)--md Fl(start)">
+            <p class="Mb($gutter)">My name is Juan Vanni. I'm a passionate front-end developer - specialized in UI and mobile -, UX designer and speaker. I stand out for writing neat, performant and scalable code, as also designing very well cared, thoughtful user experiences.</p>
+            <!-- <p class="Mb($gutter)">Throughout my career I worked for some of the biggest brands in Argentina in all kind of projects. From big corporation sites, e-commerce platforms, mobile applications and HTML5 video games.</p> -->
+            <p class="Mb(25px)">I'm a very detail oriented professional always focused on achieving outstanding results. I love what I do and that's the fuel that gets me on delivering high quality products.</p>
+            <a class="btn D(b) W(100%) D(ib)--md W(a)--md" href="about.html" role="button">Learn More</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="section section--negative P(0) Pt(30px) P(0)--md">
+        <div class="owl-carousel owl-theme">
+          <article class="W(100%) Px($gutter)">
+            <div class="container container--cols Pos(r)--md">
+              <div class="col W(100%) W(40%)--md Fl(end)--md Pos(a)--md End(0)--md End($gutter)--md T(50%)--md TranslateY(-50%)--md">
+                <h3 class="section__title Mb(12px)">A must have app for movers</h3>
+                <p class="Mb(25px)">With this simple and easy to use proximity alarm, you no longer need to worry about missing your stop. With Waykup you can get the most of each daily trip!</p>
+                <a class="btn btn--inverse Mend(7px)" href="work.html#waykup" role="button">View more</a>
+                <a class="W(149px) D(ib) Va(m)" href="https://itunes.apple.com/us/app/waykup/id817714891?ls=1&mt=8" target="_blank" role="button"><img class="W(100%) D(b)" src="images/appStore-badge.svg" alt="App Store download"></a>
+              </div>
+              <div class="col W(100%) W(65%)--md Fl(start)--md">
+                <script>
+                  if (isMobile.any === true) {
+                    document.write('<img alt="Waykup highlight image" src="images/iphone-hand.png">');
+                  } else {
+                    document.write('<img class="waykup W(68%)! Mx(a)" alt="Waykup highlight image" src="images/highlights/001-Slider-Waykup.png">');
+                  }
+                </script>
+              </div>
             </div>
-
-            <div main>
-            <core-scroll-header-panel condenses headerHeight="320px" condensedHeaderHeight="75px">
-
-                <core-toolbar class="core-header jv-navbar">
-
-                    <div class="container bottom">
-                        <h1 class="navbar-brand"><a href="index.html">Jota V<span class="jv-hidden">Juan Vanni</span></a></h1>
-                        <p class="navbar-brand-tag">CSS Architect / UX Designer</p>
-                    </div>
-
-                    <div class="container">
-                        <nav class="main-menu">
-                            <div class="pull-left">
-                                <a class="nav-item" href="https://www.linkedin.com/profile/view?id=86087495&trk=nav_responsive_tab_profile_pic" target="_blank">
-                                    <span class="social-icon icon-linkedin"></span>
-                                </a>
-                                <a class="nav-item" href="https://github.com/jota-v" target="_blank">
-                                    <span class="social-icon icon-github"></span>
-                                </a>
-                                <a class="nav-item" href="https://twitter.com/jota_vanni" target="_blank">
-                                    <span class="social-icon icon-twitter"></span>
-                                </a>
-                            </div>
-                            <div class="pull-right">
-                                <a class="nav-item" href="experience.html">
-                                    <paper-button class="jv-btn">Experience</paper-button>
-                                </a>
-                                <a class="nav-item" href="http://waykup-app.com/">
-                                    <paper-button class="jv-btn">Waykup!</paper-button>
-                                </a>
-                                <a class="nav-item" href="contact.html">
-                                    <paper-button class="jv-btn">Contact</paper-button>
-                                </a>
-                            </div>
-                        </nav>
-
-                        <paper-button class="navbar-toggle">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </paper-button>
-                    </div>
-                </core-toolbar>
-
-                <main content class="jv-screen-home">
-                    <!--[if lt IE 10]>
-                      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-                    <![endif]-->
-                    <section class="jv-section-block about">
-                        <div class="container">
-                            <h2 class="jv-section-title">About me</h2>
-                            <p>My name is Juan Vanni (a.k.a. Jota) and I live in Buenos Aires. I'm a passionate front-end developer - specialized in UI and mobile -, UX designer and speaker. I stand out for writing neat, performant and scalable code, as also designing very well cared, thoughtful user experiences.</p>
-                            <p>Throughout my career I worked for some of the biggest brands in Argentina in all kind of projects. From big corporation sites, e-commerce platforms, mobile applications and HTML5 video games.</p>
-                            <p>I'm a very detail oriented professional always focused on achieving outstanding results. I love what I do and that's the fuel that gets me on delivering high quality products.</p>
-                        </div>
-                    </section>
-                    <section class="jv-section-block apptitudes">
-                        <div class="container">
-
-                            <h2 class="jv-section-title">Aptitudes</h2>
-
-                            <h3 class="h4">HTML5</h3>
-                            <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
-                                95%
-                                </div>
-                            </div>
-
-                            <h3 class="h4">CSS</h3>
-                            <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
-                                95%
-                                </div>
-                            </div>
-
-                            <h3 class="h4">JS</h3>
-                            <div class="progress progress-striped active">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                55%
-                                </div>
-                            </div>
-
-                            <h3 class="h4">UX Design</h3>
-                            <div class="progress progress-striped active">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                                80%
-                                </div>
-                            </div>
-
-                            <h3 class="h4">Nerdness</h3>
-                            <div class="progress progress-striped active">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-                                90%
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="jv-section-block section-weapons bg-alt">
-                        <div class="container">
-                            <h2 class="jv-section-title">Weapons of choice</h2>
-                            <ul class="brands-tiles weapons-tiles row">
-                                <li class="brand-tile sass col-xs-4 col-sm-3 col-md-3">
-                                    <core-tooltip label="SASS or less.js, CSS preprocessors" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile node col-xs-4 col-sm-3 col-md-3">
-                                    <core-tooltip label="Node / NPM" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile grunt col-xs-4 col-sm-3 col-md-3">
-                                    <core-tooltip label="Grunt - Task manager" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile bower col-xs-4 col-sm-3 col-md-3">
-                                    <core-tooltip label="Bower - Dependency manager" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile yo col-xs-4 col-sm-3 col-md-3">
-                                    <core-tooltip label="Yeoman - Scaffolding projects" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile browserify col-xs-4 col-sm-3 col-md-3">
-                                    <core-tooltip label="Browserify - Require JS modules" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile cordova col-xs-4 col-sm-3 col-md-3">
-                                    <core-tooltip label="Apache Cordova - Mobile web apps framework" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile github col-xs-4 col-sm-3 col-md-3">
-                                    <core-tooltip label="Github - Social code versioning" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                            </ul>
-                            <div class="jv-btn-wrapper">
-                                <a href="contact.html">
-                                    <paper-button class="jv-btn">Contact me</paper-button>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="jv-section-block bg-alt section-twitter">
-                        <div class="container">
-                            <h2 class="jv-section-title">My tweets + My favorites</h2>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                    <a class="twitter-timeline" href="https://twitter.com/jota_v_" data-widget-id="494692316448178177">Tweets by @jota_v_</a>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                    <a class="twitter-timeline" href="https://twitter.com/jota_v_/favorites" data-widget-id="494694477630414848">Favorite Tweets by @jota_v_</a>
-                                </div>
-                        </div>
-                    </section>
-                    <section class="jv-section-block section-clients">
-                        <div class="container">
-                            <h2 class="jv-section-title">Some brands I worked with</h2>
-
-                            <ul class="brands-tiles clients-tiles row">
-                                <li class="brand-tile ibero col-xs-6 col-sm-3 col-md-3">
-                                    <core-tooltip label="Iberostar - Hotels & Resorts - Site / Reservation platform" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile ypf col-xs-6 col-sm-3 col-md-3">
-                                    <core-tooltip label="YPF - Petrochemical Company Site / Guía YPF - Navigation app" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile meli col-xs-6 col-sm-3 col-md-3">
-                                    <core-tooltip label="mercadolibre.com - e-commerce platform" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile preguntados col-xs-6 col-sm-3 col-md-3">
-                                    <core-tooltip label="Preguntados (Trivia Crack) - Video game" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile omint col-xs-6 col-sm-3 col-md-3">
-                                    <core-tooltip label="Omint - Health insurance site" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile trump col-xs-6 col-sm-3 col-md-3">
-                                    <core-tooltip label="Trump Punta del Este - Real Estate Site" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile consultatio col-xs-6 col-sm-3 col-md-3">
-                                    <core-tooltip label="Consultatio - Real Estate site" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-                                <li class="brand-tile techo col-xs-6 col-sm-3 col-md-3">
-                                    <core-tooltip label="Techo - Foundation site" position="top">
-                                        <span></span>
-                                    </core-tooltip>
-                                </li>
-
-                            </ul>
-                            <div class="jv-btn-wrapper">
-                                <a href="experience.html">
-                                    <paper-button class="jv-btn">View my Experience</paper-button>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-
-                    <footer class="jv-footer">
-                        <div class="container">
-                            <h5 class="copy">2014 - Designed & Developed by Juan Vanni with <a href="https://www.polymer-project.org/" target="_blank">Polymer Web Components</a></h5>
-                            <!-- <a class="twitter-follow-button" href="https://twitter.com/jota_vanni" data-show-count="false" data-lang="en"> Follow @jota_vanni</a> -->
-                        </div>
-                    </footer>
-
-                </main>
-
-            </core-scroll-header-panel>
-
+          </article>
+          <article class="W(100%) Px($gutter)">
+            <div class="container container--cols Pos(r)--md">
+              <div class="col W(100%) W(35%)--md Fl(start)--md Pos(a)--md Start(0)--md End($gutter)--md T(50%)--md TranslateY(-50%)--md">
+                <h3 class="section__title Mb(12px)">An online marketplace.</h3>
+                <p class="Mb(25px)">MercadoLibre is the largest e-commerce ecosystem in Latin America. It offer a wide range of services to our sellers and buyers throughout the region including marketplace, payments, advertising and e-building solutions.</p>
+                <a class="btn btn--inverse" href="work.html#meli" role="button">View more</a>
+              </div>
+              <div class="col W(100%) W(65%)--md Fl(end)--md">
+                <script>
+                  if (isMobile.any === true) {
+                    document.write('<img alt="MercadoLibre highlight image" src="images/highlight_MELI.png">');
+                  } else {
+                    document.write('<img class="meli P(r) W(112%)! End(-5%)" alt="MercadoLibre highlight image" src="images/highlights/002-Slider-ML.png">');
+                  }
+                </script>
+              </div>
+            </div>
+          </article>
+          <article class="W(100%) Px($gutter)">
+            <div class="container container--cols Pos(r)--md">
+              <div class="col W(100%) W(35%)--md Fl(end)--md Pos(a)--md End(0)--md End($gutter)--md T(50%)--md TranslateY(-50%)--md">
+                <h3 class="section__title Mb(12px)">A multiplayer trivia game.</h3>
+                <p class="Mb(25px)">Is an Argentinian trivia multiplayer game for Android, iOS and web browsers. It can be played against Facebook friends and users who registered with their e-mails.</p>
+                <a class="btn btn--inverse" href="work.html#trivia" role="button">View more</a>
+              </div>
+              <div class="col W(100%) W(65%)--md Fl(start)--md">
+                <script>
+                  if (isMobile.any === true) {
+                    document.write('<img alt="Trivia Crack highlight image" src="images/highlight_TRIVIA.png">');
+                  } else {
+                    document.write('<img class="trivia P(r) Start(-5%)" alt="Trivia Crack highlight image" src="images/highlights/003-Slider-Preguntados.png">');
+                  }
+                </script>
+              </div>
+            </div>
+          </article>
         </div>
-    </core-drawer-panel>
+      </section>
 
+      <section>
+        <div class="H(65px) Lh(65px) Bg(#eee) Ta(c)">
+          <a href="work.html" class="Fz($Fz-xsm) Fw(900) Tt(u) C($grey-4) Pb(2px) Bdbw(1px) Bdbs(s) Bdbc($grey-9) Lts(1px)">View all work</a>
+        </div>
+        <div class="xaSlide">
+          <ul class="xaSlide-container container Py(40px) Py(65px)--md">
+            <li class="xaSlide-item"><img alt="Iberostar Logo" src="images/logo_IBEROSTAR.png" alt="Iberostar"></li>
+            <li class="xaSlide-item"><img alt="YPF Logo" src="images/logo_YPF.png" alt="YPF"></li>
+            <li class="xaSlide-item"><img alt="MercadoLibre Logo" src="images/logo_MERCADOLIBRE.png" alt="mercadolibre"></li>
+            <li class="xaSlide-item"><img alt="TriviaCrack Logo" src="images/logo_PREGUNTADOS.png" alt="Trivia Crack"></li>
+            <li class="xaSlide-item"><img alt="Trump Logo" src="images/logo_TRUMP.png" alt="Trump"></li>
+            <li class="xaSlide-item"><img alt="Consultatio Logo" src="images/logo_CONSULTATIO.png" alt="Consultatio"></li>
+            <li class="xaSlide-item"><img alt="Techo Logo" src="images/logo_TECHO.png" alt="Techo"></li>
+            <li class="xaSlide-item"><img alt="Omit Logo" src="images/logo_OMINT.png" alt="omint"></li>
+          </ul>
+        </div>
+      </section>
 
-        <!-- build:js(.) scripts/vendor.js -->
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/Grid-A-Licious/jquery.grid-a-licious.js"></script>
-        <!-- endbuild -->
+      <section class="section section--negative Py(110px)--md Ta(c)">
+        <h3 class="section__title Mb(30px)">Want to work with me?</h3>
+        <a href="#" class="btn btn--alternative" role="button">Get in touch</a>
+      </section>
+    </main>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <inline src="templates/footer.html" />
+    <inline src="templates/scripts.html" />
 
-              ga('create', 'UA-44071951-1', 'jota-v.github.io');
-              ga('send', 'pageview');
-        </script>
-
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
-
-        <!-- Twitter plugins -->
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-    </body>
+  </body>
 </html>

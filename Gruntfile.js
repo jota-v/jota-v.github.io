@@ -1,112 +1,95 @@
-// Generated on 2014-10-09 using
-// generator-webapp 0.5.1
 'use strict';
-
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// If you want to recursively match all subfolders, use:
-// 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
 
-  // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
+  require('jit-grunt')(grunt, {
+    useminPrepare: 'grunt-usemin'
+  });
 
-  // Load grunt tasks automatically
-  require('load-grunt-tasks')(grunt);
+  grunt.loadNpmTasks('grunt-media-query-extractor');
+  grunt.loadNpmTasks('grunt-comment-media-queries');
 
-  // Configurable paths
   var config = {
     app: 'app',
     dist: 'dist'
   };
 
-  // Define the configuration for all the tasks
   grunt.initConfig({
-
-    // Project settings
     config: config,
 
-    // Watches files for changes and runs tasks based on the changed files
     watch: {
-      js: {
+      babel: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
-        tasks: ['jshint'],
-        options: {
-          livereload: true
-        }
+        tasks: ['babel:dist']
       },
-      jstest: {
+      babelTest: {
         files: ['test/spec/{,*/}*.js'],
-        tasks: ['test:watch']
+        tasks: ['babel:test', 'test:watch']
       },
       gruntfile: {
         files: ['Gruntfile.js']
       },
-      sass: {
-        files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['sass:server', 'autoprefixer']
+      html: {
+        files: ['<%= config.app %>/{,*/}*.html'],
+        tasks: ['inline','atomizer','mqe']
       },
-      styles: {
-        files: ['<%= config.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
-      },
-      livereload: {
-        options: {
-          livereload: '<%= connect.options.livereload %>'
-        },
-        files: [
-          '<%= config.app %>/{,*/}*.html',
-          '.tmp/styles/{,*/}*.css',
-          '<%= config.app %>/images/{,*/}*'
-        ]
+      stylus: {
+        files: ['<%= config.app %>/styles/{,*/}*.{styl,css}'],
+        tasks: ['stylus', 'postcss']
       }
     },
 
-    // The actual grunt server settings
-    connect: {
+    browserSync: {
       options: {
-        port: 9000,
+        notify: false,
+        background: true,
         open: false,
-        livereload: 35729,
-        // Change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
+        browser: 'Google Chrome',
+        watchOptions: {
+          ignored: ''
+        }
       },
       livereload: {
         options: {
-          middleware: function(connect) {
-            return [
-              connect.static('.tmp'),
-              connect().use('/bower_components', connect.static('./bower_components')),
-              connect.static(config.app)
-            ];
+          files: [
+            '.tmp/{,*/}*.html',
+            '.tmp/styles/{,*/}*.css',
+            '<%= config.app %>/images/{,*/}*',
+            '.tmp/scripts/{,*/}*.js'
+          ],
+          port: 9000,
+          server: {
+            baseDir: ['.tmp', config.app],
+            routes: {
+              '/bower_components': './bower_components',
+              '/node_modules': './node_modules'
+            }
           }
         }
       },
       test: {
         options: {
-          open: false,
           port: 9001,
-          middleware: function(connect) {
-            return [
-              connect.static('.tmp'),
-              connect.static('test'),
-              connect().use('/bower_components', connect.static('./bower_components')),
-              connect.static(config.app)
-            ];
+          open: false,
+          logLevel: 'silent',
+          host: 'localhost',
+          server: {
+            baseDir: ['.tmp', './test', config.app],
+            routes: {
+              '/bower_components': './bower_components'
+            }
           }
         }
       },
       dist: {
         options: {
-          base: '<%= config.dist %>',
-          livereload: false
+          background: false,
+          server: '<%= config.dist %>'
         }
       }
     },
 
-    // Empties folders to start fresh
     clean: {
       dist: {
         files: [{
@@ -121,13 +104,11 @@ module.exports = function (grunt) {
       server: '.tmp'
     },
 
-    // Make sure code styles are up to par and there are no obvious mistakes
-    jshint: {
+    eslint: {
       options: {
-        jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
+        configFile: '.eslintrc'
       },
-      all: [
+      target: [
         'Gruntfile.js',
         '<%= config.app %>/scripts/{,*/}*.js',
         '!<%= config.app %>/scripts/vendor/*',
@@ -135,83 +116,173 @@ module.exports = function (grunt) {
       ]
     },
 
-    // Mocha testing framework configuration options
     mocha: {
       all: {
         options: {
           run: true,
-          urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
+          urls: ['http://<%= browserSync.test.options.host %>:<%= browserSync.test.options.port %>/index.html']
         }
       }
     },
 
-    // Compiles Sass to CSS and generates necessary files if requested
-    sass: {
+    babel: {
       options: {
-        sourceMap: true,
-        includePaths: ['bower_components']
-        },
+        sourceMap: true
+      },
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>/styles',
-          src: ['*.{scss,sass}'],
-          dest: '.tmp/styles',
-          ext: '.css'
+          cwd: '<%= config.app %>/scripts',
+          src: '{,*/}*.js',
+          dest: '.tmp/scripts',
+          ext: '.js'
         }]
       },
-      server: {
+      test: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>/styles',
-          src: ['*.{scss,sass}'],
-          dest: '.tmp/styles',
-          ext: '.css'
+          cwd: 'test/spec',
+          src: '{,*/}*.js',
+          dest: '.tmp/spec',
+          ext: '.js'
         }]
       }
     },
 
-    // Add vendor prefixed styles
-    autoprefixer: {
+    atomizer: {
+      task: {
+        options: {
+          config: {
+            breakPoints: {
+              'sm': '@media(min-width:480px)',
+              'md': '@media(min-width:768px)',
+              'lg': '@media(min-width:1024px)'
+            },
+            custom: {
+              //Greys
+              '$grey-1': '#171717',
+              '$grey-2': '#232323',
+              '$grey-4': '#424242',
+              '$grey-6': '#616161',
+              '$grey-9': '#9E9E9E',
+              '$grey-b': '#BDBDBD',
+              '$grey-e': '#EEEEEE',
+              '$grey-f': '#F5F5F5',
+
+              // Color
+              '$brandMain': '#4E3FB5',
+
+              // fonts
+              '$Fz-base': '14px',
+              '$Fz-xsm': '10px',
+              '$Fz-sm': '12px',
+              '$Fz-lg': '18px',
+              '$Fz-xlg': '23px',
+              '$Fz-xxlg': '58px',
+              '$Ff-primary': '"Lato", Helvetica, Arial, sans-serif',
+
+              // Layout
+              '$gutter': '15px'
+            }
+          }
+        },
+        files: [{
+          src: '.tmp/*.html',
+          dest: '<%= config.app %>/styles/_atomizer.css'
+        }]
+      }
+    },
+
+    stylus: {
       options: {
-        browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
+        compress: false,
+        path: '.',
+        'include css': true,
+        relativeDest: '.tmp/styles'
+      },
+      dist: {
+        files: {
+          'main.css': '<%= config.app %>/styles/main.styl',
+          'main__large.css': '<%= config.app %>/styles/main__large.styl'
+        }
+      }
+    },
+
+    mqe: {
+      options: {
+        log: true
+      },
+      your_target: {
+        files: {
+          '<%= config.app %>/styles': ['<%= config.app %>/styles/_atomizer.css']
+        }
+      }
+    },
+
+    'comment-media-queries': {
+      options: {
+        // log: true
+      },
+      your_target: {
+        files: {
+          '<%= config.app %>/styles/_atomizer-min-width-768px.css': ['<%= config.app %>/styles/_atomizer-min-width-768px.css'],
+          '<%= config.app %>/styles/_atomizer-min-width-1024px.css': ['<%= config.app %>/styles/_atomizer-min-width-1024px.css']
+        }
+      }
+    },
+
+    postcss: {
+      options: {
+        map: true,
+        processors: [
+          require('autoprefixer')({
+            browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']
+          })
+        ]
       },
       dist: {
         files: [{
           expand: true,
           cwd: '.tmp/styles/',
           src: '{,*/}*.css',
-          dest: '.tmp/styles/'
+          dest: 'dist/styles/'
         }]
       }
     },
 
-    // Renames files for browser caching purposes
-    rev: {
+    inline: {
+      options: {
+        uglify: true
+      },
       dist: {
         files: {
-          src: [
-            '<%= config.dist %>/scripts/{,*/}*.js',
-            '<%= config.dist %>/styles/{,*/}*.css',
-            '<%= config.dist %>/images/{,*/}*.*',
-            '<%= config.dist %>/styles/fonts/{,*/}*.*',
-            '<%= config.dist %>/*.{ico,png}'
-          ]
+          '.tmp/index.html': ['<%= config.app %>/index.html'],
+          '.tmp/about.html': ['<%= config.app %>/about.html'],
+          '.tmp/work.html': ['<%= config.app %>/work.html'],
+          '.tmp/contact.html': ['<%= config.app %>/contact.html']
         }
       }
     },
 
-    // Reads HTML for usemin blocks to enable smart builds that automatically
-    // concat, minify and revision files. Creates configurations in memory so
-    // additional tasks can operate on them
+    filerev: {
+      dist: {
+        src: [
+          '<%= config.dist %>/scripts/{,*/}*.js',
+          '<%= config.dist %>/styles/{,*/}*.css',
+          '<%= config.dist %>/images/{,*/}*.*',
+          '<%= config.dist %>/fonts/{,*/}*.*',
+          '<%= config.dist %>/*.{ico,png}'
+        ]
+      }
+    },
+
     useminPrepare: {
       options: {
         dest: '<%= config.dist %>'
       },
-      html: '<%= config.app %>/index.html'
+      html: '.tmp/index.html'
     },
 
-    // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
       options: {
         assetsDirs: [
@@ -220,11 +291,10 @@ module.exports = function (grunt) {
           '<%= config.dist %>/styles'
         ]
       },
-      html: ['<%= config.dist %>/{,*/}*.html'],
+      html: ['.tmp/{,*/}*.html'],
       css: ['<%= config.dist %>/styles/{,*/}*.css']
     },
 
-    // The following *-min tasks produce minified files in the dist folder
     imagemin: {
       dist: {
         files: [{
@@ -247,6 +317,21 @@ module.exports = function (grunt) {
       }
     },
 
+    cssnano: {
+      options: {
+        sourcemap: false,
+        autoprefixer: false
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '.tmp/styles',
+          dest: '<%= config.dist %>/styles',
+          src: 'main.css'
+        }]
+      }
+    },
+
     htmlmin: {
       dist: {
         options: {
@@ -257,58 +342,18 @@ module.exports = function (grunt) {
           removeCommentsFromCDATA: true,
           removeEmptyAttributes: true,
           removeOptionalTags: true,
-          removeRedundantAttributes: true,
+          removeRedundantAttributes: false,
           useShortDoctype: true
         },
         files: [{
           expand: true,
-          cwd: '<%= config.dist %>',
+          cwd: '.tmp',
           src: '{,*/}*.html',
           dest: '<%= config.dist %>'
         }]
       }
     },
 
-    vulcanize: {
-        default: {
-            options: {
-                strip: true
-            },
-            files: {
-                'dist/index.html': 'dist/index.html',
-                'dist/experience.html': 'dist/experience.html',
-                'dist/contact.html': 'dist/contact.html'
-            },
-        },
-    },
-
-    // By default, your `index.html`'s <!-- Usemin block --> will take care
-    // of minification. These next options are pre-configured if you do not
-    // wish to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= config.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css',
-    //         '<%= config.app %>/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= config.dist %>/scripts/scripts.js': [
-    //         '<%= config.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
-
-    // Copies remaining files to places other tasks can use
     copy: {
       dist: {
         files: [{
@@ -320,54 +365,23 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
-            'fonts/{,*/}*.*',
-            '.htaccess'
+            'fonts/{,*/}*.*'
           ]
-        }, {
-          src: 'node_modules/apache-server-configs/dist/.htaccess',
-          dest: '<%= config.dist %>/.htaccess'
         }]
-      },
-      styles: {
-        expand: true,
-        dot: true,
-        cwd: '<%= config.app %>/styles',
-        dest: '.tmp/styles/',
-        src: '{,*/}*.css'
-      },
-      bower: {
-        expand: true,
-        cwd: './',
-        dest: '<%= config.dist %>',
-        src: [
-          'bower_components/polymer/**/*'
-        ]
       }
     },
 
-    'gh-pages': {
-      options: {
-        base: 'dist',
-        branch: 'master',
-        message: 'Auto-generated commit',
-        repo: 'https://github.com/jota-v/jota-v.github.io.git'
-      },
-      src: '**/*'
-    },
-
-
-    // Run some tasks in parallel to speed up build process
     concurrent: {
       server: [
-        'sass:server',
-        'copy:styles'
+        'babel:dist',
+        'stylus'
       ],
       test: [
-        'copy:styles'
+        'babel'
       ],
       dist: [
-        'sass',
-        'copy:styles',
+        'babel',
+        'stylus',
         'imagemin',
         'svgmin'
       ]
@@ -375,19 +389,21 @@ module.exports = function (grunt) {
   });
 
 
-  grunt.registerTask('serve', 'start the server and preview your app, --allow-remote for remote access', function (target) {
-    if (grunt.option('allow-remote')) {
-      grunt.config.set('connect.options.hostname', '0.0.0.0');
-    }
+  grunt.registerTask('serve', 'start the server and preview your app', function (target) {
+
     if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
+      return grunt.task.run(['build', 'browserSync:dist']);
     }
 
     grunt.task.run([
       'clean:server',
       'concurrent:server',
-      'autoprefixer',
-      'connect:livereload',
+      'inline',
+      'atomizer',
+      'mqe',
+      'stylus',
+      'postcss',
+      'browserSync:livereload',
       'watch'
     ]);
   });
@@ -402,33 +418,36 @@ module.exports = function (grunt) {
       grunt.task.run([
         'clean:server',
         'concurrent:test',
-        'autoprefixer'
+        'postcss'
       ]);
     }
 
     grunt.task.run([
-      'connect:test',
+      'browserSync:test',
       'mocha'
     ]);
   });
 
   grunt.registerTask('build', [
     'clean:dist',
+    'inline',
+    'atomizer',
+    'mqe',
+    'comment-media-queries',
     'useminPrepare',
     'concurrent:dist',
-    'autoprefixer',
+    'postcss',
     'concat',
-    'cssmin',
+    'cssnano',
     'uglify',
     'copy:dist',
-    'copy:bower',
-    // 'rev',
+    'filerev',
     'usemin',
-    'vulcanize'
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [
-    'newer:jshint',
+    'newer:eslint',
     'test',
     'build'
   ]);
