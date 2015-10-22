@@ -182,5 +182,16 @@
     <inline src="templates/footer.html" />
     <inline src="templates/scripts.html" />
 
+    <script>
+      $(document).ready(function () {
+        $('.workRest-items').gridalicious({
+          animate: true,
+          selector: '.workRest-item',
+          gutter: 0,
+          width: 290
+        });
+      });
+    </script>
+
   </body>
 </html>

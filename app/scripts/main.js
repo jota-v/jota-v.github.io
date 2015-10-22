@@ -11,27 +11,11 @@ function navPos() {
 
 $(function(){
 
-  // InstantClick.init();
-
-  $('.owl-carousel').owlCarousel({
-    items: 1,
-    smartSpeed: 600
-  });
-
   navPos();
 
   $(window).scroll(function () {
     navPos();
   });
-
-  if ($('.workRest-items')) {
-    $('.workRest-items').gridalicious({
-      animate: true,
-      selector: '.workRest-item',
-      gutter: 0,
-      width: 290
-    });
-  }
 
   var pathname = window.location.pathname;
 
@@ -50,10 +34,3 @@ $(function(){
       break;
   }
 });
-
- // var md = new MobileDetect(window.navigator.userAgent);
- // if (md.mobile()) {
- //     $('body').addClass('mobile');
- // } else {
- //     $('body').addClass('no-mobile');
- // }
