@@ -58,7 +58,7 @@ module.exports = function (grunt) {
             '<%= config.app %>/images/{,*/}*',
             '.tmp/scripts/{,*/}*.js'
           ],
-          port: 9000,
+          port: 9009,
           server: {
             baseDir: ['.tmp', config.app],
             routes: {
@@ -171,13 +171,14 @@ module.exports = function (grunt) {
 
               // Color
               '$brandMain': '#4E3FB5',
+              '$brandSecondary': 'rgb(0,188,212)',
 
               // fonts
               '$Fz-base': '14px',
               '$Fz-xsm': '10px',
               '$Fz-sm': '12px',
               '$Fz-lg': '18px',
-              '$Fz-xlg': '23px',
+              '$Fz-xlg': '27px',
               '$Fz-xxlg': '58px',
               '$Ff-primary': '"Lato", Helvetica, Arial, sans-serif',
 

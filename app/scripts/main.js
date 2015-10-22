@@ -29,7 +29,7 @@ $(function(){
       animate: true,
       selector: '.workRest-item',
       gutter: 0,
-      width: 320
+      width: 290
     });
   }
 

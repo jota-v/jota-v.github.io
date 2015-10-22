@@ -7,7 +7,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="shortcut icon" href="/favicon.ico">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <link rel="stylesheet" href="styles/main.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,900' rel='stylesheet' type='text/css'>
@@ -24,26 +25,32 @@
 
     <inline src="templates/nav.html" />
 
-    <header class="Bg($brandMain) Mt(65px) C($grey-f) Ta(c) P(50px) P(90px)--md" role="banner">
+    <header class="Bg($brandMain) Mt(50px) Mt(65px)--md C($grey-f) Ta(c) Py(50px) Py(90px)--md Px(30px)--md" role="banner">
       <div class="container">
-        <h1 class="Fz(57px)">I just love what I do</h1>
-        <p class="Mx(-12%) Fz($Fz-lg) Mx(0)--md">Don't take my word for it. Here I've selected the very best work I have been fortunate enough to produce.</p>
+        <h1 class="Fz(11vw) Lh(1.15) Mb(10px) Fz(52px)--sm Fz(57px)--md">I just love what I do</h1>
+        <p class="Fz($Fz-base) Fz($Fz-lg)--md">Don't take my word for it. Here I've selected the very best work I have been fortunate enough to produce.</p>
       </div>
     </header>
 
     <main role="main" class="work">
-      <section class="Pt(100px) Pb(0) workHighlight Bg(#fff) Ta(c)" id="waykup">
+      <section class="Pt(50px) Pt(100px)--md Pb(0) workHighlight Bg(#fff) Ta(c)" id="waykup">
         <article class="container">
           <h2 class="section__title Mb(25px)">Waykup!</h2>
           <p class="Mx(a) Mb(50px) Maw(800px)">I wanted to develop a javascript app for mobile that performed as a native app focusing on every detail for the user experience to feel native like, every touch input, gesture, animation, speed and the UI. The technology stack used for development: Apache Cordova to wrap the webapp to be installed as native, grunt.js for compiling, require.js for modularity of the js code, hammer.js for touch gestures and sass as the css pre-precessor.
   The app consists on a geolocation alarm. It is currently available in the iOS appstore. <a href="https://itunes.apple.com/us/app/waykup/id817714891?ls=1&mt=8" target="_blank">Download now!</a></p>
           <div class="Mx(-15px)">
-            <img src="images/work/waykup.png" class="W(100%) D(b)">
+            <script>
+              if (isMobile.any === true) {
+                document.write('<img src="images/work/waykupiphones-600.png" alt="Waykup" class="W(100%) D(b)">');
+              } else {
+                document.write('<img src="images/work/waykupiphones.png" alt="Waykup" class="W(100%) D(b)">');
+              }
+            </script>
           </div>
         </article>
       </section>
 
-      <section class="workRest Py(90px) Bg($grey-f)">
+      <section class="workRest Pt(50px) Py(100px)--md Bg($grey-f)">
         <div class="container container--cols Ta(c)">
           <!-- <h2 class="section__title Mb(50px)">I love what I do and I hope you do too!</h2> -->
           <!-- <p class="Mb(50px)">I love what I do and I hope you do too! Have a poke around, get to know me a bit better.</p> -->
