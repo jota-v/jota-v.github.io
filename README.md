@@ -14,8 +14,8 @@ This is my 2016 Portfolio. If you like it feel free to fork it and use it (just 
 
 ## Getting started
 
-### Dependencies
-* Node
+### Needed stuff
+* [Node](https://nodejs.org)
 * [Grunt](http://gruntjs.com)
 * [Bower](http://bower.io)
 
@@ -23,4 +23,4 @@ This is my 2016 Portfolio. If you like it feel free to fork it and use it (just 
 * Fork & Clone
 * Run `npm install && bower install` to install required dependencies.
 * Run `grunt serve` to create local server while working.
-* Run `gulp build` to compile and optimize everything for dist.
+* Run `grunt build` to compile and optimize everything for dist.
