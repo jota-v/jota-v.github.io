@@ -386,6 +386,14 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
+    },
+    'gh-pages': {
+      options: {
+        base: 'dist',
+        branch: 'master',
+        message: 'Auto-generated deploy to prod'
+      },
+      src: ['**']
     }
   });
 

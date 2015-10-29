@@ -15,7 +15,7 @@
 
     <script src="../node_modules/ismobilejs/isMobile.js?__inline=true"></script>
     <script>
-      if (isMobile.any === false) {
+      if (isMobile.phone === false) {
         document.write('<link rel="stylesheet" href="styles/main__large.css">');
       }
     </script>
@@ -40,7 +40,7 @@
   The app consists on a geolocation alarm. It is currently available in the iOS appstore. <a href="https://itunes.apple.com/us/app/waykup/id817714891?ls=1&mt=8" target="_blank">Download now!</a></p>
           <div class="Mx(-15px)">
             <script>
-              if (isMobile.any === true) {
+              if (isMobile.phone === true) {
                 document.write('<img src="images/work/waykupiphones-600.png" alt="Waykup" class="W(100%) D(b)">');
               } else {
                 document.write('<img src="images/work/waykupiphones.png" alt="Waykup" class="W(100%) D(b)">');
