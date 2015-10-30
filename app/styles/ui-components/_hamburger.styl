@@ -1,5 +1,6 @@
 .hamburger {
   position: relative;
+  z-index: 1;
   width: 26px;
   height: 16px;
 }
@@ -22,4 +23,61 @@
 
 .hamburger span:last-child {
   top: 100%;
+}
+
+@keyframes cross1 {
+
+  40% {
+    transform: translateY(8px)
+  }
+
+  60% {
+    transform: translateY(8px)
+  }
+
+  100% {
+    transform: translateY(8px) rotate(45deg)
+  }
+}
+
+@keyframes cross3 {
+
+  40% {
+    transform: translateY(-8px)
+  }
+
+  60% {
+    transform: translateY(-8px)
+  }
+
+  100% {
+    transform: translateY(-8px) rotate(-45deg)
+  }
+}
+
+@keyframes cross2 {
+  40% {
+    opacity: 1
+  }
+
+  60% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+.nav--on .hamburger {
+  span:first-child {
+    animation: cross1 250ms linear both
+  }
+
+  span:nth-child(2) {
+    animation: cross2 250ms linear both
+  }
+
+  span:last-child {
+    animation: cross3 250ms linear both
+  }
 }
