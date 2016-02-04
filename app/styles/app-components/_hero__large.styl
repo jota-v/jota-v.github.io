@@ -1,6 +1,47 @@
 .hero {
-  height: 95vh;
+  height: 99vh;
   min-height: 450px;
   padding-top: 38vh;
   top: 50px;
+}
+
+.hero-arrow {
+  display: block
+  position: absolute
+  bottom 40px
+  left 50%
+  width: 18px
+  height: 18px
+  margin-left -9px
+  transform rotate(45deg)
+  border-right 4px solid rgba(255,255,255,.9)
+  border-bottom 4px solid rgba(255,255,255,.9)
+  animation bounce 3.2s linear infinite
+}
+
+@keyframes bounce {
+  0% {
+    transform translateY(0) rotate(45deg)
+  }
+  78%{
+    transform translateY(0) rotate(45deg)
+  }
+  85% {
+    transform translateY(15px) rotate(45deg)
+  }
+  86% {
+    transform translateY(13px) rotate(45deg) skew(-8deg,-8deg)
+  }
+  90% {
+    transform translateY(5px) rotate(45deg)
+  }
+  95% {
+    transform translateY(15px) rotate(45deg)
+  }
+  96% {
+    transform translateY(13px) rotate(45deg) skew(-8deg,-8deg)
+  }
+  // 100% {
+  //   transform translateY(0) rotate(45deg)
+  // }
 }
