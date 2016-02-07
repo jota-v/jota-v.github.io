@@ -331,7 +331,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '.tmp/styles',
           dest: '<%= config.dist %>/styles',
-          src: 'main.css'
+          src: '{,*/}*.css'
         }]
       }
     },
