@@ -1,7 +1,6 @@
 node_modules
 dist
 .tmp
+.sass-cache
 bower_components
-.DS_Store
-app/styles/_atomizer*
-.grunt
+test/bower_components

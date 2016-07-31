@@ -1,0 +1,17 @@
+@media (min-width:480px) {
+
+.Fz\(52px\)--sm {
+	font-size: 52px;
+}
+
+.Fz\(10vw\)--sm {
+	font-size: 10vw;
+}
+
+.Px\(20\%\)--sm {
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+}
+

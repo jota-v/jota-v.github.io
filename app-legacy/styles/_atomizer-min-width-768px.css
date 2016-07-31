@@ -1,0 +1,159 @@
+@media (min-width:768px) {
+
+.D\(ib\)--md {
+	display: inline-block;
+}
+
+.Fl\(start\)--md {
+	float: left;
+}
+
+.Fl\(end\)--md {
+	float: right;
+}
+
+.Fz\(57px\)--md {
+	font-size: 57px;
+}
+
+.Fz\(\$Fz-lg\)--md {
+	font-size: 18px;
+}
+
+.Fz\(38px\)--md {
+	font-size: 38px;
+}
+
+.Fz\(22px\)--md {
+	font-size: 22px;
+}
+
+.Fz\(78px\)--md {
+	font-size: 78px;
+}
+
+.H\(200px\)--md {
+	height: 200px;
+}
+
+.Mx\(0\)--md {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.Mb\(0\)--md {
+	margin-bottom: 0;
+}
+
+.Mstart\(40px\)--md {
+	margin-left: 40px;
+}
+
+.T\(50\%\)--md {
+	top: 50%;
+}
+
+.End\(0\)--md {
+	right: 0;
+}
+
+.End\(\$gutter\)--md {
+	right: 15px;
+}
+
+.Start\(0\)--md {
+	left: 0;
+}
+
+.P\(90px\)--md {
+	padding: 90px;
+}
+
+.P\(0\)--md {
+	padding: 0;
+}
+
+.Px\(0\)--md {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.Px\(\$gutter\)--md {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.Py\(90px\)--md {
+	padding-top: 90px;
+}
+
+.Py\(90px\)--md,
+.Pb\(90px\)--md {
+	padding-bottom: 90px;
+}
+
+.Py\(110px\)--md {
+	padding-top: 110px;
+	padding-bottom: 110px;
+}
+
+.Py\(65px\)--md {
+	padding-top: 65px;
+	padding-bottom: 65px;
+}
+
+.Py\(100px\)--md,
+.Pt\(100px\)--md {
+	padding-top: 100px;
+}
+
+.Py\(100px\)--md {
+	padding-bottom: 100px;
+}
+
+.Pt\(150px\)--md {
+	padding-top: 150px;
+}
+
+.Pos\(r\)--md {
+	position: relative;
+}
+
+.Pos\(a\)--md {
+	position: absolute;
+}
+
+.TranslateY\(-50\%\)--md {
+	transform: translateY(-50%);
+}
+
+.W\(40\%\)--md {
+	width: 40%;
+}
+
+.W\(60\%\)--md {
+	width: 60%;
+}
+
+.W\(50\%\)--md {
+	width: 50%;
+}
+
+.W\(25\%\)--md {
+	width: 25%;
+}
+
+.W\(a\)--md {
+	width: auto;
+}
+
+.W\(65\%\)--md {
+	width: 65%;
+}
+
+.W\(35\%\)--md {
+	width: 35%;
+}
+
+}
+
