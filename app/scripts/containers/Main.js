@@ -1,11 +1,11 @@
 import React from 'react';
-import NavMenu from './../components/NavMenu';
+import NavBar from './../components/NavBar';
 
 class Main extends React.Component {
   render() {
     return (
       <div>
-        <NavMenu />
+        <NavBar />
         {this.props.children}
       </div>
     );

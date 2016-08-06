@@ -6,19 +6,17 @@ import Home from './containers/Home';
 import About from './containers/About';
 import Work from './containers/Work';
 
-class App extends React.Component {
-  render() {
-    return (
-      <Router history={hashHistory}>
-        <Route path="/" component={Main}>
-          <IndexRoute component={Home} />
-          <Route path="about" component={About} />
-          <Route path="work" component={Work} />
-        </Route>
-      </Router>
-    );
-  }
-}
+const App = function () {
+  return (
+    <Router history={hashHistory}>
+      <Route path="/" component={Main}>
+        <IndexRoute component={Home} />
+        <Route path="about" component={About} />
+        <Route path="work" component={Work} />
+      </Route>
+    </Router>
+  );
+};
 
 ReactDOM.render(
   <App />,

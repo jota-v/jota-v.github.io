@@ -37,7 +37,9 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "mullet-css": "^0.1.3",
     "normalize.css": "^4.2.0",
+    "nuka-carousel": "^2.0.2",
     "radium": "^0.18.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
