@@ -2,15 +2,16 @@ import React from 'react';
 import Hero from './../components/Hero';
 import Bio from './../components/Bio';
 import Highlights from './../components/Highlights';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Home extends React.Component {
   render() {
     return (
-      <div>
+      <ReactCSSTransitionGroup transitionName="fade-in" transitionAppear={true} transitionEnterTimeout={500} transitionAppearTimeout={500} transitionLeaveTimeout={500}>
         <Hero />
         <Bio />
         <Highlights />
-      </div>
+      </ReactCSSTransitionGroup>
     );
   }
 }

@@ -11,6 +11,13 @@ import buffer from 'vinyl-buffer';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
+gulp.task('stylesVars', () => {
+  return gulp.src('app/scripts/utils/stylesVars.json')
+    .pipe($.jsonStylus())
+    .pipe($.rename('_variables.styl'))
+    .pipe(gulp.dest('app/styles/helpers'));
+});
+
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.styl')
     .pipe($.plumber())
@@ -46,7 +53,7 @@ function lint(files) {
       .pipe($.eslint.format())
       .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
   };
-}
+};
 
 gulp.task('lint', lint('app/scripts/**/*.js'));
 
@@ -108,9 +115,8 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
   ]).on('change', reload);
 
   gulp.watch('app/styles/**/*.styl', ['styles']);
-  gulp.watch('app/scripts/**/*.js', ['scripts', 'lint']);
+  gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
-  gulp.watch('bower.json', ['fonts']);
 });
 
 gulp.task('serve:dist', () => {

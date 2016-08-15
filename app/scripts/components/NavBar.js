@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Radium from 'radium';
-import stylesVars from './../utils/stylesVars';
+import uiVariables from './../utils/uiVariables';
 
 let styles = {
   bar: {
@@ -9,12 +9,14 @@ let styles = {
     top: 0,
     zIndex: 9,
     width: '100%',
+    padding: '0 1em',
     lineHeight: '50px',
     background: 'rgba(0,0,0,0.0)',
   },
   logo: {
     float: 'left',
     color: '#fff',
+    fontSize: '1.2em',
   },
   menu: {
     float: 'right',
@@ -25,7 +27,10 @@ let styles = {
   },
   menuLink: {
     margin: '0 10px',
-    color: stylesVars.gray1020,
+    color: uiVariables.gray1020,
+    fontSize: '.85em',
+    fontWeight: 300,
+    letterSpacing: 2,
 
     ':hover': {
       color: 'blue'
@@ -40,8 +45,9 @@ class NavBar extends React.Component {
         <div className="l-container">
           <Link to="/" style={styles.logo}>JV</Link>
           <ul style={styles.menu}>
-            <li style={styles.menuItems}><Link to="/about" style={styles.menuLink}>ABOUT</Link></li>
-            <li style={styles.menuItems}><Link to="/work" style={styles.menuLink}>WORK</Link></li>
+            <li style={styles.menuItems}><Link to="/about"><span ref="1" style={styles.menuLink}>ABOUT</span></Link></li>
+            <li style={styles.menuItems}><Link to="/work"><span ref="2" style={styles.menuLink}>WORK</span></Link></li>
+            <li style={styles.menuItems}><a href="mailto:juanvanni@icloud.com" style={styles.menuLink}>CONTACT</a></li>
           </ul>
         </div>
       </nav>

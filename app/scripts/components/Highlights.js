@@ -1,17 +1,17 @@
 import React from 'react';
 import Radium from 'radium';
 import Carousel from 'nuka-carousel';
-import stylesVars from './../utils/stylesVars';
+import uiVariables from './../utils/uiVariables';
 
 let styles = {
   highlights: {
-    background: stylesVars.gray100,
-    color: stylesVars.gray1020
+    background: uiVariables.gray100,
+    color: uiVariables.gray1020
   },
   colLarge: {
     flexBasis: '60%',
     maxWidth: '60%',
-    minHeight: 340,
+    minHeight: '20em',
     padding: '5%'
   },
   colSmall: {

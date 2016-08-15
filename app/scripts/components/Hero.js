@@ -1,24 +1,37 @@
 import React from 'react';
 import Radium from 'radium';
-import stylesVars from './../utils/stylesVars';
+import uiVariables from './../utils/uiVariables';
 
 let styles = {
   hero: {
-    height: '98vh',
+    minHeight: '28em',
     textAlign: 'center',
-    backgroundColor: stylesVars.gray200,
+    backgroundColor: uiVariables.gray200,
     backgroundImage: 'url(images/hero-block.png)',
-    backgroundSize: '700px auto',
+    backgroundSize: '30em auto',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'left center'
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed',
+
+    '@media (min-width: 768px)': {
+      height: '100vh',
+      backgroundPosition: 'left center',
+      // backgroundSize: '700px auto',
+    }
   },
   heroTitle: {
-    padding: '41vh 0 0',
+    padding: '2.5em 1em 0.5em',
     color: '#fff',
-    fontSize: '3.5em',
-    fontWeight: '400'
+    fontSize: '12vw',
+    fontWeight: '300',
+
+    '@media (min-width: 768px)': {
+      padding: '41vh 0 0',
+      fontSize: '3.5em',
+    }
   },
   subTitle: {
+    padding: '0 1em',
     fontSize: '1em',
     color: '#fff',
   }
@@ -27,7 +40,7 @@ let styles = {
 class Hero extends React.Component {
   render() {
     return (
-      <section style={styles.hero}>
+      <section style={styles.hero} className="hero">
         <h1 style={styles.heroTitle}>Building done right</h1>
         <p style={styles.subTitle}>Neat, adaptive and performant UIs. This is JV's 2016 Portfolio.</p>
       </section>
