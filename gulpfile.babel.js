@@ -1,22 +1,19 @@
 
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
+import autoprefixer from 'autoprefixer';
 import browserSync from 'browser-sync';
 import del from 'del';
 import browserify from 'browserify';
 import babelify from 'babelify';
+import cssModulesify from 'css-modulesify';
 import source from 'vinyl-source-stream';
 import buffer from 'vinyl-buffer';
+import preCss from 'precss';
 
 const $ = gulpLoadPlugins();
+const gulpsync = require('gulp-sync')(gulp);
 const reload = browserSync.reload;
-
-gulp.task('stylesVars', () => {
-  return gulp.src('app/scripts/utils/stylesVars.json')
-    .pipe($.jsonStylus())
-    .pipe($.rename('_variables.styl'))
-    .pipe(gulp.dest('app/styles/helpers'));
-});
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.styl')
@@ -26,16 +23,26 @@ gulp.task('styles', () => {
       compress: false,
       'include css': true
     }))
-    .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
+    .pipe($.postcss([autoprefixer({browsers: ['> 1%', 'last 5 versions']})]))
     .pipe($.sourcemaps.write('maps'))
     .pipe(gulp.dest('.tmp/styles'))
+    .pipe($.size({
+      'showFiles': true
+    }))
     .pipe(reload({stream: true}));
 });
 
 gulp.task('scripts', () => {
-  var b = browserify('app/scripts/app.js').transform(babelify, {presets: ['es2015', 'react']});
+  const b = browserify('app/scripts/app.js').transform(babelify, {presets: ['es2015', 'react']});
 
   return b
+    .plugin(cssModulesify, {
+      rootDir: './app/scripts',
+      before: [preCss],
+      after: [autoprefixer({browsers: ['> 1%', 'last 5 versions']})],
+      output: './app/styles/_css-modules.styl',
+      generateScopedName: cssModulesify.generateShortName
+    })
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(buffer())
@@ -57,7 +64,7 @@ function lint(files) {
 
 gulp.task('lint', lint('app/scripts/**/*.js'));
 
-gulp.task('html', ['styles', 'scripts'], () => {
+gulp.task('html', gulpsync.sync(['styles', 'scripts']), () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
@@ -97,7 +104,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['build'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -115,7 +122,7 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
   ]).on('change', reload);
 
   gulp.watch('app/styles/**/*.styl', ['styles']);
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
+  gulp.watch('app/scripts/**/*.{js, css}', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
 });
 

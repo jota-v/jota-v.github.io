@@ -1,0 +1,36 @@
+.bio {
+  display: flex
+}
+
+/*'@media (min-width: 768px)': {
+  flexBasis: '60%',
+  maxWidth: '60%',
+},*/
+
+.colLarge {
+  min-height: 20em;
+  padding: 5%;
+  background: $color;
+}
+
+.colSmall {
+  display: none
+}
+/*@media (min-width: 768px): {
+  display: block,
+  flexBasis: 40%,
+  maxWidth: 40%,
+  background: uiVariables.gray200,
+},*/
+
+.bioPic {
+  display: block;
+  width: 100%;
+  opacity: 0.35;
+}
+
+.title {
+  margin-bottom: 1.3em;
+  font-size: 1.5em;
+  color: uiVariables.gray300;
+}

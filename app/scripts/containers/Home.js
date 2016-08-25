@@ -1,6 +1,6 @@
 import React from 'react';
-import Hero from './../components/Hero';
-import Bio from './../components/Bio';
+import Hero from './../components/hero/Hero';
+import Bio from './../components/bio/Bio';
 import Highlights from './../components/Highlights';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
