@@ -1,9 +1,9 @@
 body {
-  font-family: fontFamilyPrimary;
+  /*font-family: fontFamilyPrimary;*/
   font-size: 100%;
   line-height: 1.5;
-  color: gray400;
-  background: gray1020;
+  color: var(--gray300);
+  background: var(--gray1020);
 }
 
 p {
@@ -34,7 +34,7 @@ h6 {
 }
 
 .hero {
-  // animation heroPop 1s ease-out both;
+  /*animation heroPop 1s ease-out both;*/
 }
 
 .fade-in-appear {

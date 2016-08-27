@@ -10,7 +10,6 @@
 .colLarge {
   min-height: 20em;
   padding: 5%;
-  background: $color;
 }
 
 .colSmall {
@@ -32,5 +31,5 @@
 .title {
   margin-bottom: 1.3em;
   font-size: 1.5em;
-  color: uiVariables.gray300;
+  color: var(--gray300);
 }

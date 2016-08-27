@@ -10,20 +10,22 @@ import cssModulesify from 'css-modulesify';
 import source from 'vinyl-source-stream';
 import buffer from 'vinyl-buffer';
 import preCss from 'precss';
+import customProperties from 'postcss-custom-properties';
+import atImport from 'postcss-import';
 
 const $ = gulpLoadPlugins();
 const gulpsync = require('gulp-sync')(gulp);
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
-  return gulp.src('app/styles/*.styl')
+  return gulp.src('app/styles/main.css')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
-    .pipe($.stylus({
-      compress: false,
-      'include css': true
-    }))
-    .pipe($.postcss([autoprefixer({browsers: ['> 1%', 'last 5 versions']})]))
+    .pipe($.postcss([
+      atImport(),
+      customProperties(),
+      autoprefixer({browsers: ['> 1%', 'last 5 versions']}),
+    ]))
     .pipe($.sourcemaps.write('maps'))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe($.size({
@@ -38,9 +40,9 @@ gulp.task('scripts', () => {
   return b
     .plugin(cssModulesify, {
       rootDir: './app/scripts',
-      before: [preCss],
-      after: [autoprefixer({browsers: ['> 1%', 'last 5 versions']})],
-      output: './app/styles/_css-modules.styl',
+      // before: [preCss],
+      // after: [autoprefixer({browsers: ['> 1%', 'last 5 versions']})],
+      output: './app/styles/_css-modules.css',
       generateScopedName: cssModulesify.generateShortName
     })
     .bundle()

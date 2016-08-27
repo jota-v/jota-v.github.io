@@ -1,7 +1,7 @@
 .hero {
   min-height: 28em;
   text-align: center;
-  background-color: $gray200;
+  background-color: var(--gray200);
   background-image: url('images/hero-block.png');
   background-size: 30em auto;
   background-repeat: no-repeat;
