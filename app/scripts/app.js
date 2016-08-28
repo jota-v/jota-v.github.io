@@ -5,19 +5,16 @@ import Main from './containers/Main';
 import Home from './containers/Home';
 import About from './containers/About';
 import Work from './containers/Work';
-import { StyleRoot } from 'radium';
 
-const App = function () {
+const App = function render() {
   return (
-    <StyleRoot>
-      <Router history={hashHistory}>
-        <Route path="/" component={Main}>
-          <IndexRoute component={Home} />
-          <Route path="about" component={About} />
-          <Route path="work" component={Work} />
-        </Route>
-      </Router>
-    </StyleRoot>
+    <Router history={hashHistory}>
+      <Route path="/" component={Main}>
+        <IndexRoute component={Home} />
+        <Route path="about" component={About} />
+        <Route path="work" component={Work} />
+      </Route>
+    </Router>
   );
 };
 

@@ -1,0 +1,20 @@
+.highlights {
+  background: var(--gray-100);
+  color: var(--gray-1020);
+}
+
+.colLarge {
+  flex-basis: 60%;
+  max-width: 60%;
+  min-height: 20em;
+  padding: 5%;
+}
+
+.colSmall {
+  flex-basis: 40%;
+  max-width: 40%;
+}
+
+.sliderItem {
+  display: flex;
+}

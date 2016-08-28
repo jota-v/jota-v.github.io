@@ -1,57 +1,58 @@
-._bio_gsaw4_1 {
-  display: flex
-}
-
-/*'@media (min-width: 768px)': {
-  flexBasis: '60%',
-  maxWidth: '60%',
-},*/
-
-._colLarge_gsaw4_10 {
-  min-height: 20em;
-  padding: 5%;
-}
-
-._colSmall_gsaw4_15 {
-  display: none
-}
-/*@media (min-width: 768px): {
-  display: block,
-  flexBasis: 40%,
-  maxWidth: 40%,
-  background: uiVariables.gray200,
-},*/
-
-._bioPic_gsaw4_25 {
-  display: block;
+._bar_1xu4g_1 {
+  position: fixed;
+  top: 0;
+  z-index: 9;
   width: 100%;
-  opacity: 0.35;
+  padding: 0 1em;
+  line-height: 50px;
+  background: rgba(0,0,0,0.0);
 }
 
-._title_gsaw4_31 {
-  margin-bottom: 1.3em;
-  font-size: 1.5em;
-  color: var(--gray300);
+._logo_1xu4g_11 {
+  float: left;
+  color: #fff;
+  font-size: 1.2em;
 }
-._hero_d693d_1 {
+
+._menu_1xu4g_17 {
+  float: right;
+  color: #fff;
+}
+
+._menuItems_1xu4g_22 {
+  display: inline-block;
+}
+
+._menuLink_1xu4g_26 {
+  margin: 0 10px;
+  color: var(--gray-1020);
+  font-size: .85em;
+  font-weight: 300;
+  letter-spacing: 2;
+}
+
+._menuLink_1xu4g_26:hover {
+  color: blue;
+}
+._hero_en6mo_1 {
   min-height: 28em;
   text-align: center;
-  background-color: var(--gray200);
-  background-image: url('images/hero-block.png');
+  background-color: var(--gray-200);
+  background-image: url('../images/hero-block.png');
   background-size: 30em auto;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
 
-._heroTitle_d693d_12 {
+._heroTitle_en6mo_12 {
   padding: 2.5em 1em 0.5em;
   color: #fff;
   font-size: 12vw;
   font-weight: 300;
 }
 
-._subTitle_d693d_19 {
+._subTitle_en6mo_19 {
   padding: 0 1em;
   font-size: 1em;
   color: #fff;
@@ -67,3 +68,38 @@
   padding: '41vh 0 0',
   fontSize: '3.5em',
 }*/
+._bio_11e8b_1 {
+  display: flex
+}
+
+/*'@media (min-width: 768px)': {
+  flexBasis: '60%',
+  maxWidth: '60%',
+},*/
+
+._colLarge_11e8b_10 {
+  min-height: 20em;
+  padding: 5%;
+}
+
+._colSmall_11e8b_15 {
+  display: none
+}
+/*@media (min-width: 768px): {
+  display: block,
+  flexBasis: 40%,
+  maxWidth: 40%,
+  background: uiVariables.gray200,
+},*/
+
+._bioPic_11e8b_25 {
+  display: block;
+  width: 100%;
+  opacity: 0.35;
+}
+
+._title_11e8b_31 {
+  margin-bottom: 1.3em;
+  font-size: 1.5em;
+  color: var(--gray-300);
+}

@@ -1,33 +1,31 @@
 :root {
-  --gray200: #242121;
-  --gray300: #333;
-  --gray600: #666;
-  --gray900: #999;
-  --gray1000: #bbb;
-  --gray1010: #d7d7d7;
-  --gray1020: #eee;
+  /* GRAYS
+  ---------------------------------------------------------*/
+  --gray-200: #242121;
+  --gray-300: #333;
+  --gray-600: #666;
+  --gray-900: #999;
+  --gray-1000: #bbb;
+  --gray-1010: #d7d7d7;
+  --gray-1020: #eee;
+
+  /* PX to EMs
+  ---------------------------------------------------------*/
+  --px-10: 0.625em;
+  --px-12: 0.75em;
+  --px-13: 0.8125em;
+  --px-14: 0.875em;
+  --px-15: 0.9375em;
+  --px-16: 1em;
+  --px-18: 1.125em;
+  --px-20: 1.25em;
+  --px-25: 1.5625em;
+  --px-30: 1.875em;
+  --px-40: 2.5em;
+
+  /* FONTS
+  ---------------------------------------------------------*/
+  --font-family-primary: 'Roboto Mono', 'Menlo', 'Consolas', 'Lucida Console', monospace;
+  --font-size-small: var(--px-12);
+  --font-size-base: var(--px-14);
 }
-
-
-/*gray100 = #111
-gray200 = #242121
-gray300 = #333
-gray600 = #666
-gray900 = #999
-gray1000 = #bbb
-gray1010 = #d7d7d7
-gray1020 = #eee
-px10 = 0.625em
-px12 = 0.75em
-px13 = 0.8125em
-px14 = 0.875em
-px15 = 0.9375em
-px16 = 1em
-px18 = 1.125em
-px20 = 1.25em
-px25 = 1.5625em
-px30 = 1.875em
-px40 = 2.5em
-fontFamilyPrimary = 'Roboto Mono', 'Menlo', 'Consolas', 'Lucida Console', monospace
-font-size-small = px-12;
-font-size-base = px-14*/
