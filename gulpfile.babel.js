@@ -56,7 +56,6 @@ gulp.task('scripts', () => {
 function lint(files) {
   return () => {
     return gulp.src(files)
-      .pipe(reload({stream: true, once: true}))
       .pipe($.eslint())
       .pipe($.eslint.format())
       .pipe($.if(!browserSync.active, $.eslint.failAfterError()));

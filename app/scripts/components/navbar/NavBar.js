@@ -7,7 +7,7 @@ class NavBar extends React.Component {
     return (
       <nav className={styles.bar} role="navigation">
         <div className="l-container">
-          <Link to="/" className={styles.logo}>JV</Link>
+          <Link to="/" className={styles.logo}>JMV</Link>
           <ul className={styles.menu}>
             <li className={styles.menuItems}>
               <Link to="/about"><span ref="1" className={styles.menuLink}>ABOUT</span></Link>
