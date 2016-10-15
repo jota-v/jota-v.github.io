@@ -1,11 +1,8 @@
 .bio {
-  display: flex
+  display: flex;
+  padding: 2.2em 0;
+  background: #fff;
 }
-
-/*'@media (min-width: 768px)': {
-  flexBasis: '60%',
-  maxWidth: '60%',
-},*/
 
 .colLarge {
   min-height: 20em;
@@ -15,12 +12,6 @@
 .colSmall {
   display: none
 }
-/*@media (min-width: 768px): {
-  display: block,
-  flexBasis: 40%,
-  maxWidth: 40%,
-  background: uiVariables.gray200,
-},*/
 
 .bioPic {
   display: block;
@@ -30,6 +21,29 @@
 
 .title {
   margin-bottom: 1.3em;
-  font-size: 1.5em;
+  font-family: var(--font-family-secondary);
+  font-size: 1.6em;
+  font-style: italic;
   color: var(--gray-300);
 }
+
+.textBlock {
+  border-top: 2px solid var(--gray-600);
+  padding: 2em 0;
+}
+
+.actionBtn {
+  margin-top: 2.5em;
+}
+
+/*'@media (min-width: 768px)': {
+  flexBasis: '60%',
+  maxWidth: '60%',
+},*/
+
+/*@media (min-width: 768px): {
+  display: block,
+  flexBasis: 40%,
+  maxWidth: 40%,
+  background: uiVariables.gray200,
+},*/

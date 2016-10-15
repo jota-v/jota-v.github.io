@@ -1,32 +1,33 @@
 .hero {
-  min-height: 28em;
+  min-height: 36em;
   text-align: center;
   background-color: var(--gray-200);
-  background-image: url('../images/blocks.png');
-  background-size: 30em auto;
+  background-image: url('../images/build-bg.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
 }
 
 .heroTitle {
-  padding: 2.5em 1em 0.5em;
+  padding: 6em 1em 0.5em;
   color: #fff;
-  font-size: 12vw;
-  font-weight: 300;
+  font-size: 11vw;
+  font-weight: 400;
+  /*letter-spacing: 0.05em;*/
 }
 
 .subTitle {
   padding: 0 1em;
-  font-size: 1em;
+  font-size: 1.1em;
   color: #fff;
 }
 
 @media (min-width: 768px) {
   .hero {
     height: 100vh;
-    background-position: left center;
-    background-size: 520px auto;
+    background-position: center;
+    background-size: cover;
   }
 
   .heroTitle {

@@ -25,7 +25,8 @@
 
   /* FONTS
   ---------------------------------------------------------*/
-  --font-family-primary: 'Roboto Mono', 'Menlo', 'Consolas', 'Lucida Console', monospace;
+  --font-family-primary: 'Hack', 'Roboto Mono', 'Menlo', 'Consolas', 'Lucida Console', monospace;
+  --font-family-secondary: 'slikk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-size-small: var(--px-12);
   --font-size-base: var(--px-14);
 }

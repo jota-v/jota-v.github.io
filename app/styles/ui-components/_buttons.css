@@ -1,6 +1,6 @@
 .ui-btn {
   display: inline-block;
-  padding: 0 2em;
+  padding: .4em 2em;
   font-size: 1em;
   line-height: 2.5em;
   text-transform: uppercase;
@@ -8,6 +8,11 @@
   color: var(--gray-1020);
   background: #000;
   border: 0;
+}
+
+.ui-btn--block {
+  display: block;
+  width: 100%;
 }
 
 .ui-btn:focus {

@@ -2,6 +2,9 @@
 
 @import 'normalize.css';
 
+/*fonts*/
+@import 'base/_fonts.css';
+
 /*Helpers*/
 @import 'helpers/_variables.css';
 @import 'mullet-css/dist/mullet-utilities.css';
@@ -15,6 +18,3 @@
 
 /*Layout*/
 @import 'layout/_layout.css';
-
-/*module*/
-@import '_css-modules.css';

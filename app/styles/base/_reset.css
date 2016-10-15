@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: var(--gray-600);
+  color: #fff;
+}
+
 h1,
 h2,
 h3,

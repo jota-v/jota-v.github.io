@@ -18,7 +18,7 @@ const gulpsync = require('gulp-sync')(gulp);
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
-  return gulp.src('app/styles/main.css')
+  return gulp.src(['app/styles/core.css', 'app/styles/modules.css'])
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.postcss([
@@ -41,7 +41,7 @@ gulp.task('scripts', () => {
       rootDir: './app/scripts',
       // before: [preCss],
       // after: [autoprefixer({browsers: ['> 1%', 'last 5 versions']})],
-      output: './app/styles/_css-modules.css',
+      output: './.tmp/_css-modules.css',
       generateScopedName: cssModulesify.generateShortName
     })
     .bundle()
@@ -56,7 +56,11 @@ gulp.task('scripts', () => {
 function lint(files) {
   return () => {
     return gulp.src(files)
-      .pipe($.eslint())
+      .pipe($.eslint({
+        rules: {
+          'max-len': 0
+        }
+      }))
       .pipe($.eslint.format())
       .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
   };
