@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from './../components/hero/Hero';
 import Bio from './../components/bio/Bio';
-import Highlights from './../components/highlights/Highlights';
+// import Highlights from './../components/highlights/Highlights';
 import Brands from './../components/brands/Brands';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
@@ -16,7 +16,7 @@ const Home = function render() {
     >
       <Hero />
       <Bio />
-      <Highlights />
+      // <Highlights />
       <Brands />
     </ReactCSSTransitionGroup>
   );

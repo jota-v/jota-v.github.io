@@ -6,6 +6,8 @@ import browserSync from 'browser-sync';
 import del from 'del';
 import browserify from 'browserify';
 import babelify from 'babelify';
+import preactify from 'preactify';
+import aliasify from 'aliasify';
 import cssModulesify from 'css-modulesify';
 import source from 'vinyl-source-stream';
 import buffer from 'vinyl-buffer';
@@ -33,17 +35,29 @@ gulp.task('styles', () => {
     }));
 });
 
+var aliasifyConfig = {
+    aliases: {
+      "react": "preact-compat",
+      "react-dom": "preact-compat",
+      "react-router": "preact-compat",
+      "react-addons-css-transition-group": "preact-compat"
+    },
+    verbose: false
+}
+
 gulp.task('scripts', () => {
-  const b = browserify('app/scripts/app.js').transform(babelify, {presets: ['es2015', 'react']});
+  const b = browserify('app/scripts/app.js').transform(babelify, {presets: ['es2015', 'react']}).transform(preactify).transform(aliasify, aliasifyConfig);
 
   return b
-    .plugin(cssModulesify, {
-      rootDir: './app/scripts',
-      // before: [preCss],
-      // after: [autoprefixer({browsers: ['> 1%', 'last 5 versions']})],
-      output: './.tmp/_css-modules.css',
-      generateScopedName: cssModulesify.generateShortName
-    })
+    .plugin(
+      cssModulesify, {
+        rootDir: './app/scripts',
+        // before: [preCss],
+        // after: [autoprefixer({browsers: ['> 1%', 'last 5 versions']})],
+        output: './.tmp/_css-modules.css',
+        generateScopedName: cssModulesify.generateShortName
+      }
+    )
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(buffer())
