@@ -1,26 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-import Main from './containers/Main';
-import Home from './containers/Home';
-import About from './containers/About';
-import Work from './containers/Work';
+import Inferno from 'inferno';
 
-const App = function render() {
-  return (
-    <Router history={hashHistory}>
-      <Route path="/" component={Main}>
-        <IndexRoute component={Home} />
-        <Route path="about" component={About} />
-        <Route path="work" component={Work} />
-      </Route>
-    </Router>
-  );
-};
+const message = "Hello world";
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
-
-export default App;
+Inferno.render(
+  <MyComponent message={ message } />,
+  document.getElementById("app")
+)

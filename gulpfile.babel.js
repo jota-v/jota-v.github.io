@@ -34,13 +34,11 @@ gulp.task('styles', () => {
 });
 
 gulp.task('scripts', () => {
-  const b = browserify('app/scripts/app.js').transform(babelify, {presets: ['es2015', 'react']});
+  const b = browserify('app/scripts/app.js').transform(babelify, {presets: ['es2015'], plugins: ['inferno']});
 
   return b
     .plugin(cssModulesify, {
       rootDir: './app/scripts',
-      // before: [preCss],
-      // after: [autoprefixer({browsers: ['> 1%', 'last 5 versions']})],
       output: './.tmp/_css-modules.css',
       generateScopedName: cssModulesify.generateShortName
     })
@@ -142,7 +140,7 @@ gulp.task('serve:dist', () => {
 });
 
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
