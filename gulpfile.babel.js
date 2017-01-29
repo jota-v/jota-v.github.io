@@ -34,14 +34,14 @@ gulp.task('styles', () => {
 });
 
 gulp.task('scripts', () => {
-  const b = browserify('app/scripts/app.js').transform(babelify, {presets: ['es2015'], plugins: ['inferno']});
+  const b = browserify('app/scripts').transform(babelify, {presets: ['es2015'], plugins: ['inferno']});
 
   return b
-    .plugin(cssModulesify, {
-      rootDir: './app/scripts',
-      output: './.tmp/_css-modules.css',
-      generateScopedName: cssModulesify.generateShortName
-    })
+    // .plugin(cssModulesify, {
+    //   rootDir: './app/scripts',
+    //   output: './.tmp/_css-modules.css',
+    //   generateScopedName: cssModulesify.generateShortName
+    // })
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(buffer())
@@ -51,20 +51,20 @@ gulp.task('scripts', () => {
     }));
 });
 
-function lint(files) {
-  return () => {
-    return gulp.src(files)
-      .pipe($.eslint({
-        rules: {
-          'max-len': 0
-        }
-      }))
-      .pipe($.eslint.format())
-      .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
-  };
-};
-
-gulp.task('lint', lint('app/scripts/**/*.js'));
+// function lint(files) {
+//   return () => {
+//     return gulp.src(files)
+//       .pipe($.eslint({
+//         rules: {
+//           'max-len': 0
+//         }
+//       }))
+//       .pipe($.eslint.format())
+//       .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
+//   };
+// };
+//
+// gulp.task('lint', lint('app/scripts/**/*.js'));
 
 gulp.task('html', gulpsync.sync(['scripts', 'styles']), () => {
   return gulp.src('app/*.html')
@@ -125,7 +125,7 @@ gulp.task('serve', gulpsync.sync(['scripts', 'styles']), () => {
   ]).on('change', reload);
 
   gulp.watch('app/styles/**/*.css', ['styles']);
-  gulp.watch('app/scripts/**/*', ['scripts', 'lint']);
+  gulp.watch('app/scripts/**/*', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
 });
 
