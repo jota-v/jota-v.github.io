@@ -37,11 +37,6 @@ gulp.task('scripts', () => {
   const b = browserify('app/scripts').transform(babelify, {presets: ['es2015'], plugins: ['inferno']});
 
   return b
-    // .plugin(cssModulesify, {
-    //   rootDir: './app/scripts',
-    //   output: './.tmp/_css-modules.css',
-    //   generateScopedName: cssModulesify.generateShortName
-    // })
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(buffer())
@@ -139,11 +134,20 @@ gulp.task('serve:dist', () => {
   });
 });
 
+gulp.task('dist', ['default'], function() {
+    gulp.src('./dist/scripts/*.gz.js')
+    .pipe($.gzip({ append: false }))
+    .pipe(gulp.dest('./dist/scripts'))
+    .pipe($.size({
+      'showFiles': true
+    }));
+});
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
+
+gulp.task('default', ['html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
-gulp.task('default', ['clean'], () => {
-  gulp.start('build');
+gulp.task('build', () => {
+  gulp.start(gulpsync.sync(['clean', 'default']));
 });

@@ -5,7 +5,8 @@
   },
   "scripts": {
     "start": "gulp serve",
-    "build": "gulp build"
+    "build": "gulp build",
+    "dist": "gulp dist"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -28,6 +29,7 @@
     "gulp-cache": "^0.2.8",
     "gulp-cssnano": "^2.0.0",
     "gulp-eslint": "^2.0.0",
+    "gulp-gzip": "^1.4.0",
     "gulp-htmlmin": "^1.3.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^2.2.1",

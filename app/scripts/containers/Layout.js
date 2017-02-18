@@ -3,12 +3,13 @@ import { css, speedy } from 'glamor';
 speedy(true)
 // import NavBar from './../components/navbar/NavBar';
 
-let rule = css({
-  color: 'pink'
+const Styles = css({
+  color: 'pink',
+  fontSize: 22
 });
 
 function Layout({ children }) {
-  return <div className={`${rule}`}>hola { children }</div>
+  return <div className={`${Styles}`}>{ children }</div>
 }
 
 export default Layout;
