@@ -18,7 +18,7 @@ const gulpsync = require('gulp-sync')(gulp);
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
-  return gulp.src(['app/styles/core.css', 'app/styles/modules.css'])
+  return gulp.src(['app/styles/core.css'])
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.postcss([
@@ -37,13 +37,6 @@ gulp.task('scripts', () => {
   const b = browserify('app/scripts/app.js').transform(babelify, {presets: ['es2015', 'react']});
 
   return b
-    .plugin(cssModulesify, {
-      rootDir: './app/scripts',
-      // before: [preCss],
-      // after: [autoprefixer({browsers: ['> 1%', 'last 5 versions']})],
-      output: './.tmp/_css-modules.css',
-      generateScopedName: cssModulesify.generateShortName
-    })
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(buffer())

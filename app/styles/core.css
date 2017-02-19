@@ -1,5 +1,4 @@
 /*Normalize Modules*/
-
 @import 'sanitize.css';
 
 /*fonts*/
@@ -7,7 +6,6 @@
 
 /*Helpers*/
 @import 'helpers/_variables.css';
-@import 'mullet-css/dist/mullet-utilities.css';
 
 /*UI components*/
 @import 'ui-components/_buttons.css';
@@ -18,3 +16,6 @@
 
 /*Layout*/
 @import 'layout/_layout.css';
+
+/*Utilities*/
+@import 'mullet-css/dist/mullet-utilities.css';
