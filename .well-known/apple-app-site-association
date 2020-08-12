@@ -1,0 +1,40 @@
+{
+    "activitycontinuation": {
+        "apps": [
+            "3RYVG98763.com.manomano.pro.dev",
+            "3RYVG98763.com.manomano.pro.qa",
+            "3RYVG98763.com.manomano.pro.stag",
+            "3RYVG98763.com.manomano.pro"
+        ]
+    },
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "3RYVG98763.com.manomano.pro.dev",
+                "paths": [
+                    "/*",
+                    "/applinks"
+                ]
+            },
+            {
+                "appID": "3RYVG98763.com.manomano.pro.qa",
+                "paths": [
+                    "/applinks"
+                ]
+            },
+            {
+                "appID": "3RYVG98763.com.manomano.pro.stag",
+                "paths": [
+                    "/*"
+                ]
+            },
+            {
+                "appID": "3RYVG98763.com.manomano.pro",
+                "paths": [
+                    "/*"
+                ]
+            }
+        ]
+    }
+}
