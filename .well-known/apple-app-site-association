@@ -13,26 +13,41 @@
             {
                 "appID": "3RYVG98763.com.manomano.pro.dev",
                 "paths": [
-                    "/*",
-                    "/applinks"
+                    "/",
+                    "/vp/**",
+                    "/**",
+                    "/mes-commandes",
+                    "/mon-panier"
                 ]
             },
             {
                 "appID": "3RYVG98763.com.manomano.pro.qa",
                 "paths": [
-                    "/applinks"
+                    "/",
+                    "/vp/**",
+                    "/**",
+                    "/mes-commandes",
+                    "/mon-panier"
                 ]
             },
             {
                 "appID": "3RYVG98763.com.manomano.pro.stag",
                 "paths": [
-                    "/*"
+                    "/",
+                    "/vp/**",
+                    "/**",
+                    "/mes-commandes",
+                    "/mon-panier"
                 ]
             },
             {
                 "appID": "3RYVG98763.com.manomano.pro",
                 "paths": [
-                    "/*"
+                    "/",
+                    "/vp/**",
+                    "/**",
+                    "/mes-commandes",
+                    "/mon-panier"
                 ]
             }
         ]
